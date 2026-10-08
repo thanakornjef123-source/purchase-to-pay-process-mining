@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 J = lambda n: json.loads((ROOT / "results" / n).read_text())
 E, D, C, P, S = (J("01_explore.json"), J("02_discovery.json"), J("03_conformance.json"),
                  J("04_performance.json"), J("05_recommendations.json"))
+B = J("06_bpi2019.json")
 
 
 def table(head, rows):
@@ -113,6 +114,33 @@ a(table(["Activity", "เคสที่มีซ้ำ", "เพราะหล
 
 a("\n## ช่วง 6 — ข้อเสนอแนะ · `notebooks/05_recommendations.ipynb` → `results/05_recommendations.json`\n")
 a(table(["#", "ปัญหา", "หลักฐาน"], [[i['id'], i['issue'], i['evidence']] for i in S['issues']]))
+a("")
+
+a("\n## ต่อยอด — ข้อมูลจริง BPI Challenge 2019 · `notebooks/06_bpi2019_real_data.ipynb` → `results/06_bpi2019.json`\n")
+a("ข้อมูล: BPI Challenge 2019, DOI 10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1, CC BY 4.0 · `BPI_Challenge_2019.xes` MD5 `4eb909242351193a61e1c15b9c3cc814`\n")
+a(table(["รายการ", "ค่า"], [
+    ["Cases (PO items) / events / activities", f"{B['cases']:,} / {B['events']:,} / {B['activities']}"],
+    ["Purchase documents / vendors / companies", f"{B['purchase_documents']:,} / {B['vendors']:,} / {B['companies']}"],
+    ["Events before 2018 / cases affected", f"{B['events_before_2018']} / {B['cases_with_events_before_2018']}"],
+    ["Variants (singletons)", f"{B['variants']:,} ({B['variants_singletons']:,})"],
+    ["Variants for 50% / 80% of cases", f"{B['variants_needed_for_50pct']} / {B['variants_needed_for_80pct']}"],
+    ["Invoice before GR in invoice-before-GR category", f"{B['ibgr_invoice_before_gr_cases']:,} ({B['ibgr_invoice_before_gr_pct']}%)"],
+    ["Cases with Remove Payment Block", f"{B['remove_payment_block_cases_pct']}%"],
+    ["Open cases (no Clear Invoice) in invoiced categories", f"{B['open_cases_pct_of_invoiced_categories']}%"],
+    ["Cases with a purchase requisition item", f"{B['cases_with_purchase_requisition_pct']}%"],
+    ["Cases with any change/cancel (excl. payment block)", f"{B['cases_with_any_change_or_cancel_pct']}%"],
+    ["Invoice → clear median days, with / without block removal", f"{B['invoice_to_clear_median_with_block_removal']} / {B['invoice_to_clear_median_without_block_removal']}"],
+]))
+a("\nItem categories\n")
+a(table(["Category", "Cases", "%"], [[k, f"{v:,}", B['item_category_pct'][k]] for k, v in B['item_category_cases'].items()]))
+a("\nRules\n")
+a(table(["Rule", "Cases", "% of category", "Category cases"], [[r['rule'], f"{r['cases']:,}", r['pct_of_category'], f"{r['category_cases']:,}"] for r in B['rules']]))
+a("\nStage durations (days, cases with timestamps before 2018 excluded)\n")
+a(table(["Stage", "n", "median", "mean", "P90"], [[k, f"{v['n']:,}", v['median'], v['mean'], v['p90']] for k, v in B['stage_days'].items()]))
+a("\nRework\n")
+a(table(["Activity", "Cases", "% of cases"], [[r['activity'], f"{r['cases']:,}", r['pct_cases']] for r in B['rework']]))
+a("\nComparison\n")
+a(table(["Metric", "Simulated (Zenodo P2P)", "Real (BPI 2019)"], [[r['metric'], r['simulated (Zenodo P2P)'], r['real (BPI 2019)']] for r in B['comparison']]))
 a("")
 (ROOT / "results.md").write_text("\n".join(L), encoding="utf-8")
 print("wrote results.md", len(L), "blocks")

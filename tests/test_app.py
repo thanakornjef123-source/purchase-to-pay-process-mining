@@ -3,7 +3,7 @@ import pytest
 from streamlit.testing.v1 import AppTest
 
 PAGES = ["overview", "data_method", "discovery", "conformance", "performance",
-         "case_explorer", "recommendations", "report"]
+         "case_explorer", "real_data", "recommendations", "report"]
 
 
 def _snapshot(root):

@@ -45,6 +45,7 @@ pages = {
         st.Page("app_pages/conformance.py", title="ความสอดคล้องกับกระบวนการ", icon=":material/rule:"),
         st.Page("app_pages/performance.py", title="ระยะเวลาและคอขวด", icon=":material/timer:"),
         st.Page("app_pages/case_explorer.py", title="สำรวจรายเคส", icon=":material/search:"),
+        st.Page("app_pages/real_data.py", title="ข้อมูลจริง: BPI 2019", icon=":material/verified:"),
     ],
     "ข้อสรุป": [
         st.Page("app_pages/recommendations.py", title="ข้อเสนอแนะ", icon=":material/task_alt:"),

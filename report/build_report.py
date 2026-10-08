@@ -15,6 +15,7 @@ D = json.loads((RES / "02_discovery.json").read_text())
 C = json.loads((RES / "03_conformance.json").read_text())
 P = json.loads((RES / "04_performance.json").read_text())
 S = json.loads((RES / "05_recommendations.json").read_text())
+B = json.loads((RES / "06_bpi2019.json").read_text())
 rule = {r["rule"][:2]: r for r in C["rules"]}
 N = C["cases"]
 st = P["stage_wait_days"]
@@ -101,6 +102,7 @@ code{font-size:8.8pt;background:var(--soft);padding:0 3px;border-radius:3px}
 .wide>figure{min-width:0;margin:0}
 .wide figure img{width:100%;height:auto;max-height:232mm;object-fit:contain}
 .solo{break-before:page}
+.mid figure img{max-height:150mm;width:auto !important;max-width:100%}
 .solo figure img{max-height:228mm;max-width:100%;width:auto !important;height:auto}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 """
@@ -133,6 +135,9 @@ html = f"""<!doctype html><html lang="th"><head><meta charset="utf-8">
 </table>
 <p><b>สิ่งที่ควรทำก่อน:</b> P3 และ P1 เพราะเกี่ยวกับเงินที่ออกไปแล้วและการผูกพันงบโดยไม่มีการอนุมัติ ให้ทีมการเงินตรวจ {n(C['D1_payments'])} payment ที่ถูกสั่งจ่ายซ้ำก่อน
 เพื่อยืนยันว่าเป็นการจ่ายเกินจริงหรือไม่ (ข้อมูลไม่มียอดเงินรายครั้ง จึงยืนยันเองไม่ได้)</p>
+<p><b>ทดสอบกับข้อมูลจริง:</b> เมื่อใช้วิธีเดียวกันกับ event log จริง BPI Challenge 2019 ({n(B['cases'])} รายการสินค้าในใบสั่งซื้อ)
+การจ่ายเงินก่อนรับของเกิดขึ้นเพียง {B['rules'][1]['pct_of_category']}% แต่ช่วงจากใบแจ้งหนี้ถึงการจ่ายเงินใช้เวลามัธยฐาน
+{B['stage_days']['invoice recorded -> invoice cleared']['median']:.0f} วัน และต้องปลดบล็อกการจ่ายใน {B['remove_payment_block_cases_pct']}% ของเคส (หัวข้อ 7)</p>
 <p class="small">รายงานนี้ไม่ได้อ้างว่าข้อเสนอแนะจะลดต้นทุนหรือเพิ่มประสิทธิภาพได้เท่าไร เพราะยังไม่ได้นำไปใช้จริง</p>
 
 <h2 class="page">1. บริบทและคำถาม</h2>
@@ -177,7 +182,7 @@ html = f"""<!doctype html><html lang="th"><head><meta charset="utf-8">
 <code>01_explore</code> → <code>02_discovery</code> (variants, DFG, Inductive Miner) → <code>03_conformance</code> (token-based replay, alignments, กฎธุรกิจ)
 → <code>04_performance</code> (เวลารอ, rework) → <code>05_recommendations</code>. ทุก notebook เขียนตัวเลขลง <code>results/*.json</code> และรายงานนี้สร้างจากไฟล์ JSON นั้นโดยตรง</p>
 
-<h2 class="page">3. กระบวนการที่เกิดขึ้นจริง</h2>
+<h2>3. กระบวนการที่เกิดขึ้นจริง</h2>
 <p>ถ้านับลำดับ activity ทุกตัว มี <b>{D['variants_full']} variants</b> จาก {N} เคส โดย {D['variants_full_singletons']} variants เกิดแค่เคสเดียว
 variant ที่พบบ่อยที่สุดครอบคลุม {D['top1_coverage_pct']}% ของเคส ต้องใช้ {D['variants_needed_for_50pct']} variants จึงครอบคลุม 50% และ {D['variants_needed_for_80pct']} variants จึงครอบคลุม 80%</p>
 {fig('02_variant_coverage.png','รูป 1 · สัดส่วนเคสที่ครอบคลุมเมื่อเพิ่มจำนวน variants (เรียงจากพบบ่อยไปน้อย)','62%')}
@@ -295,9 +300,32 @@ variant ที่พบบ่อยที่สุดครอบคลุม {D
 <tr><td>มัธยฐานเวลาทั้งเคส (วัน)</td><td class=num>{P['case_duration_days']['median']:.1f}</td></tr>
 </table>
 
-<h2>7. ข้อจำกัดของการวิเคราะห์</h2>
+<h2 class="page">7. ต่อยอดด้วยข้อมูลจริง: BPI Challenge 2019</h2>
+<p>เพื่อทดสอบว่าวิธีวิเคราะห์ใช้ได้กับข้อมูลจริง จึงนำคำถามชุดเดียวกันไปใช้กับ event log ของบริษัทข้ามชาติด้านสีและสารเคลือบ
+(BPI Challenge 2019, DOI 10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1, CC BY 4.0) ซึ่งดาวน์โหลดจาก figshare (ระบบเดิมของ 4TU.ResearchData)
+และตรวจ MD5 ตรงกับที่เผยแพร่ ข้อมูลชุดนี้ 1 เคสคือรายการสินค้า 1 บรรทัดในใบสั่งซื้อ แบ่งเป็น 4 ประเภทการจับคู่เอกสาร</p>
+<table><tr><th>ตัวชี้วัด</th><th class=num>ข้อมูลจำลอง</th><th class=num>ข้อมูลจริง (BPI 2019)</th></tr>{''.join(f"<tr><td>{r['metric']}</td><td class=num>{r['simulated (Zenodo P2P)']}</td><td class=num>{r['real (BPI 2019)']}</td></tr>" for r in B['comparison'])}</table>
+<h3>7.1 กติกาการจับคู่เอกสาร</h3>
+<table><tr><th>กติกาที่ตรวจ</th><th class=num>เคส</th><th class=num>% ของประเภท</th><th class=num>เคสในประเภท</th></tr>{''.join(f"<tr><td>{r['rule'][3:]}</td><td class=num>{r['cases']:,}</td><td class=num>{r['pct_of_category']}%</td><td class=num>{r['category_cases']:,}</td></tr>" for r in B['rules'])}</table>
+<p>การจ่ายเงินก่อนรับของเกิดขึ้นน้อยมาก และประเภท 2-way match กับ consignment เป็นไปตามกติกาทั้งหมด
+แต่ในประเภทที่ใบแจ้งหนี้มาก่อนรับของได้ มี {n(B['ibgr_invoice_before_gr_cases'])} เคส ({B['ibgr_invoice_before_gr_pct']}%) ที่ใบแจ้งหนี้มาก่อนจริง
+และ {B['remove_payment_block_cases_pct']}% ของทุกเคสต้องปลดบล็อกการจ่ายเงิน ใบขอซื้อในระบบมีเพียง {B['cases_with_purchase_requisition_pct']}% ของเคส
+แต่ข้อมูลชุดนี้ไม่ได้กำหนดว่าทุกการซื้อต้องมีใบขอซื้อ จึงไม่นับเป็นการผิดกติกา</p>
+<h3>7.2 ระยะเวลา</h3>
+<table><tr><th>ขั้น</th><th class=num>n</th><th class=num>มัธยฐาน (วัน)</th><th class=num>P90</th></tr>{''.join(f"<tr><td>{k}</td><td class=num>{v['n']:,}</td><td class=num>{v['median']:.1f}</td><td class=num>{v['p90']:.1f}</td></tr>" for k, v in B['stage_days'].items())}</table>
+<p>ช่วงที่ใช้เวลานานที่สุดคือ<b>จากบันทึกใบแจ้งหนี้ถึงการจ่ายเงิน</b> และนานขึ้นเมื่อต้องปลดบล็อกการจ่าย
+(มัธยฐาน {B['invoice_to_clear_median_with_block_removal']:.0f} เทียบกับ {B['invoice_to_clear_median_without_block_removal']:.0f} วัน)
+เคสที่มีการแก้ไขหรือยกเลิกเอกสารอย่างน้อยหนึ่งครั้งคิดเป็น {B['cases_with_any_change_or_cancel_pct']}% (ไม่รวมการปลดบล็อก)</p>
+<h3>7.3 สิ่งที่ข้อมูลจริงเพิ่มเติมจากข้อมูลจำลอง</h3>
+<ul><li>จำนวน variants สูงกว่ามาก ({n(B['variants'])} แบบ) แต่ {B['variants_needed_for_80pct']} variants ครอบคลุม 80% ของเคส จึงต้องแยกตามประเภทก่อนวิเคราะห์</li>
+<li>มีเคสที่ยังไม่จ่ายเงิน ({B['open_cases_pct_of_invoiced_categories']}%) และ timestamp ผิดปกติย้อนไปถึงปี {min(B['events_per_year'])} ({n(B['cases_with_events_before_2018'])} เคส) ต้องจัดการก่อนวัดเวลา</li>
+<li>ประเด็นสำคัญในข้อมูลจริงอยู่ที่ช่วงจ่ายเงินหลังรับใบแจ้งหนี้ ซึ่งสอดคล้องกับข้อเสนอ P5 (เพิ่มรอบจ่ายเงิน) และ P4 (จับคู่เอกสารให้ครบก่อนปล่อยการจ่าย)</li>
+<li>ยังไม่ได้ตรวจการจับคู่มูลค่า ซึ่งเป็นโจทย์หลักของ BPI Challenge 2019 เพราะ log มีเพียงมูลค่าสะสมของรายการ</li></ul>
+<div class="mid">{fig('06_dfg_main.png', f"รูป 8 · Directly-follows graph ของ BPI 2019 ประเภท 3-way match, invoice before GR แสดงเฉพาะเส้นที่เกิดในอย่างน้อย {B['dfg_main_threshold_pct']}% ของเคส")}</div>
+
+<h2>8. ข้อจำกัดของการวิเคราะห์</h2>
 <ul>
-<li><b>ข้อมูลจำลอง:</b> ทุกเคสจบที่การจ่ายเงิน ไม่มีเคสค้าง กลุ่มต่างๆ แทบไม่ต่างกัน และเส้นทางหลักมีแค่ {D['variants_skeleton']} แบบ ข้อมูลจริงมักซับซ้อนกว่านี้มาก ผลจึงใช้แสดงวิธีการ ไม่ใช่ข้อสรุปเกี่ยวกับบริษัทจริง</li>
+<li><b>ข้อมูลจำลอง:</b> ทุกเคสจบที่การจ่ายเงิน ไม่มีเคสค้าง กลุ่มต่างๆ แทบไม่ต่างกัน และเส้นทางหลักมีแค่ {D['variants_skeleton']} แบบ ข้อมูลจริงมักซับซ้อนกว่านี้มาก ผลจึงใช้แสดงวิธีการ ไม่ใช่ข้อสรุปเกี่ยวกับบริษัทจริง (หัวข้อ 7 ทดสอบซ้ำกับข้อมูลจริง)</li>
 <li><b>Log บอกว่าอะไรเกิด แต่ไม่บอกว่าทำไม:</b> สาเหตุทุกข้อในรายงานเป็นข้อสันนิษฐาน ต้องสัมภาษณ์เจ้าของกระบวนการเพื่อยืนยัน</li>
 <li><b>ยอดเงินรายครั้ง:</b> ไม่มียอดเงินของการจ่ายแต่ละครั้ง จึงประเมินการจ่ายเกินได้แค่เพดานบน</li>
 <li><b>Timestamp:</b> ละเอียดแค่ระดับนาที และอาจเป็นเวลาที่บันทึกในระบบ ไม่ใช่เวลาที่ทำงานจริง</li>
@@ -308,9 +336,9 @@ variant ที่พบบ่อยที่สุดครอบคลุม {D
 
 <h2>ภาคผนวก: ที่มาของข้อมูลและการทำซ้ำ</h2>
 <p class="small">ข้อมูล: <i>Procure-To-Payment (P2P) Object-centric Event Log in OCEL 2.0 Standard</i>, Zenodo record 8412920, CC BY 4.0, ไฟล์ <code>ocel2-p2p.sqlite</code> MD5 <code>{E['file_md5']}</code>.
-ชุดที่วางแผนไว้แต่แรกคือ BPI Challenge 2019 (4TU.ResearchData) แต่ไฟล์ปิดให้ดาวน์โหลดชั่วคราวช่วงที่ทำงาน
+ข้อมูลจริงในหัวข้อ 7: BPI Challenge 2019, ไฟล์ <code>BPI_Challenge_2019.xes</code> MD5 <code>4eb909242351193a61e1c15b9c3cc814</code> จาก figshare (4TU.ResearchData) CC BY 4.0
 เครื่องมือ: PM4Py {E['pm4py_version']} (AGPL v3), pandas, matplotlib, Graphviz.
-ทำซ้ำได้โดยรัน notebook 01–05 ตามลำดับ แล้วรัน <code>python report/build_report.py</code>.
+ทำซ้ำได้โดยรัน notebook 01–06 ตามลำดับ แล้วรัน <code>python report/build_report.py</code>.
 ตัวเลขทุกตัวในรายงานนี้อยู่ใน <code>results.md</code> พร้อมชื่อ notebook ที่คำนวณ</p>
 </body></html>"""
 

@@ -23,6 +23,7 @@ RESULT_FILES = {
     "conformance": "03_conformance.json",
     "performance": "04_performance.json",
     "recommendations": "05_recommendations.json",
+    "bpi2019": "06_bpi2019.json",
 }
 
 RULE_LABELS_TH = {

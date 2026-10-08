@@ -190,3 +190,74 @@ Alignment moves
 | P3 | สั่งจ่ายเงินซ้ำกับใบแจ้งหนี้เดิม | 188 payment (20.3% ของเคส) ถูกสั่งจ่าย 2–5 ครั้ง (เกินมา 239 ครั้ง) ทุกครั้งอ้างใบรับของชุดเดิม ห่างกันมัธยฐาน 2.76 วัน ถ้าทุกครั้งเป็นยอดเต็ม เพดานบนคือ 25.7% ของยอดใบแจ้งหนี้ |
 | P4 | จ่ายเงินให้ PO ก่อนรับของครบ | 234 PO ใน 163 เคส (17.6%) มีการรับของ 269 ครั้งหลังจ่ายเงินแล้ว (มัธยฐาน 2.07 วันหลังจ่าย) การจับคู่ที่บันทึกเป็น two-way ทั้งหมด (1941 ครั้ง, three-way 0 ครั้ง) |
 | P5 | เวลาส่วนใหญ่อยู่ในการส่งต่องานภายใน | มัธยฐานทั้งเคส 21.75 วัน ไม่มีขั้นใดเด่นเป็นคอขวดเดียว ขั้นที่องค์กรควบคุมเองได้ (อนุมัติ/ส่งต่อ/การเงิน) คิดเป็น 69.3% ของผลรวมค่ามัธยฐานรายขั้น |
+
+
+## ต่อยอด — ข้อมูลจริง BPI Challenge 2019 · `notebooks/06_bpi2019_real_data.ipynb` → `results/06_bpi2019.json`
+
+ข้อมูล: BPI Challenge 2019, DOI 10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1, CC BY 4.0 · `BPI_Challenge_2019.xes` MD5 `4eb909242351193a61e1c15b9c3cc814`
+
+| รายการ | ค่า |
+|---|---|
+| Cases (PO items) / events / activities | 251,734 / 1,595,923 / 42 |
+| Purchase documents / vendors / companies | 76,349 / 1,975 / 4 |
+| Events before 2018 / cases affected | 318 / 264 |
+| Variants (singletons) | 11,973 (9,030) |
+| Variants for 50% / 80% of cases | 7 / 45 |
+| Invoice before GR in invoice-before-GR category | 16,356 (7.4%) |
+| Cases with Remove Payment Block | 22.2% |
+| Open cases (no Clear Invoice) in invoiced categories | 22.6% |
+| Cases with a purchase requisition item | 18.5% |
+| Cases with any change/cancel (excl. payment block) | 17.5% |
+| Invoice → clear median days, with / without block removal | 51.2 / 37.3 |
+
+Item categories
+
+| Category | Cases | % |
+|---|---|---|
+| 3-way match, invoice before GR | 221,010 | 87.8 |
+| 3-way match, invoice after GR | 15,182 | 6.0 |
+| Consignment | 14,498 | 5.8 |
+| 2-way match | 1,044 | 0.4 |
+
+Rules
+
+| Rule | Cases | % of category | Category cases |
+|---|---|---|---|
+| R1 invoice recorded before goods receipt (invoice after GR required) | 0 | 0.0 | 15,182 |
+| R2 invoice cleared (paid) before any goods receipt (3-way match) | 655 | 0.28 | 236,192 |
+| R3 goods receipt recorded for 2-way match item | 0 | 0.0 | 1,044 |
+| R4 invoice recorded for consignment item | 0 | 0.0 | 14,498 |
+
+Stage durations (days, cases with timestamps before 2018 excluded)
+
+| Stage | n | median | mean | P90 |
+|---|---|---|---|---|
+| PO item created -> first goods receipt | 234,232 | 10.0 | 15.5 | 34.1 |
+| first goods receipt -> invoice recorded | 193,785 | 11.3 | 20.6 | 48.0 |
+| invoice recorded -> invoice cleared | 183,013 | 42.1 | 48.2 | 97.1 |
+| PO item created -> invoice cleared (end to end) | 183,419 | 77.0 | 80.0 | 126.2 |
+
+Rework
+
+| Activity | Cases | % of cases |
+|---|---|---|
+| Change Quantity | 17,590 | 6.99 |
+| Change Price | 11,224 | 4.46 |
+| Delete Purchase Order Item | 8,839 | 3.51 |
+| Cancel Invoice Receipt | 6,471 | 2.57 |
+| Cancel Goods Receipt | 2,470 | 0.98 |
+| Change Approval for Purchase Order | 4,377 | 1.74 |
+| Remove Payment Block | 55,839 | 22.18 |
+
+Comparison
+
+| Metric | Simulated (Zenodo P2P) | Real (BPI 2019) |
+|---|---|---|
+| Cases | 927 (1 case = 1 PR) | 251,734 (1 case = 1 PO item) |
+| Events | 14,671 | 1,595,923 |
+| Variants | 388 | 11,973 |
+| Variants for 80% of cases | 203 | 45 |
+| Paid before any goods receipt | 0% | 0.28% of 3-way items |
+| Cases still open (not paid) | 0% | 22.6% of invoiced categories |
+| Timestamps outside the data period | none | 264 cases |
+| Median end-to-end days | 21.75 | 77.0 |

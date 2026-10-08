@@ -45,6 +45,7 @@ code{font-size:8.8pt;background:var(--soft);padding:0 3px;border-radius:3px}
 .wide>figure{min-width:0;margin:0}
 .wide figure img{width:100%;height:auto;max-height:232mm;object-fit:contain}
 .solo{break-before:page}
+.mid figure img{max-height:150mm;width:auto !important;max-width:100%}
 .solo figure img{max-height:228mm;max-width:100%;width:auto !important;height:auto}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 </style></head><body>
@@ -74,6 +75,9 @@ code{font-size:8.8pt;background:var(--soft);padding:0 3px;border-radius:3px}
 </table>
 <p><b>สิ่งที่ควรทำก่อน:</b> P3 และ P1 เพราะเกี่ยวกับเงินที่ออกไปแล้วและการผูกพันงบโดยไม่มีการอนุมัติ ให้ทีมการเงินตรวจ 188 payment ที่ถูกสั่งจ่ายซ้ำก่อน
 เพื่อยืนยันว่าเป็นการจ่ายเกินจริงหรือไม่ (ข้อมูลไม่มียอดเงินรายครั้ง จึงยืนยันเองไม่ได้)</p>
+<p><b>ทดสอบกับข้อมูลจริง:</b> เมื่อใช้วิธีเดียวกันกับ event log จริง BPI Challenge 2019 (251,734 รายการสินค้าในใบสั่งซื้อ)
+การจ่ายเงินก่อนรับของเกิดขึ้นเพียง 0.28% แต่ช่วงจากใบแจ้งหนี้ถึงการจ่ายเงินใช้เวลามัธยฐาน
+42 วัน และต้องปลดบล็อกการจ่ายใน 22.2% ของเคส (หัวข้อ 7)</p>
 <p class="small">รายงานนี้ไม่ได้อ้างว่าข้อเสนอแนะจะลดต้นทุนหรือเพิ่มประสิทธิภาพได้เท่าไร เพราะยังไม่ได้นำไปใช้จริง</p>
 
 <h2 class="page">1. บริบทและคำถาม</h2>
@@ -118,7 +122,7 @@ code{font-size:8.8pt;background:var(--soft);padding:0 3px;border-radius:3px}
 <code>01_explore</code> → <code>02_discovery</code> (variants, DFG, Inductive Miner) → <code>03_conformance</code> (token-based replay, alignments, กฎธุรกิจ)
 → <code>04_performance</code> (เวลารอ, rework) → <code>05_recommendations</code>. ทุก notebook เขียนตัวเลขลง <code>results/*.json</code> และรายงานนี้สร้างจากไฟล์ JSON นั้นโดยตรง</p>
 
-<h2 class="page">3. กระบวนการที่เกิดขึ้นจริง</h2>
+<h2>3. กระบวนการที่เกิดขึ้นจริง</h2>
 <p>ถ้านับลำดับ activity ทุกตัว มี <b>388 variants</b> จาก 927 เคส โดย 330 variants เกิดแค่เคสเดียว
 variant ที่พบบ่อยที่สุดครอบคลุม 19.5% ของเคส ต้องใช้ 15 variants จึงครอบคลุม 50% และ 203 variants จึงครอบคลุม 80%</p>
 <figure><img src="../figures/02_variant_coverage.png" style="width:62%"><figcaption>รูป 1 · สัดส่วนเคสที่ครอบคลุมเมื่อเพิ่มจำนวน variants (เรียงจากพบบ่อยไปน้อย)</figcaption></figure>
@@ -236,9 +240,32 @@ variant ที่พบบ่อยที่สุดครอบคลุม 19
 <tr><td>มัธยฐานเวลาทั้งเคส (วัน)</td><td class=num>21.8</td></tr>
 </table>
 
-<h2>7. ข้อจำกัดของการวิเคราะห์</h2>
+<h2 class="page">7. ต่อยอดด้วยข้อมูลจริง: BPI Challenge 2019</h2>
+<p>เพื่อทดสอบว่าวิธีวิเคราะห์ใช้ได้กับข้อมูลจริง จึงนำคำถามชุดเดียวกันไปใช้กับ event log ของบริษัทข้ามชาติด้านสีและสารเคลือบ
+(BPI Challenge 2019, DOI 10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1, CC BY 4.0) ซึ่งดาวน์โหลดจาก figshare (ระบบเดิมของ 4TU.ResearchData)
+และตรวจ MD5 ตรงกับที่เผยแพร่ ข้อมูลชุดนี้ 1 เคสคือรายการสินค้า 1 บรรทัดในใบสั่งซื้อ แบ่งเป็น 4 ประเภทการจับคู่เอกสาร</p>
+<table><tr><th>ตัวชี้วัด</th><th class=num>ข้อมูลจำลอง</th><th class=num>ข้อมูลจริง (BPI 2019)</th></tr><tr><td>Cases</td><td class=num>927 (1 case = 1 PR)</td><td class=num>251,734 (1 case = 1 PO item)</td></tr><tr><td>Events</td><td class=num>14,671</td><td class=num>1,595,923</td></tr><tr><td>Variants</td><td class=num>388</td><td class=num>11,973</td></tr><tr><td>Variants for 80% of cases</td><td class=num>203</td><td class=num>45</td></tr><tr><td>Paid before any goods receipt</td><td class=num>0%</td><td class=num>0.28% of 3-way items</td></tr><tr><td>Cases still open (not paid)</td><td class=num>0%</td><td class=num>22.6% of invoiced categories</td></tr><tr><td>Timestamps outside the data period</td><td class=num>none</td><td class=num>264 cases</td></tr><tr><td>Median end-to-end days</td><td class=num>21.75</td><td class=num>77.0</td></tr></table>
+<h3>7.1 กติกาการจับคู่เอกสาร</h3>
+<table><tr><th>กติกาที่ตรวจ</th><th class=num>เคส</th><th class=num>% ของประเภท</th><th class=num>เคสในประเภท</th></tr><tr><td>invoice recorded before goods receipt (invoice after GR required)</td><td class=num>0</td><td class=num>0.0%</td><td class=num>15,182</td></tr><tr><td>invoice cleared (paid) before any goods receipt (3-way match)</td><td class=num>655</td><td class=num>0.28%</td><td class=num>236,192</td></tr><tr><td>goods receipt recorded for 2-way match item</td><td class=num>0</td><td class=num>0.0%</td><td class=num>1,044</td></tr><tr><td>invoice recorded for consignment item</td><td class=num>0</td><td class=num>0.0%</td><td class=num>14,498</td></tr></table>
+<p>การจ่ายเงินก่อนรับของเกิดขึ้นน้อยมาก และประเภท 2-way match กับ consignment เป็นไปตามกติกาทั้งหมด
+แต่ในประเภทที่ใบแจ้งหนี้มาก่อนรับของได้ มี 16,356 เคส (7.4%) ที่ใบแจ้งหนี้มาก่อนจริง
+และ 22.2% ของทุกเคสต้องปลดบล็อกการจ่ายเงิน ใบขอซื้อในระบบมีเพียง 18.5% ของเคส
+แต่ข้อมูลชุดนี้ไม่ได้กำหนดว่าทุกการซื้อต้องมีใบขอซื้อ จึงไม่นับเป็นการผิดกติกา</p>
+<h3>7.2 ระยะเวลา</h3>
+<table><tr><th>ขั้น</th><th class=num>n</th><th class=num>มัธยฐาน (วัน)</th><th class=num>P90</th></tr><tr><td>PO item created -> first goods receipt</td><td class=num>234,232</td><td class=num>10.0</td><td class=num>34.1</td></tr><tr><td>first goods receipt -> invoice recorded</td><td class=num>193,785</td><td class=num>11.3</td><td class=num>48.0</td></tr><tr><td>invoice recorded -> invoice cleared</td><td class=num>183,013</td><td class=num>42.1</td><td class=num>97.1</td></tr><tr><td>PO item created -> invoice cleared (end to end)</td><td class=num>183,419</td><td class=num>77.0</td><td class=num>126.2</td></tr></table>
+<p>ช่วงที่ใช้เวลานานที่สุดคือ<b>จากบันทึกใบแจ้งหนี้ถึงการจ่ายเงิน</b> และนานขึ้นเมื่อต้องปลดบล็อกการจ่าย
+(มัธยฐาน 51 เทียบกับ 37 วัน)
+เคสที่มีการแก้ไขหรือยกเลิกเอกสารอย่างน้อยหนึ่งครั้งคิดเป็น 17.5% (ไม่รวมการปลดบล็อก)</p>
+<h3>7.3 สิ่งที่ข้อมูลจริงเพิ่มเติมจากข้อมูลจำลอง</h3>
+<ul><li>จำนวน variants สูงกว่ามาก (11,973 แบบ) แต่ 45 variants ครอบคลุม 80% ของเคส จึงต้องแยกตามประเภทก่อนวิเคราะห์</li>
+<li>มีเคสที่ยังไม่จ่ายเงิน (22.6%) และ timestamp ผิดปกติย้อนไปถึงปี 1948 (264 เคส) ต้องจัดการก่อนวัดเวลา</li>
+<li>ประเด็นสำคัญในข้อมูลจริงอยู่ที่ช่วงจ่ายเงินหลังรับใบแจ้งหนี้ ซึ่งสอดคล้องกับข้อเสนอ P5 (เพิ่มรอบจ่ายเงิน) และ P4 (จับคู่เอกสารให้ครบก่อนปล่อยการจ่าย)</li>
+<li>ยังไม่ได้ตรวจการจับคู่มูลค่า ซึ่งเป็นโจทย์หลักของ BPI Challenge 2019 เพราะ log มีเพียงมูลค่าสะสมของรายการ</li></ul>
+<div class="mid"><figure><img src="../figures/06_dfg_main.png" style="width:100%"><figcaption>รูป 8 · Directly-follows graph ของ BPI 2019 ประเภท 3-way match, invoice before GR แสดงเฉพาะเส้นที่เกิดในอย่างน้อย 2% ของเคส</figcaption></figure></div>
+
+<h2>8. ข้อจำกัดของการวิเคราะห์</h2>
 <ul>
-<li><b>ข้อมูลจำลอง:</b> ทุกเคสจบที่การจ่ายเงิน ไม่มีเคสค้าง กลุ่มต่างๆ แทบไม่ต่างกัน และเส้นทางหลักมีแค่ 3 แบบ ข้อมูลจริงมักซับซ้อนกว่านี้มาก ผลจึงใช้แสดงวิธีการ ไม่ใช่ข้อสรุปเกี่ยวกับบริษัทจริง</li>
+<li><b>ข้อมูลจำลอง:</b> ทุกเคสจบที่การจ่ายเงิน ไม่มีเคสค้าง กลุ่มต่างๆ แทบไม่ต่างกัน และเส้นทางหลักมีแค่ 3 แบบ ข้อมูลจริงมักซับซ้อนกว่านี้มาก ผลจึงใช้แสดงวิธีการ ไม่ใช่ข้อสรุปเกี่ยวกับบริษัทจริง (หัวข้อ 7 ทดสอบซ้ำกับข้อมูลจริง)</li>
 <li><b>Log บอกว่าอะไรเกิด แต่ไม่บอกว่าทำไม:</b> สาเหตุทุกข้อในรายงานเป็นข้อสันนิษฐาน ต้องสัมภาษณ์เจ้าของกระบวนการเพื่อยืนยัน</li>
 <li><b>ยอดเงินรายครั้ง:</b> ไม่มียอดเงินของการจ่ายแต่ละครั้ง จึงประเมินการจ่ายเกินได้แค่เพดานบน</li>
 <li><b>Timestamp:</b> ละเอียดแค่ระดับนาที และอาจเป็นเวลาที่บันทึกในระบบ ไม่ใช่เวลาที่ทำงานจริง</li>
@@ -249,8 +276,8 @@ variant ที่พบบ่อยที่สุดครอบคลุม 19
 
 <h2>ภาคผนวก: ที่มาของข้อมูลและการทำซ้ำ</h2>
 <p class="small">ข้อมูล: <i>Procure-To-Payment (P2P) Object-centric Event Log in OCEL 2.0 Standard</i>, Zenodo record 8412920, CC BY 4.0, ไฟล์ <code>ocel2-p2p.sqlite</code> MD5 <code>1a4238260019939239488b0b4befb515</code>.
-ชุดที่วางแผนไว้แต่แรกคือ BPI Challenge 2019 (4TU.ResearchData) แต่ไฟล์ปิดให้ดาวน์โหลดชั่วคราวช่วงที่ทำงาน
+ข้อมูลจริงในหัวข้อ 7: BPI Challenge 2019, ไฟล์ <code>BPI_Challenge_2019.xes</code> MD5 <code>4eb909242351193a61e1c15b9c3cc814</code> จาก figshare (4TU.ResearchData) CC BY 4.0
 เครื่องมือ: PM4Py 2.7.23.8 (AGPL v3), pandas, matplotlib, Graphviz.
-ทำซ้ำได้โดยรัน notebook 01–05 ตามลำดับ แล้วรัน <code>python report/build_report.py</code>.
+ทำซ้ำได้โดยรัน notebook 01–06 ตามลำดับ แล้วรัน <code>python report/build_report.py</code>.
 ตัวเลขทุกตัวในรายงานนี้อยู่ใน <code>results.md</code> พร้อมชื่อ notebook ที่คำนวณ</p>
 </body></html>

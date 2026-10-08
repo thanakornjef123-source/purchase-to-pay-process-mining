@@ -1,6 +1,7 @@
 """Deployment settings and repository hygiene."""
 import re
 import subprocess
+
 import tomllib
 
 TEXT_SUFFIXES = {".py", ".ipynb", ".md", ".toml", ".txt", ".bat", ".json", ".cfg", ".ini", ".yml", ".yaml", ".html"}
