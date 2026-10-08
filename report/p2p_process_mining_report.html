@@ -1,0 +1,256 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<title>Process Mining: Purchase-to-Pay</title><style>
+@font-face{font-family:Sarabun;font-weight:400;src:url(../static/fonts/sarabun-thai-400-normal.woff2);unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:Sarabun;font-weight:400;src:url(../static/fonts/sarabun-latin-400-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2212}
+@font-face{font-family:Sarabun;font-weight:600;src:url(../static/fonts/sarabun-thai-600-normal.woff2);unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:Sarabun;font-weight:600;src:url(../static/fonts/sarabun-latin-600-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2212}
+@font-face{font-family:Sarabun;font-weight:700;src:url(../static/fonts/sarabun-thai-700-normal.woff2);unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:Sarabun;font-weight:700;src:url(../static/fonts/sarabun-latin-700-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2212}
+@font-face{font-family:Plex;font-weight:400;src:url(../static/fonts/ibm-plex-sans-thai-thai-400-normal.woff2);unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:Plex;font-weight:400;src:url(../static/fonts/ibm-plex-sans-thai-latin-400-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2212}
+@font-face{font-family:Plex;font-weight:600;src:url(../static/fonts/ibm-plex-sans-thai-thai-600-normal.woff2);unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:Plex;font-weight:600;src:url(../static/fonts/ibm-plex-sans-thai-latin-600-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+2190-21FF,U+2212}
+@page{size:A4;margin:18mm 17mm 18mm 17mm}
+:root{--ink:#1d2733;--muted:#5b6672;--accent:#1f5f8b;--red:#b23a3a;--line:#d7dde3;--soft:#f3f6f9}
+body{font-family:Sarabun,sans-serif;color:var(--ink);font-size:10.6pt;line-height:1.55;margin:0}
+h1,h2,h3{font-family:Plex,sans-serif;font-weight:600;color:var(--ink);line-height:1.25}
+h1{font-size:21pt;margin:0 0 4px}
+h2{font-size:14.5pt;margin:22px 0 8px;padding-bottom:4px;border-bottom:2px solid var(--accent);break-after:avoid}
+h3{font-size:11.5pt;margin:14px 0 6px;color:var(--accent);break-after:avoid}
+p{margin:6px 0}
+.small{font-size:9pt;color:var(--muted)}
+.page{break-before:page}
+.cover-meta{color:var(--muted);font-size:9.5pt;margin-bottom:14px}
+.banner{background:#fff4e5;border-left:4px solid #d98a1b;padding:7px 10px;font-size:9.4pt;margin:8px 0 12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 12px}
+.kpi{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.kpi b{display:block;font-family:Plex;font-size:17pt;color:var(--accent);line-height:1.1}
+.kpi span{font-size:8.6pt;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:8px 0 10px;font-size:9.3pt;break-inside:auto}
+th{font-family:Plex;font-weight:600;text-align:left;background:var(--soft);border-bottom:1.5px solid var(--accent);padding:5px 6px}
+td{border-bottom:1px solid var(--line);padding:4.5px 6px;vertical-align:top}
+tr{break-inside:avoid}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+figure{margin:10px 0 12px;break-inside:avoid;text-align:center}
+figure img{border:1px solid var(--line);border-radius:4px;box-sizing:border-box;object-fit:contain}
+figcaption{font-size:8.8pt;color:var(--muted);margin-top:4px;text-align:left}
+.callout{border:1px solid var(--line);border-radius:6px;padding:8px 12px;margin:8px 0;background:#fafbfc;break-inside:avoid}
+.callout b.t{font-family:Plex;color:var(--accent)}
+ul,ol{margin:4px 0 6px 0;padding-left:20px}
+li{margin:2px 0}
+code{font-size:8.8pt;background:var(--soft);padding:0 3px;border-radius:3px}
+.hyp{color:var(--muted);font-style:normal}
+.tag{display:inline-block;font-size:8pt;font-family:Plex;padding:0 6px;border-radius:9px;background:#fdecea;color:var(--red);margin-left:4px}
+.wide{break-before:page;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:start}
+.wide>figure{min-width:0;margin:0}
+.wide figure img{width:100%;height:auto;max-height:232mm;object-fit:contain}
+.solo{break-before:page}
+.solo figure img{max-height:228mm;max-width:100%;width:auto !important;height:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+</style></head><body>
+
+<h1>Process Mining ของกระบวนการจัดซื้อถึงจ่ายเงิน (Purchase-to-Pay)</h1>
+<div class="cover-meta">รายงานแบบที่ปรึกษา · Thanakorn · ตุลาคม 2026 · โปรเจกต์ส่วนตัวสำหรับ portfolio</div>
+<div class="banner"><b>หมายเหตุเรื่องข้อมูล:</b> วิเคราะห์จากชุดข้อมูลสาธารณะ <i>Procure-To-Payment (P2P) Object-centric Event Log in OCEL 2.0</i> (Zenodo 8412920, CC BY 4.0)
+ซึ่งเป็น<b>ข้อมูลจำลอง</b>ตามโครงสร้างธุรกรรม SAP ไม่ใช่ข้อมูลของบริษัทจริง และไม่ใช่งานของบริษัทใดหรือการฝึกงาน
+ตัวเลขทุกตัวคำนวณจากโค้ดใน repo (ดู <code>results.md</code>) ส่วนสาเหตุทุกข้อเป็นข้อสันนิษฐานที่ต้องยืนยันกับเจ้าของกระบวนการ</div>
+
+<h2 style="margin-top:6px">สรุปผู้บริหาร</h2>
+<p>ตรวจเส้นทางของใบขอซื้อ 927 ใบ (14,671 events, 2022-04 ถึง 2024-10) ตั้งแต่ขอซื้อจนจ่ายเงิน
+พบว่ามีเพียง <b>41.7%</b> ที่เดินตามกระบวนการที่ควรเป็นครบทุกข้อ อีก <b>58.3%</b> เบี่ยงอย่างน้อย 1 จุด
+จุดที่เบี่ยงส่วนใหญ่เป็นเรื่อง<b>การควบคุม (control)</b> ไม่ใช่เรื่องความเร็ว</p>
+<div class="kpis">
+<div class="kpi"><b>58.3%</b><span>เคสที่เบี่ยงจากกระบวนการอ้างอิง</span></div>
+<div class="kpi"><b>21.4%</b><span>เริ่มจัดซื้อโดยไม่มีใบขอซื้อในระบบ</span></div>
+<div class="kpi"><b>20.3%</b><span>มีการสั่งจ่ายเงินซ้ำกับ payment เดิม</span></div>
+<div class="kpi"><b>21.8 วัน</b><span>ค่ามัธยฐานตั้งแต่เริ่มถึงจ่ายเงิน</span></div>
+</div>
+<table><tr><th style="width:5%">#</th><th style="width:38%">ปัญหา</th><th class=num style="width:12%">เคส</th><th>ข้อเสนอแนะหลัก</th></tr>
+<tr><td>P1</td><td>ขอใบเสนอราคาโดยไม่มีใบขอซื้อในระบบ</td><td class=num>21.4%</td><td>บังคับให้ RFQ ต้องอ้างใบขอซื้อที่อนุมัติแล้ว</td></tr>
+<tr><td>P2</td><td>ส่งต่อการอนุมัติ แต่ไม่มีบันทึกการอนุมัติ</td><td class=num>13.2%</td><td>ผู้รับมอบต้องอนุมัติในระบบก่อนปลดล็อกใบขอซื้อ</td></tr>
+<tr><td>P3</td><td>สั่งจ่ายเงินซ้ำกับ invoice เดิม</td><td class=num>20.3%</td><td>ตรวจการจ่ายซ้ำก่อนรันจ่ายเงิน และทบทวนรายการที่พบ</td></tr>
+<tr><td>P4</td><td>จ่ายเงินให้ PO ก่อนรับของครบ</td><td class=num>17.6%</td><td>เปลี่ยนเป็น three-way match และจ่ายตามจำนวนที่รับจริง</td></tr>
+<tr><td>P5</td><td>เวลาส่วนใหญ่อยู่ในการส่งต่องานภายใน</td><td class=num>ทุกเคส</td><td>อนุมัติอัตโนมัติเมื่อมูลค่าต่ำ, สร้าง RFQ อัตโนมัติ, รันจ่ายเงินถี่ขึ้น</td></tr>
+</table>
+<p><b>สิ่งที่ควรทำก่อน:</b> P3 และ P1 เพราะเกี่ยวกับเงินที่ออกไปแล้วและการผูกพันงบโดยไม่มีการอนุมัติ ให้ทีมการเงินตรวจ 188 payment ที่ถูกสั่งจ่ายซ้ำก่อน
+เพื่อยืนยันว่าเป็นการจ่ายเกินจริงหรือไม่ (ข้อมูลไม่มียอดเงินรายครั้ง จึงยืนยันเองไม่ได้)</p>
+<p class="small">รายงานนี้ไม่ได้อ้างว่าข้อเสนอแนะจะลดต้นทุนหรือเพิ่มประสิทธิภาพได้เท่าไร เพราะยังไม่ได้นำไปใช้จริง</p>
+
+<h2 class="page">1. บริบทและคำถาม</h2>
+<p>กระบวนการ Purchase-to-Pay (P2P) คือการจัดซื้อตั้งแต่มีคนขอซื้อจนถึงจ่ายเงินให้ผู้ขาย เป็นกระบวนการที่มีการควบคุมมาก เพราะเกี่ยวกับเงินที่ออกจากบริษัท
+ลำดับมาตรฐานคือ ใบขอซื้อ (PR) → อนุมัติ → ขอใบเสนอราคา (RFQ) → ใบสั่งซื้อ (PO) → อนุมัติ PO → รับของ (GR) → รับใบแจ้งหนี้ (invoice) → จับคู่เอกสาร → จ่ายเงิน</p>
+<p>process mining ใช้ event log ที่ระบบ ERP บันทึกไว้อยู่แล้ว มาสร้างภาพกระบวนการที่<b>เกิดขึ้นจริง</b> แทนการถามคนว่ากระบวนการเป็นอย่างไร แล้วเทียบกับกระบวนการที่<b>ควรเป็น</b></p>
+<div class="callout"><b class="t">คำถามที่รายงานนี้ตอบ</b>
+<ol><li>กระบวนการจริงมีกี่แบบ (variants) และกี่แบบครอบคลุมงานส่วนใหญ่</li>
+<li>กี่เปอร์เซ็นต์ของเคสเดินตามลำดับที่ควรเป็น และที่เบี่ยงไปเบี่ยงแบบไหน</li>
+<li>ขั้นไหนรอนานที่สุด และเกิดกับกลุ่มใดเป็นพิเศษ</li>
+<li>มีการทำซ้ำ (rework) ที่ไหน บ่อยแค่ไหน</li>
+<li>มีเคสที่ข้ามขั้นสำคัญหรือลำดับผิดหรือไม่ เช่น จ่ายเงินก่อนรับของ</li>
+<li>ปัญหาสำคัญคืออะไร และควรแก้ในทางธุรกิจอย่างไร</li></ol></div>
+
+<h2>2. ข้อมูลและวิธีการ</h2>
+<h3>2.1 ชุดข้อมูล</h3>
+<table><tr><th>รายการ</th><th class=num>ค่า</th><th>รายการ</th><th class=num>ค่า</th></tr>
+<tr><td>Events</td><td class=num>14,671</td><td>Activities</td><td class=num>10</td></tr>
+<tr><td>Objects (เอกสาร)</td><td class=num>9,543</td><td>ประเภทเอกสาร</td><td class=num>7</td></tr>
+<tr><td>ลิงก์ event→เอกสาร</td><td class=num>35,927</td><td>ช่วงเวลา (วัน)</td><td class=num>944</td></tr>
+</table>
+<p>ข้อมูลอยู่ในรูปแบบ <b>object-centric (OCEL 2.0)</b> คือ event หนึ่งตัวผูกกับเอกสารได้หลายใบพร้อมกัน เช่น การจ่ายเงินหนึ่งครั้งผูกกับ payment, invoice, ใบรับของ และ PO
+ต่างจาก event log แบบดั้งเดิมที่ event หนึ่งตัวอยู่ในเคสเดียว</p>
+
+<h3>2.2 การตรวจคุณภาพข้อมูล</h3>
+<ul>
+<li>ไม่มีค่าว่างใน event และ timestamp ละเอียดระดับนาที (1,223 events หรือ 8.34% มีเวลาตรงกับ event อื่น) จึงใช้รหัส event เป็นตัวเรียงลำดับรอง</li>
+<li>ลิงก์ระหว่างเอกสาร 2,028 ลิงก์ชี้ไปหา invoice ที่ไม่มีอยู่จริง จึงใช้ความสัมพันธ์จาก event เป็นหลัก</li>
+<li>รหัสใบขอซื้อมีเครื่องหมาย <code>:</code> เกินมา (เช่น <code>purchase_requisition:622:pr_trigger_622</code>) ต้องอ่านประเภทเอกสารจากตาราง object ไม่ใช่แยกจากรหัส</li>
+<li>material 489 รายการไม่มี event เลย PM4Py ตัดทิ้งตอนโหลด ไม่กระทบการวิเคราะห์</li>
+</ul>
+
+<h3>2.3 การกำหนดเคส (case notion)</h3>
+<p>ต้องเลือกว่า "1 เคส" คืออะไร เลือก <b>1 เคส = ใบขอซื้อ 1 ใบ และเอกสารทั้งหมดที่ตามมา</b> เพราะสายเอกสารเป็นโครงสร้างต้นไม้ที่มีใบขอซื้อเป็นราก
+เอกสารทุกใบสืบกลับไปหาใบขอซื้อได้ใบเดียว ผลคือ event ทั้ง 14,671 ตัวอยู่ในเคสเดียวพอดี
+(อยู่หลายเคส 0 ตัว, ไม่อยู่ในเคสใด 0 ตัว) ได้ 927 เคส
+เฉลี่ยเคสละ 15.83 events</p>
+<p class="small">ข้อเสียของการเลือกแบบนี้: เคสที่มีหลาย PO จะมี activity ซ้ำใน trace ซึ่งไม่ใช่การทำซ้ำจริง จึงตรวจลำดับและ rework ระดับเอกสารแยกอีกชั้น (ดูหัวข้อ 4–5)</p>
+
+<h3>2.4 เครื่องมือและขั้นตอน</h3>
+<p>Python 3.13, pandas และ PM4Py 2.7.23.8 แบ่งงานเป็น 5 notebook:
+<code>01_explore</code> → <code>02_discovery</code> (variants, DFG, Inductive Miner) → <code>03_conformance</code> (token-based replay, alignments, กฎธุรกิจ)
+→ <code>04_performance</code> (เวลารอ, rework) → <code>05_recommendations</code>. ทุก notebook เขียนตัวเลขลง <code>results/*.json</code> และรายงานนี้สร้างจากไฟล์ JSON นั้นโดยตรง</p>
+
+<h2 class="page">3. กระบวนการที่เกิดขึ้นจริง</h2>
+<p>ถ้านับลำดับ activity ทุกตัว มี <b>388 variants</b> จาก 927 เคส โดย 330 variants เกิดแค่เคสเดียว
+variant ที่พบบ่อยที่สุดครอบคลุม 19.5% ของเคส ต้องใช้ 15 variants จึงครอบคลุม 50% และ 203 variants จึงครอบคลุม 80%</p>
+<figure><img src="../figures/02_variant_coverage.png" style="width:62%"><figcaption>รูป 1 · สัดส่วนเคสที่ครอบคลุมเมื่อเพิ่มจำนวน variants (เรียงจากพบบ่อยไปน้อย)</figcaption></figure>
+<p>แต่ variants จำนวนมากไม่ได้แปลว่ากระบวนการยุ่ง เมื่อดูเฉพาะลำดับที่ activity แต่ละตัวปรากฏครั้งแรก (skeleton) จะเหลือเส้นทางหลักแค่ <b>3 แบบ</b>:</p>
+<table><tr><th>เส้นทางหลัก</th><th class=num>เคส</th></tr>
+<tr><td>Create PR > Approve PR > Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment</td><td class=num>607</td></tr><tr><td>Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment</td><td class=num>198</td></tr><tr><td>Create PR > Delegate PR Approval > Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment</td><td class=num>122</td></tr></table>
+<p>ความหลากหลายที่เหลือมาจาก<b>จำนวนเอกสารต่อเคส</b> เคสที่มี PO 1 ใบและใบรับของ 1 ใบ (345 เคส) มีแค่ 11 variants
+ส่วนเคสที่มีหลาย PO แทบทุกเคสเป็น variant ของตัวเอง เพราะลำดับระหว่าง PO แต่ละใบสลับกันได้</p>
+<p>จาก DFG (รูป 2 ท้ายหัวข้อนี้) เห็นสัญญาณของปัญหา 3 จุดก่อนตรวจละเอียด:</p>
+<ul>
+<li>มีจุดเริ่ม 2 จุด: 198 เคสเริ่มที่การขอใบเสนอราคาโดยไม่มีใบขอซื้อ</li>
+<li><code>Execute Payment → Execute Payment</code> คือการสั่งจ่ายต่อกัน</li>
+<li><code>Execute Payment → Create Goods Receipt</code> และมี 141 เคสที่จบด้วยการรับของ ไม่ใช่การจ่ายเงิน</li>
+</ul>
+<p>Inductive Miner (ทั้งแบบกรอง 15 variants ยอดนิยมและแบบใช้ทั้ง log ที่ noise threshold 0.2) ให้ process tree ตัวเดียวกัน
+โมเดลอธิบาย log ได้ดี (log fitness 0.996) แต่ precision ต่ำ (0.612) เพราะมี loop และ parallel เยอะ จึงใช้แค่อธิบายภาพรวม ไม่ได้ใช้เป็นมาตรฐานในการตรวจ</p>
+
+<div class="solo"><figure><img src="../figures/02_dfg_frequency_tb.png" style="width:100%"><figcaption>รูป 2 · Directly-follows graph ของทั้ง log (ตัวเลข = จำนวนครั้งที่ activity หนึ่งตามด้วยอีก activity)</figcaption></figure></div><div class="solo"><figure><img src="../figures/02_asis_bpmn_tb.png" style="width:100%"><figcaption>รูป 3 · BPMN ที่ได้จาก Inductive Miner (as-is) วิธีอ่าน: อ่านจากบนลงล่าง ◇× = เลือกทางใดทางหนึ่ง, ◇+ = สองฝั่งทำคู่ขนานกันได้, เส้นประ = วนกลับไปทำซ้ำ (เช่น สร้าง PO หลายใบ) ฝั่งซ้ายคือการรับของ ฝั่งขวาคือใบแจ้งหนี้ → จับคู่ → จ่ายเงิน (ตัด gateway ที่มีทางเข้า 1 ทางออก 1 ออกเพื่อให้อ่านง่าย ความหมายของโมเดลไม่เปลี่ยน)</figcaption></figure></div>
+<h2 class="page">4. เทียบกับกระบวนการที่ควรเป็น</h2>
+<p>ตรวจ 2 ชั้น เพราะเคสหนึ่งมีหลายเอกสาร</p>
+<ol>
+<li><b>ระดับเคส:</b> โมเดลอ้างอิงตามหลัก P2P คือ สร้างใบขอซื้อ → อนุมัติ → RFQ → (สร้าง/อนุมัติ PO หลายใบได้) → (รับของ/ใบแจ้งหนี้/จับคู่ หลายรอบได้) → <b>จ่ายเงินครั้งเดียวเป็นขั้นสุดท้าย</b>
+ตรวจด้วย token-based replay และ alignments กับทุกเคส (927 เคส ใช้เวลา 3.1 วินาที จึงไม่ต้องสุ่มตัวอย่าง)</li>
+<li><b>ระดับเอกสาร:</b> กฎธุรกิจที่ตรวจทีละเอกสาร เช่น PO ต้องอนุมัติก่อนรับของ และจ่ายเงินครั้งเดียวต่อใบแจ้งหนี้</li>
+</ol>
+<div class="two">
+<table><tr><th>ผลระดับเคส</th><th class=num>ค่า</th></tr>
+<tr><td>เคสที่ตรงโมเดลอ้างอิง (alignment fitness = 1)</td><td class=num>41.7%</td></tr>
+<tr><td>Token-replay: เคสที่ fit</td><td class=num>41.7%</td></tr>
+<tr><td>Log fitness (token replay)</td><td class=num>0.973</td></tr>
+<tr><td>ค่าเฉลี่ย alignment fitness</td><td class=num>0.944</td></tr></table>
+<table><tr><th>ความเบี่ยงที่ alignment พบ</th><th class=num>เคส</th></tr>
+<tr><td>ข้าม: Approve Purchase Requisition</td><td class=num>320</td></tr><tr><td>เกิน/ผิดที่: Execute Payment</td><td class=num>213</td></tr><tr><td>ข้าม: Create Purchase Requisition</td><td class=num>198</td></tr><tr><td>เกิน/ผิดที่: Delegate Purchase Requisition Approval</td><td class=num>122</td></tr><tr><td>เกิน/ผิดที่: Create Goods Receipt</td><td class=num>116</td></tr><tr><td>ข้าม: Execute Payment</td><td class=num>25</td></tr></table>
+</div>
+<p>ผลการตรวจทั้ง 2 ชั้นตรงกันทุกเคส: เคสที่ alignment สมบูรณ์คือเคสที่ไม่ผิดกฎข้อใดเลย (387 เคส)
+และเคสที่ผิดกฎคือเคสที่ alignment ไม่สมบูรณ์ (540 เคส)</p>
+
+<h3>4.1 กฎที่ถูกละเมิด</h3>
+<table><tr><th>รหัส</th><th>กฎ</th><th class=num>เอกสาร</th><th class=num>เคส</th><th class=num>% เคส</th></tr><tr><td>A1</td><td>RFQ without a purchase requisition created in the system</td><td class=num>198</td><td class=num>198</td><td class=num>21.4%</td></tr><tr><td>A2</td><td>PR delegated, approval never recorded</td><td class=num>122</td><td class=num>122</td><td class=num>13.2%</td></tr><tr><td>A3</td><td>RFQ created before PR approval</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>B1</td><td>PO approved before it was created</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>B2</td><td>goods received before PO approval</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>B3</td><td>PO never approved</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>C1</td><td>invoice before any goods received</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>C2</td><td>match before invoice</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>C3</td><td>payment before invoice matched</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>C4</td><td>payment before any goods received</td><td class=num>0</td><td class=num>0</td><td class=num>0.0%</td></tr><tr><td>C5</td><td>PO paid before its last goods receipt posting</td><td class=num>234</td><td class=num>163</td><td class=num>17.6%</td></tr><tr><td>D1</td><td>payment executed more than once</td><td class=num>188</td><td class=num>188</td><td class=num>20.3%</td></tr></table>
+<figure><img src="../figures/03_rule_violations.png" style="width:78%"><figcaption>รูป 4 · สัดส่วนเคสที่ละเมิดกฎแต่ละข้อ (เคสหนึ่งละเมิดได้หลายข้อ)</figcaption></figure>
+<p>กฎที่<b>ไม่มีการละเมิดเลย</b>ก็เป็นข้อค้นพบเช่นกัน: ไม่มี PO ที่อนุมัติก่อนสร้าง ไม่มีการรับของก่อนอนุมัติ PO ไม่มีใบแจ้งหนี้ก่อนรับของ และ<b>ไม่มีการจ่ายเงินก่อนรับของครั้งแรก</b>
+คำตอบของคำถาม "จ่ายเงินก่อนรับของหรือไม่" จึงเป็น "ไม่ แต่มีการจ่ายก่อนรับของ<b>ครบ</b>" (C5)</p>
+
+<h3>4.2 รายละเอียดแต่ละประเด็น</h3>
+<p><b>A1 · เริ่มจัดซื้อโดยไม่มีใบขอซื้อ (198 เคส).</b> เคสเริ่มที่ <code>Create Request for Quotation</code> ไม่มีการสร้างหรืออนุมัติใบขอซื้อ
+แต่ข้อมูลสถานะของใบขอซื้อทั้ง 198 ใบยังเป็น <code>Released</code>
+<span class="hyp">ข้อสันนิษฐาน: ใบขอซื้อถูกปลดล็อกโดยไม่ผ่าน workflow อนุมัติ หรือเป็นการซื้อนอกขั้นตอน (maverick buying)</span></p>
+<p><b>A2 · ส่งต่อการอนุมัติแต่ไม่มีบันทึกการอนุมัติ (122 เคส).</b> ใบขอซื้อถูก delegate โดยเฉลี่ยไม่ถึงวันหลังสร้าง
+(มัธยฐาน 0.06 วัน) แล้วไปขั้น RFQ ต่อเลย โดยไม่มี event อนุมัติจากผู้รับมอบ
+<span class="hyp">ข้อสันนิษฐาน: ระบบไม่บันทึกการอนุมัติของผู้รับมอบ หรือการ delegate ถูกใช้เป็นทางลัดข้ามการอนุมัติ</span></p>
+<p><b>D1 · สั่งจ่ายเงินซ้ำ (188 payment).</b> payment เดิมถูกสั่งจ่าย 2–5 ครั้ง รวม 239 ครั้งที่เกินมา ห่างกันมัธยฐาน 2.76 วัน
+ทุกครั้งอ้างใบรับของชุดเดิม (188 จาก 188) และยอดของ payment เท่ากับยอดใบแจ้งหนี้ทุกใบ (100.0%)
+ถ้าทุกครั้งจ่ายยอดเต็ม เงินที่จ่ายเกินจะเป็น <b>เพดานบน</b> 25.7% ของยอดใบแจ้งหนี้ทั้งหมด
+แต่ข้อมูลไม่มียอดเงินของการจ่ายแต่ละครั้ง (0 แถวที่มียอด) จึงยืนยันไม่ได้ว่าเป็นการจ่ายเกินหรือจ่ายเป็นงวด</p>
+<p><b>C5 · จ่ายเงินให้ PO ก่อนรับของครบ (234 PO).</b> มีการรับของ 269 ครั้งหลังจาก PO นั้นถูกจ่ายเงินไปแล้ว (มัธยฐาน 2.07 วันหลังจ่าย)
+ระบบบันทึกการจับคู่เป็น <code>Perform Two-Way Match</code> ทั้งหมด (1,941 ครั้ง) ไม่มี three-way match ทั้งที่ใบแจ้งหนี้ทุกใบมีใบรับของ
+<span class="hyp">ข้อสันนิษฐาน: การจับคู่เทียบแค่ PO กับใบแจ้งหนี้ ไม่ได้เทียบจำนวนที่รับจริง จึงจ่ายได้ก่อนรับของครบ</span></p>
+
+<h2 class="page">5. คอขวดและการทำซ้ำ</h2>
+<p>ระยะเวลาทั้งเคส: มัธยฐาน <b>21.8 วัน</b>, เฉลี่ย 22.5 วัน, เปอร์เซ็นไทล์ที่ 90 อยู่ที่ 32.8 วัน และนานสุด 66.0 วัน
+เวลารอระหว่างขั้นวัดบน<b>เอกสารใบเดียวกัน</b>เท่านั้น เพื่อไม่ให้ปนกับเวลาระหว่างเอกสารคนละใบ</p>
+<table><tr><th>ขั้น (เอกสารเดียวกัน)</th><th class=num>n</th><th class=num>มัธยฐาน (วัน)</th><th class=num>เฉลี่ย</th><th class=num>P90</th></tr><tr><td>PR created -> PR approved</td><td class=num>607</td><td class=num>2.43</td><td class=num>3.37</td><td class=num>7.30</td></tr><tr><td>PR approved -> RFQ</td><td class=num>607</td><td class=num>2.89</td><td class=num>3.84</td><td class=num>7.81</td></tr><tr><td>RFQ -> first PO created</td><td class=num>927</td><td class=num>0.90</td><td class=num>1.30</td><td class=num>2.82</td></tr><tr><td>PO created -> PO approved</td><td class=num>1,598</td><td class=num>2.83</td><td class=num>3.64</td><td class=num>7.81</td></tr><tr><td>PO approved -> first goods receipt</td><td class=num>1,598</td><td class=num>3.01</td><td class=num>3.92</td><td class=num>8.31</td></tr><tr><td>first goods receipt -> invoice</td><td class=num>1,941</td><td class=num>2.41</td><td class=num>2.82</td><td class=num>5.58</td></tr><tr><td>invoice -> two-way match</td><td class=num>1,941</td><td class=num>0.23</td><td class=num>0.49</td><td class=num>1.85</td></tr><tr><td>two-way match -> first payment</td><td class=num>1,941</td><td class=num>2.93</td><td class=num>3.76</td><td class=num>8.01</td></tr></table>
+<figure><img src="../figures/04_stage_waits.png" style="width:80%"><figcaption>รูป 5 · เวลารอระหว่างขั้น: แท่ง = มัธยฐาน, จุด = เปอร์เซ็นไทล์ที่ 90</figcaption></figure>
+<div class="callout"><b class="t">ไม่มีคอขวดเดียว แต่มีการรอหลายทอด</b>
+<p>ขั้นที่รอนานที่สุดคือ <b>PO approved -> first goods receipt</b> (มัธยฐาน 3.01 วัน) ซึ่งเป็นช่วงรอผู้ขายส่งของ
+แต่ขั้นอื่นอีกหลายขั้นก็รอใกล้เคียงกันที่ 2.4–2.9 วัน เมื่อรวมค่ามัธยฐาน ขั้นที่องค์กรควบคุมได้เอง (อนุมัติ, ส่งต่องาน, การเงิน) คิดเป็น <b>69.3%</b>
+(12.21 จาก 17.63 วัน)
+<span class="small">ผลรวมค่ามัธยฐานใช้ดูสัดส่วนคร่าวๆ เท่านั้น ไม่เท่ากับเวลาทั้งเคส เพราะเอกสารหลายใบทำคู่ขนานกัน</span></p></div>
+
+<h3>5.1 แยกตามกลุ่ม</h3>
+<table><tr><th>กลุ่ม</th><th class=num>เคส</th><th class=num>มัธยฐานทั้งเคส (วัน)</th></tr>
+<tr><td>เส้นทาง: PR approved</td><td class=num>607</td><td class=num>23.6</td></tr><tr><td>เส้นทาง: PR delegated, no approval</td><td class=num>122</td><td class=num>19.8</td></tr><tr><td>เส้นทาง: no PR created</td><td class=num>198</td><td class=num>16.6</td></tr>
+<tr><td>จ่ายเงินครั้งเดียว</td><td class=num>739</td><td class=num>21.1</td></tr>
+<tr><td>มีการสั่งจ่ายซ้ำ</td><td class=num>188</td><td class=num>25.9</td></tr>
+<tr><td>กลุ่มจัดซื้อ 001</td><td class=num>159</td><td class=num>19.2</td></tr><tr><td>กลุ่มจัดซื้อ 002</td><td class=num>189</td><td class=num>23.1</td></tr><tr><td>กลุ่มจัดซื้อ 003</td><td class=num>192</td><td class=num>22.0</td></tr><tr><td>กลุ่มจัดซื้อ 004</td><td class=num>194</td><td class=num>22.6</td></tr><tr><td>กลุ่มจัดซื้อ 005</td><td class=num>193</td><td class=num>22.0</td></tr>
+</table>
+<ul>
+<li>เคสที่<b>ไม่มีใบขอซื้อ</b>เร็วกว่าเคสปกติ (16.6 vs 23.6 วัน) ส่วนต่างพอๆ กับเวลาของขั้นอนุมัติและส่งต่อใบขอซื้อ
+<span class="hyp">อาจเป็นแรงจูงใจให้ข้ามขั้นตอน</span></li>
+<li>เคสที่<b>สั่งจ่ายซ้ำ</b>จบช้ากว่า (25.9 vs 21.1 วัน)</li>
+<li>จำนวนเอกสารมีผลบ้าง: ความสัมพันธ์ (Spearman) ระหว่างระยะเวลากับจำนวนใบรับของคือ 0.254 และกับจำนวน PO คือ 0.214</li>
+<li>กลุ่มจัดซื้อ วิธีจ่ายเงิน และผู้ขายต่างกันไม่มาก (มัธยฐานของผู้ขายที่มี 10 เคสขึ้นไปอยู่ระหว่าง 16.0–28.6 วัน)
+<span class="hyp">การกระจายที่สม่ำเสมอแบบนี้น่าจะเป็นลักษณะของข้อมูลจำลอง</span></li>
+</ul>
+
+<h3>5.2 การทำซ้ำ (rework)</h3>
+<p>activity ที่เกิดซ้ำในเคสส่วนใหญ่<b>ไม่ใช่ rework</b> แต่เป็นเพราะเคสมีเอกสารหลายใบ เช่น เคสที่มี PO หลายใบมี <code>Create Purchase Order</code> หลายครั้ง
+ต้องแยกโดยดูว่า activity ซ้ำบน<b>เอกสารใบเดิม</b>หรือไม่</p>
+<table><tr><th>Activity</th><th class=num>เคสที่มีซ้ำ</th><th class=num>เพราะหลายเอกสาร</th><th class=num>ซ้ำบนเอกสารเดิม</th></tr>
+<tr><td>Create Purchase Order</td><td class=num>433</td><td class=num>433</td><td class=num>0</td></tr><tr><td>Approve Purchase Order</td><td class=num>433</td><td class=num>433</td><td class=num>0</td></tr><tr><td>Create Goods Receipt</td><td class=num>582</td><td class=num>149</td><td class=num>433</td></tr><tr><td>Create Invoice Receipt</td><td class=num>582</td><td class=num>582</td><td class=num>0</td></tr><tr><td>Perform Two-Way Match</td><td class=num>582</td><td class=num>582</td><td class=num>0</td></tr><tr><td>Execute Payment</td><td class=num>188</td><td class=num>0</td><td class=num>188</td></tr>
+</table>
+<ul>
+<li><code>Create Goods Receipt</code> ซ้ำบนใบรับของเดียวกัน 1,241 ใบ แต่ทุกครั้ง (100.0%) อ้าง PO คนละใบ
+จึงเป็นใบรับของที่รวมของจากหลาย PO <b>ไม่ใช่ rework</b></li>
+<li>rework จริงมีอย่างเดียวคือ <code>Execute Payment</code> ซ้ำบน payment เดิม (188 payment, เกินมา 239 ครั้ง) ซึ่งคือประเด็น D1</li>
+</ul>
+
+<h2 class="page">6. ข้อเสนอแนะ</h2>
+<table><tr><th style="width:4%">#</th><th style="width:38%">ปัญหาและหลักฐาน</th><th style="width:24%">ผลกระทบที่น่าจะเกิด</th><th>ข้อเสนอแนะ</th></tr><tr><td><b>P1</b></td><td><b>เริ่มจัดซื้อโดยไม่มีใบขอซื้อในระบบ</b><br><span class=small>198 จาก 927 เคส (21.4%) เริ่มที่ 'Create Request for Quotation' และใบขอซื้อทั้ง 198 ใบยังมีสถานะ 'Released'</span></td><td>ผูกพันค่าใช้จ่ายได้โดยไม่มีหลักฐานความต้องการหรือการอนุมัติงบ (maverick buying) และ audit trail ไม่ครบ</td><td>บล็อกการสร้าง RFQ ที่ไม่อ้างใบขอซื้อที่อนุมัติแล้ว และรายงานรายการที่ไม่มีใบขอซื้อให้หัวหน้าจัดซื้อทุกสัปดาห์</td></tr><tr><td><b>P2</b></td><td><b>ส่งต่อการอนุมัติ แต่ไม่มีบันทึกการอนุมัติ</b><br><span class=small>122 เคส (13.2%) มี 'Delegate Purchase Requisition Approval' แต่ไม่มี event อนุมัติตามมา ทั้งที่ใบขอซื้อมีสถานะ 'Released'</span></td><td>ไม่มีหลักฐานว่าใครเป็นผู้อนุมัติจริง แสดงการแบ่งแยกหน้าที่ (segregation of duties) ให้ผู้ตรวจสอบไม่ได้</td><td>ให้การ delegate ส่งงานไปที่ผู้รับมอบ และต้องมี event อนุมัติของผู้รับมอบก่อนปลดล็อกใบขอซื้อ</td></tr><tr><td><b>P3</b></td><td><b>สั่งจ่ายเงินซ้ำกับใบแจ้งหนี้เดิม</b><br><span class=small>188 payment (20.3% ของเคส) ถูกสั่งจ่าย 2–5 ครั้ง (เกินมา 239 ครั้ง) ทุกครั้งอ้างใบรับของชุดเดิม ห่างกันมัธยฐาน 2.76 วัน ถ้าทุกครั้งเป็นยอดเต็ม เพดานบนคือ 25.7% ของยอดใบแจ้งหนี้</span></td><td>อาจจ่ายเงินซ้ำและเงินสดรั่วไหล การเงินต้องตามเรียกคืน ข้อมูลไม่มียอดเงินรายครั้ง จึงยังไม่ยืนยันความเสียหาย</td><td>เพิ่มการตรวจจ่ายซ้ำ (ใบแจ้งหนี้/ผู้ขาย/ยอดเงินเดียวกัน) ก่อนรันจ่ายเงิน และให้การเงินทบทวน 188 payment ที่พบ</td></tr><tr><td><b>P4</b></td><td><b>จ่ายเงินให้ PO ก่อนรับของครบ</b><br><span class=small>234 PO ใน 163 เคส (17.6%) มีการรับของ 269 ครั้งหลังจ่ายเงินแล้ว (มัธยฐาน 2.07 วันหลังจ่าย) การจับคู่ที่บันทึกเป็น two-way ทั้งหมด (1941 ครั้ง, three-way 0 ครั้ง)</span></td><td>เสี่ยงจ่ายเงินให้ของที่ส่งไม่ครบหรือไม่ได้ส่ง</td><td>เปลี่ยนเป็น three-way match (PO–ใบรับของ–ใบแจ้งหนี้) และจ่ายเฉพาะจำนวนที่รับจริง</td></tr><tr><td><b>P5</b></td><td><b>เวลาส่วนใหญ่อยู่ในการส่งต่องานภายใน</b><br><span class=small>มัธยฐานทั้งเคส 21.75 วัน ไม่มีขั้นใดเด่นเป็นคอขวดเดียว ขั้นที่องค์กรควบคุมเองได้ (อนุมัติ/ส่งต่อ/การเงิน) คิดเป็น 69.3% ของผลรวมค่ามัธยฐานรายขั้น</span></td><td>รอบจัดซื้อถึงจ่ายเงินช้า เพราะคิวระหว่างทีม มากกว่าการรอผู้ขาย</td><td>อนุมัติอัตโนมัติเมื่อมูลค่าต่ำ, สร้าง RFQ อัตโนมัติเมื่อใบขอซื้ออนุมัติ, รันจ่ายเงินถี่ขึ้นสำหรับใบแจ้งหนี้ที่จับคู่แล้ว</td></tr></table>
+<p>แผนภาพ as-is แบบย่อและ to-be ที่เสนออยู่ในหน้าถัดไป (รูป 6–7)</p>
+<div class="wide"><figure><img src="../figures/05_asis_annotated_tb.png" style="width:100%"><figcaption>รูป 6 · As-is แบบย่อ พร้อมจุดที่เบี่ยง (สีแดง)</figcaption></figure><figure><img src="../figures/05_tobe_tb.png" style="width:100%"><figcaption>รูป 7 · To-be ที่เสนอ แยกตามผู้รับผิดชอบ สีเขียว = control ใหม่ ป้าย [P1–P5] โยงกับปัญหา</figcaption></figure></div>
+<h3 class="page">ลำดับการดำเนินการที่แนะนำ</h3>
+<ol>
+<li><b>ทันที (P3):</b> ให้การเงินตรวจ 188 payment ที่สั่งจ่ายซ้ำ ยืนยันว่ามีการจ่ายเกินหรือไม่ แล้วเปิดใช้การตรวจจ่ายซ้ำในรอบจ่ายเงิน</li>
+<li><b>ระยะสั้น (P1, P2):</b> บังคับให้ RFQ อ้างใบขอซื้อที่อนุมัติแล้ว และให้การ delegate ต้องมีการอนุมัติของผู้รับมอบ ทำรายงานรายสัปดาห์ของรายการที่ไม่ผ่าน</li>
+<li><b>ระยะกลาง (P4):</b> เปลี่ยนการจับคู่เป็น three-way match และจ่ายตามจำนวนที่รับจริง</li>
+<li><b>ต่อเนื่อง (P5):</b> กำหนดเพดานมูลค่าสำหรับอนุมัติอัตโนมัติ สร้าง RFQ อัตโนมัติเมื่อปลดล็อกใบขอซื้อ แล้ววัดผลด้วยตัวชี้วัดในข้อถัดไป</li>
+</ol>
+<h3>ตัวชี้วัดที่ควรติดตามหลังปรับ</h3>
+<table><tr><th>ตัวชี้วัด</th><th class=num>ค่าปัจจุบัน (baseline)</th></tr>
+<tr><td>% เคสที่ตรงกระบวนการอ้างอิง</td><td class=num>41.7%</td></tr>
+<tr><td>% เคสที่เริ่มโดยไม่มีใบขอซื้อ</td><td class=num>21.4%</td></tr>
+<tr><td>% เคสที่มีการสั่งจ่ายซ้ำ</td><td class=num>20.3%</td></tr>
+<tr><td>% เคสที่จ่ายก่อนรับของครบ</td><td class=num>17.6%</td></tr>
+<tr><td>มัธยฐานเวลาทั้งเคส (วัน)</td><td class=num>21.8</td></tr>
+</table>
+
+<h2>7. ข้อจำกัดของการวิเคราะห์</h2>
+<ul>
+<li><b>ข้อมูลจำลอง:</b> ทุกเคสจบที่การจ่ายเงิน ไม่มีเคสค้าง กลุ่มต่างๆ แทบไม่ต่างกัน และเส้นทางหลักมีแค่ 3 แบบ ข้อมูลจริงมักซับซ้อนกว่านี้มาก ผลจึงใช้แสดงวิธีการ ไม่ใช่ข้อสรุปเกี่ยวกับบริษัทจริง</li>
+<li><b>Log บอกว่าอะไรเกิด แต่ไม่บอกว่าทำไม:</b> สาเหตุทุกข้อในรายงานเป็นข้อสันนิษฐาน ต้องสัมภาษณ์เจ้าของกระบวนการเพื่อยืนยัน</li>
+<li><b>ยอดเงินรายครั้ง:</b> ไม่มียอดเงินของการจ่ายแต่ละครั้ง จึงประเมินการจ่ายเกินได้แค่เพดานบน</li>
+<li><b>Timestamp:</b> ละเอียดแค่ระดับนาที และอาจเป็นเวลาที่บันทึกในระบบ ไม่ใช่เวลาที่ทำงานจริง</li>
+<li><b>ความสัมพันธ์ระหว่างเอกสาร:</b> มีลิงก์ที่ชี้ไปหาเอกสารที่ไม่มีอยู่ (2,028 ลิงก์) จึงใช้ความสัมพันธ์จาก event แทน</li>
+<li><b>วันส่งของตามสัญญา:</b> ไม่มีข้อมูลที่เชื่อถือได้ จึงวัดการส่งของตรงเวลาของผู้ขายไม่ได้</li>
+<li><b>ข้อเสนอแนะยังไม่ได้นำไปใช้:</b> จึงไม่มีตัวเลขผลลัพธ์หลังปรับ</li>
+</ul>
+
+<h2>ภาคผนวก: ที่มาของข้อมูลและการทำซ้ำ</h2>
+<p class="small">ข้อมูล: <i>Procure-To-Payment (P2P) Object-centric Event Log in OCEL 2.0 Standard</i>, Zenodo record 8412920, CC BY 4.0, ไฟล์ <code>ocel2-p2p.sqlite</code> MD5 <code>1a4238260019939239488b0b4befb515</code>.
+ชุดที่วางแผนไว้แต่แรกคือ BPI Challenge 2019 (4TU.ResearchData) แต่ไฟล์ปิดให้ดาวน์โหลดชั่วคราวช่วงที่ทำงาน
+เครื่องมือ: PM4Py 2.7.23.8 (AGPL v3), pandas, matplotlib, Graphviz.
+ทำซ้ำได้โดยรัน notebook 01–05 ตามลำดับ แล้วรัน <code>python report/build_report.py</code>.
+ตัวเลขทุกตัวในรายงานนี้อยู่ใน <code>results.md</code> พร้อมชื่อ notebook ที่คำนวณ</p>
+</body></html>
