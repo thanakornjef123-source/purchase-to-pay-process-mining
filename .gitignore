@@ -16,3 +16,8 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# BPI Challenge 2019 (700 MB, too large for GitHub) and its local Parquet cache
+data/BPI_Challenge_2019.xes
+data/BPI_Challenge_2019.xes.gz
+data/bpi2019_*.parquet

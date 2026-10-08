@@ -17,5 +17,6 @@ def root():
 @pytest.fixture(scope="session")
 def results():
     names = {"explore": "01_explore", "discovery": "02_discovery", "conformance": "03_conformance",
-             "performance": "04_performance", "recommendations": "05_recommendations"}
+             "performance": "04_performance", "recommendations": "05_recommendations",
+             "bpi2019": "06_bpi2019"}
     return {k: json.loads((ROOT / "results" / f"{v}.json").read_text(encoding="utf-8")) for k, v in names.items()}
