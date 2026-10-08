@@ -1,4 +1,4 @@
-**Live demo:** _(ลิงก์จะเพิ่มหลัง deploy บน Streamlit Community Cloud)_
+**Live demo:** https://purchase-to-pay-process-mining-cwxvungo6invrbnsb6jgta.streamlit.app/
 
 # Purchase-to-Pay Process Mining
 
