@@ -1,0 +1,12 @@
+# Re-running the notebooks and rebuilding the report.
+# Also needs the Graphviz program (dot) on PATH: https://graphviz.org/download/
+-r requirements.txt
+pm4py==2.7.23.8
+matplotlib==3.11.2
+graphviz==0.21
+nbformat==5.11.1
+nbclient==0.11.0
+nbconvert==7.17.1
+ipykernel==7.4.0
+# optional: PDF export of the report (after install run: playwright install chromium)
+playwright==1.56.0

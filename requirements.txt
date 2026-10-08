@@ -1,0 +1,4 @@
+# Runtime for the Streamlit app (this file is what Streamlit Community Cloud installs).
+streamlit==1.65.0
+pandas==3.0.5
+altair==6.3.0

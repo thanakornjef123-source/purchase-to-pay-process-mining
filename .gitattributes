@@ -1,0 +1,6 @@
+* text=auto
+*.bat text eol=crlf
+*.sqlite binary
+*.png binary
+*.pdf binary
+*.woff2 binary
