@@ -1,0 +1,92 @@
+# Settings shared by local runs and Streamlit Community Cloud.
+# headless = true: the server never waits for terminal input (e.g. the first-run email prompt).
+# To open a browser automatically on Windows, use start.bat instead of changing this.
+
+[server]
+headless = true
+enableStaticServing = true
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"
+showErrorDetails = "none"
+
+[theme]
+base = "light"
+primaryColor = "#1f5f8b"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f3f6f9"
+textColor = "#1d2733"
+linkColor = "#1f5f8b"
+borderColor = "#d7dde3"
+showWidgetBorder = true
+baseRadius = "6px"
+baseFontSize = 16
+font = "Sarabun, sans-serif"
+headingFont = "IBM Plex Sans Thai, sans-serif"
+
+[theme.sidebar]
+backgroundColor = "#f3f6f9"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-thai-400-normal.woff2"
+weight = "400"
+unicodeRange = "U+0E01-0E5B, U+200C-200D, U+25CC"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-latin-400-normal.woff2"
+weight = "400"
+unicodeRange = "U+0000-00FF, U+2000-206F, U+2190-21FF, U+2212"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-thai-600-normal.woff2"
+weight = "600"
+unicodeRange = "U+0E01-0E5B, U+200C-200D, U+25CC"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-latin-600-normal.woff2"
+weight = "600"
+unicodeRange = "U+0000-00FF, U+2000-206F, U+2190-21FF, U+2212"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-thai-700-normal.woff2"
+weight = "700"
+unicodeRange = "U+0E01-0E5B, U+200C-200D, U+25CC"
+
+[[theme.fontFaces]]
+family = "Sarabun"
+url = "app/static/fonts/sarabun-latin-700-normal.woff2"
+weight = "700"
+unicodeRange = "U+0000-00FF, U+2000-206F, U+2190-21FF, U+2212"
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans Thai"
+url = "app/static/fonts/ibm-plex-sans-thai-thai-600-normal.woff2"
+weight = "600"
+unicodeRange = "U+0E01-0E5B, U+200C-200D, U+25CC"
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans Thai"
+url = "app/static/fonts/ibm-plex-sans-thai-latin-600-normal.woff2"
+weight = "600"
+unicodeRange = "U+0000-00FF, U+2000-206F, U+2190-21FF, U+2212"
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans Thai"
+url = "app/static/fonts/ibm-plex-sans-thai-thai-400-normal.woff2"
+weight = "400"
+unicodeRange = "U+0E01-0E5B, U+200C-200D, U+25CC"
+
+[[theme.fontFaces]]
+family = "IBM Plex Sans Thai"
+url = "app/static/fonts/ibm-plex-sans-thai-latin-400-normal.woff2"
+weight = "400"
+unicodeRange = "U+0000-00FF, U+2000-206F, U+2190-21FF, U+2212"
