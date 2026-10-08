@@ -43,3 +43,20 @@ def test_app_writes_no_files(root, before):
     after = _snapshot(root)
     assert set(after) == set(before)
     assert all(after[p] == before[p] for p in before)
+
+
+def test_cache_refreshes_when_results_change(root, tmp_path, monkeypatch):
+    """A redeploy can add result files while the server keeps running; the cache must pick them up."""
+    import importlib
+    import shutil
+
+    import app_pages.common as common
+    importlib.reload(common)
+    fake = tmp_path / "repo"
+    shutil.copytree(root / "results", fake / "results")
+    (fake / "data").mkdir()
+    monkeypatch.setattr(common, "ROOT", fake)
+    before = common.results()
+    (fake / "results" / "07_extra.json").write_text('{"x": 1}', encoding="utf-8")
+    after = common.results()
+    assert "extra" not in before and after["extra"] == {"x": 1}

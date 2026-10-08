@@ -13,19 +13,46 @@ INK = "#1d2733"
 MUTED = "#5b6672"
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def _signature(*folders):  # passed as a normal (hashed) argument to the cached loaders
+    """Names and modification times of the data files, used as the cache key.
+
+    A redeploy can update the files while the server process keeps running, so the
+    cache must be invalidated whenever a results/data file changes or is added.
+    """
+    files = sorted(p for f in folders for p in (ROOT / f).glob("*") if p.suffix in {".json", ".csv"})
+    return tuple((p.name, p.stat().st_mtime_ns) for p in files)
+
+
 @st.cache_data(show_spinner=False)
+def _results(sig):
+    import json
+    return {p.stem.split("_", 1)[1]: json.loads(p.read_text(encoding="utf-8"))
+            for p in sorted((ROOT / "results").glob("[0-9][0-9]_*.json"))}
+
+
 def results():
-    return ad.load_results()
+    return _results(_signature("results"))
 
 
 @st.cache_data(show_spinner=False)
-def case_log():
+def _case_log(sig):
     return ad.load_case_log()
 
 
+def case_log():
+    return _case_log(_signature("data"))
+
+
 @st.cache_data(show_spinner=False)
-def case_table():
+def _case_table(sig):
     return ad.load_case_table()
+
+
+def case_table():
+    return _case_table(_signature("data"))
 
 
 def rules_by_code():
