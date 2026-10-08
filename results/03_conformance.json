@@ -1,0 +1,232 @@
+{
+  "cases": 927,
+  "reference_tree": "->( 'Create Purchase Requisition', 'Approve Purchase Requisition', 'Create Request for Quotation', *( X( 'Create Purchase Order', 'Approve Purchase Order' ), tau ), *( X( 'Create Goods Receipt', 'Create Invoice Receipt', 'Perform Two-Way Match' ), tau ), 'Execute Payment' )",
+  "tbr_fitting_traces_pct": 41.7,
+  "tbr_log_fitness": 0.973,
+  "tbr_precision": 0.418,
+  "alignment_runtime_s": 3.1,
+  "alignment_cases": 927,
+  "alignment_perfect_cases": 387,
+  "alignment_perfect_pct": 41.7,
+  "alignment_mean_fitness": 0.944,
+  "alignment_moves": [
+    {
+      "type": "skipped (model move)",
+      "activity": "Approve Purchase Requisition",
+      "moves": 320,
+      "cases": 320,
+      "cases_pct": 34.5
+    },
+    {
+      "type": "extra / out of place (log move)",
+      "activity": "Execute Payment",
+      "moves": 264,
+      "cases": 213,
+      "cases_pct": 23.0
+    },
+    {
+      "type": "skipped (model move)",
+      "activity": "Create Purchase Requisition",
+      "moves": 198,
+      "cases": 198,
+      "cases_pct": 21.4
+    },
+    {
+      "type": "extra / out of place (log move)",
+      "activity": "Delegate Purchase Requisition Approval",
+      "moves": 122,
+      "cases": 122,
+      "cases_pct": 13.2
+    },
+    {
+      "type": "extra / out of place (log move)",
+      "activity": "Create Goods Receipt",
+      "moves": 140,
+      "cases": 116,
+      "cases_pct": 12.5
+    },
+    {
+      "type": "skipped (model move)",
+      "activity": "Execute Payment",
+      "moves": 25,
+      "cases": 25,
+      "cases_pct": 2.7
+    }
+  ],
+  "pr_release_indicator_by_group": {
+    "Released": {
+      "approved": 607,
+      "delegated, no approval": 122,
+      "no PR created": 198
+    }
+  },
+  "C5_postings_after_payment": 269,
+  "C5_days_after_payment": {
+    "count": 269.0,
+    "mean": 3.01,
+    "std": 2.99,
+    "min": 0.01,
+    "25%": 0.94,
+    "50%": 2.07,
+    "75%": 4.17,
+    "max": 16.4
+  },
+  "D1_payments": 188,
+  "D1_extra_executions": 239,
+  "D1_same_goods_receipts_every_time": 188,
+  "D1_days_between_executions": {
+    "count": 239.0,
+    "mean": 3.55,
+    "std": 2.76,
+    "min": 0.02,
+    "25%": 1.5,
+    "50%": 2.76,
+    "75%": 5.24,
+    "max": 16.17
+  },
+  "payment_amount_equals_invoice_pct": 100.0,
+  "D1_exposure_if_full_amount_each_time": 15090800.0,
+  "total_invoice_amount": 58785600.0,
+  "D1_exposure_pct_of_invoiced": 25.7,
+  "payment_change_rows_with_amount_value": 0,
+  "two_way_match_events": 1941,
+  "three_way_match_events": 0,
+  "invoices_with_goods_receipt": 927,
+  "rules": [
+    {
+      "rule": "A1 RFQ without a purchase requisition created in the system",
+      "kind": "rule",
+      "documents": 198,
+      "cases": 198,
+      "cases_pct": 21.4,
+      "example_document": "purchase_requisition:108:pr_trigger_108",
+      "example_case": "purchase_requisition:108:pr_trigger_108"
+    },
+    {
+      "rule": "A2 PR delegated, approval never recorded",
+      "kind": "rule",
+      "documents": 122,
+      "cases": 122,
+      "cases_pct": 13.2,
+      "example_document": "purchase_requisition:117:pr_trigger_117",
+      "example_case": "purchase_requisition:117:pr_trigger_117"
+    },
+    {
+      "rule": "A3 RFQ created before PR approval",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "B1 PO approved before it was created",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "B2 goods received before PO approval",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "B3 PO never approved",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "C1 invoice before any goods received",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "C2 match before invoice",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "C3 payment before invoice matched",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "C4 payment before any goods received",
+      "kind": "rule",
+      "documents": 0,
+      "cases": 0,
+      "cases_pct": 0.0,
+      "example_document": "",
+      "example_case": ""
+    },
+    {
+      "rule": "C5 PO paid before its last goods receipt posting",
+      "kind": "rule",
+      "documents": 234,
+      "cases": 163,
+      "cases_pct": 17.6,
+      "example_document": "purchase_order:1",
+      "example_case": "purchase_requisition:3:pr_trigger_3"
+    },
+    {
+      "rule": "D1 payment executed more than once",
+      "kind": "rule",
+      "documents": 188,
+      "cases": 188,
+      "cases_pct": 20.3,
+      "example_document": "payment:0",
+      "example_case": "purchase_requisition:1:pr_trigger_1"
+    },
+    {
+      "rule": "C6 invoice before the last posting on its goods receipt document",
+      "kind": "observation",
+      "documents": 683,
+      "cases": 364,
+      "cases_pct": 39.3,
+      "example_document": "goods receipt:0",
+      "example_case": "purchase_requisition:0:pr_trigger_0"
+    }
+  ],
+  "cases_with_any_rule_violation": 540,
+  "cases_with_any_rule_violation_pct": 58.3,
+  "cases_fully_compliant": 387,
+  "cases_fully_compliant_pct": 41.7,
+  "rules_broken_per_case": {
+    "0": 387,
+    "1": 420,
+    "2": 109,
+    "3": 11
+  },
+  "alignment_perfect_but_rule_broken": {},
+  "alignment_vs_rules": {
+    "(False, False)": 540,
+    "(False, True)": 0,
+    "(True, False)": 0,
+    "(True, True)": 387
+  },
+  "case_rules_rows": 927
+}

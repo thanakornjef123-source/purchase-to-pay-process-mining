@@ -1,0 +1,443 @@
+{
+  "file_md5": "1a4238260019939239488b0b4befb515",
+  "n_events": 14671,
+  "n_event_ids_unique": 14671,
+  "n_objects": 9543,
+  "n_activities": 10,
+  "n_object_types": 7,
+  "n_event_object_links": 35927,
+  "n_object_object_links": 20402,
+  "time_min": "2022-04-01 09:26:00+00:00",
+  "time_max": "2024-10-31 20:28:00+00:00",
+  "time_span_days": 944,
+  "events_per_activity": {
+    "Create Goods Receipt": 4042,
+    "Create Invoice Receipt": 1941,
+    "Perform Two-Way Match": 1941,
+    "Approve Purchase Order": 1598,
+    "Create Purchase Order": 1598,
+    "Execute Payment": 1166,
+    "Create Request for Quotation": 927,
+    "Create Purchase Requisition": 729,
+    "Approve Purchase Requisition": 607,
+    "Delegate Purchase Requisition Approval": 122
+  },
+  "objects_per_type": {
+    "material": 2296,
+    "goods receipt": 1941,
+    "purchase_order": 1598,
+    "invoice receipt": 927,
+    "payment": 927,
+    "purchase_requisition": 927,
+    "quotation": 927
+  },
+  "events_per_resource": {
+    "Finance/Account Department": 5048,
+    "Warehouse Department": 4042,
+    "Procurement Department": 2525,
+    "Procurement Order Manager": 1598,
+    "Manufacturing Department": 851,
+    "Procurement Requisition Manager": 607
+  },
+  "lifecycle_values": {
+    "complete": 14671
+  },
+  "cardinality": [
+    {
+      "source": "purchase_requisition",
+      "target": "quotation",
+      "max_sources_per_target": 1,
+      "max_targets_per_source": 1,
+      "mean_targets_per_source": 1.0
+    },
+    {
+      "source": "quotation",
+      "target": "purchase_order",
+      "max_sources_per_target": 1,
+      "max_targets_per_source": 4,
+      "mean_targets_per_source": 1.72
+    },
+    {
+      "source": "goods receipt",
+      "target": "purchase_order",
+      "max_sources_per_target": 4,
+      "max_targets_per_source": 1,
+      "mean_targets_per_source": 1.0
+    },
+    {
+      "source": "goods receipt",
+      "target": "invoice receipt",
+      "max_sources_per_target": 1,
+      "max_targets_per_source": 1,
+      "mean_targets_per_source": 1.0
+    },
+    {
+      "source": "invoice receipt",
+      "target": "payment",
+      "max_sources_per_target": 1,
+      "max_targets_per_source": 1,
+      "mean_targets_per_source": 1.0
+    }
+  ],
+  "dangling_object_links_total": 2028,
+  "dangling_object_links": [
+    {
+      "source_type": "goods receipt",
+      "target_prefix": "invoice receipt",
+      "ocel_qualifier": "Invoice Receipt of Goods Receipt",
+      "links": 1941,
+      "dangling": 1014
+    },
+    {
+      "source_type": "purchase_order",
+      "target_prefix": "invoice receipt",
+      "ocel_qualifier": "Invoice Receipts of Purchase Order",
+      "links": 1941,
+      "dangling": 1014
+    }
+  ],
+  "gr_per_invoice_from_events": {
+    "count": 927.0,
+    "mean": 2.09,
+    "std": 1.04,
+    "min": 1.0,
+    "25%": 1.0,
+    "50%": 2.0,
+    "75%": 3.0,
+    "max": 4.0
+  },
+  "invoices_per_gr_from_events_max": 1,
+  "docs_shared_across_prs": {
+    "quotation": 0,
+    "po": 0,
+    "gr": 0,
+    "ir": 0,
+    "payment": 0
+  },
+  "event_nulls": {
+    "ocel_id": 0,
+    "activity": 0,
+    "ocel_time": 0,
+    "lifecycle": 0,
+    "resource": 0
+  },
+  "objects_without_events": {
+    "material": 489
+  },
+  "objects_without_events_total": 489,
+  "pm4py_version": "2.7.23.8",
+  "pm4py_n_objects": 9054,
+  "pm4py_n_events": 14671,
+  "events_sharing_timestamp": 1223,
+  "share_events_sharing_timestamp_pct": 8.34,
+  "object_timestamp_ties": 245,
+  "objects_with_timestamp_ties": 243,
+  "objects_with_timestamp_ties_by_type": {
+    "invoice receipt": 242,
+    "goods receipt": 1,
+    "purchase_order": 1,
+    "quotation": 1
+  },
+  "timestamps_with_nonzero_seconds": 0,
+  "repeats": [
+    {
+      "object_type": "goods receipt",
+      "activity": "Create Goods Receipt",
+      "objects": 1941,
+      "mean": 2.08,
+      "max": 4,
+      "objects_with_repeat": 1241
+    },
+    {
+      "object_type": "goods receipt",
+      "activity": "Create Invoice Receipt",
+      "objects": 1941,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "goods receipt",
+      "activity": "Execute Payment",
+      "objects": 1941,
+      "mean": 1.26,
+      "max": 5,
+      "objects_with_repeat": 397
+    },
+    {
+      "object_type": "goods receipt",
+      "activity": "Perform Two-Way Match",
+      "objects": 1941,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "invoice receipt",
+      "activity": "Create Invoice Receipt",
+      "objects": 927,
+      "mean": 2.09,
+      "max": 4,
+      "objects_with_repeat": 582
+    },
+    {
+      "object_type": "invoice receipt",
+      "activity": "Execute Payment",
+      "objects": 927,
+      "mean": 1.26,
+      "max": 5,
+      "objects_with_repeat": 188
+    },
+    {
+      "object_type": "invoice receipt",
+      "activity": "Perform Two-Way Match",
+      "objects": 927,
+      "mean": 2.09,
+      "max": 4,
+      "objects_with_repeat": 582
+    },
+    {
+      "object_type": "material",
+      "activity": "Approve Purchase Requisition",
+      "objects": 1499,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "material",
+      "activity": "Create Purchase Requisition",
+      "objects": 1807,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "material",
+      "activity": "Delegate Purchase Requisition Approval",
+      "objects": 308,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "payment",
+      "activity": "Execute Payment",
+      "objects": 927,
+      "mean": 1.26,
+      "max": 5,
+      "objects_with_repeat": 188
+    },
+    {
+      "object_type": "purchase_order",
+      "activity": "Approve Purchase Order",
+      "objects": 1598,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "purchase_order",
+      "activity": "Create Goods Receipt",
+      "objects": 1598,
+      "mean": 2.53,
+      "max": 4,
+      "objects_with_repeat": 1253
+    },
+    {
+      "object_type": "purchase_order",
+      "activity": "Create Purchase Order",
+      "objects": 1598,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "purchase_order",
+      "activity": "Execute Payment",
+      "objects": 1598,
+      "mean": 1.25,
+      "max": 5,
+      "objects_with_repeat": 315
+    },
+    {
+      "object_type": "purchase_requisition",
+      "activity": "Approve Purchase Requisition",
+      "objects": 607,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "purchase_requisition",
+      "activity": "Create Purchase Requisition",
+      "objects": 729,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "purchase_requisition",
+      "activity": "Create Request for Quotation",
+      "objects": 927,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "purchase_requisition",
+      "activity": "Delegate Purchase Requisition Approval",
+      "objects": 122,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    },
+    {
+      "object_type": "quotation",
+      "activity": "Approve Purchase Order",
+      "objects": 927,
+      "mean": 1.72,
+      "max": 4,
+      "objects_with_repeat": 433
+    },
+    {
+      "object_type": "quotation",
+      "activity": "Create Purchase Order",
+      "objects": 927,
+      "mean": 1.72,
+      "max": 4,
+      "objects_with_repeat": 433
+    },
+    {
+      "object_type": "quotation",
+      "activity": "Create Request for Quotation",
+      "objects": 927,
+      "mean": 1.0,
+      "max": 1,
+      "objects_with_repeat": 0
+    }
+  ],
+  "payments_executed_more_than_once": 188,
+  "payment_events_total": 1166,
+  "order_checks": {
+    "gr_before_po_created": 0,
+    "po_before_pr_approved": 0,
+    "po_links_where_pr_never_approved": 544,
+    "payment_before_goods_receipt": 0,
+    "payment_before_invoice": 0,
+    "gr_ir_pay_links_checked": 927
+  },
+  "pr_furthest_stage": {
+    "PR only": 0,
+    "quotation": 0,
+    "PO": 0,
+    "GR": 0,
+    "invoice": 0,
+    "payment": 0,
+    "paid (Execute Payment)": 927
+  },
+  "events_last_30_days": 271,
+  "events_per_month_min": 230,
+  "events_per_month_max": 688,
+  "object_attribute_rows": [
+    {
+      "object_type": "goods receipt",
+      "rows": "11966",
+      "initial_rows": "1941",
+      "change_rows": "10025",
+      "objects_with_changes": "1941",
+      "change_time_min": "2022-04-11 08:52:00+00:00",
+      "change_time_max": "2024-10-29 07:55:00+00:00"
+    },
+    {
+      "object_type": "invoice receipt",
+      "rows": "8691",
+      "initial_rows": "927",
+      "change_rows": "7764",
+      "objects_with_changes": "927",
+      "change_time_min": "2022-04-13 07:49:00+00:00",
+      "change_time_max": "2024-10-29 08:10:00+00:00"
+    },
+    {
+      "object_type": "material",
+      "rows": "2296",
+      "initial_rows": "2296",
+      "change_rows": "0",
+      "objects_with_changes": "0",
+      "change_time_min": NaN,
+      "change_time_max": NaN
+    },
+    {
+      "object_type": "payment",
+      "rows": "3259",
+      "initial_rows": "927",
+      "change_rows": "2332",
+      "objects_with_changes": "927",
+      "change_time_min": "2022-04-16 15:46:00+00:00",
+      "change_time_max": "2024-10-31 20:28:00+00:00"
+    },
+    {
+      "object_type": "purchase_order",
+      "rows": "9588",
+      "initial_rows": "1598",
+      "change_rows": "7990",
+      "objects_with_changes": "1598",
+      "change_time_min": "2022-04-06 07:45:00+00:00",
+      "change_time_max": "2024-10-22 17:36:00+00:00"
+    },
+    {
+      "object_type": "purchase_requisition",
+      "rows": "2583",
+      "initial_rows": "927",
+      "change_rows": "1656",
+      "objects_with_changes": "927",
+      "change_time_min": "2022-04-02 14:16:00+00:00",
+      "change_time_max": "2024-10-16 17:45:00+00:00"
+    },
+    {
+      "object_type": "quotation",
+      "rows": "4635",
+      "initial_rows": "927",
+      "change_rows": "3708",
+      "objects_with_changes": "927",
+      "change_time_min": "2022-04-05 16:09:00+00:00",
+      "change_time_max": "2024-10-16 17:45:00+00:00"
+    }
+  ],
+  "invoice_tie_patterns": {
+    "Perform Two-Way Match + Perform Two-Way Match": 193,
+    "Perform Two-Way Match + Perform Two-Way Match + Perform Two-Way Match": 45,
+    "Perform Two-Way Match + Perform Two-Way Match + Perform Two-Way Match + Perform Two-Way Match": 4
+  },
+  "pr_activity_patterns": {
+    "Approve Purchase Requisition + Create Purchase Requisition + Create Request for Quotation": 607,
+    "Create Request for Quotation": 198,
+    "Create Purchase Requisition + Create Request for Quotation + Delegate Purchase Requisition Approval": 122
+  },
+  "objects_mapped_to_pr": 9543,
+  "objects_mapped_to_multiple_prs": 0,
+  "events_mapped_to_a_case": 14671,
+  "events_mapped_to_multiple_cases": 0,
+  "events_not_mapped": 0,
+  "case_count": 927,
+  "events_per_case": {
+    "count": 927.0,
+    "mean": 15.83,
+    "std": 7.92,
+    "min": 7.0,
+    "25%": 9.0,
+    "50%": 14.0,
+    "75%": 20.0,
+    "max": 38.0
+  },
+  "case_duration_days": {
+    "count": 927.0,
+    "mean": 22.5,
+    "std": 8.2,
+    "min": 4.6,
+    "25%": 16.7,
+    "50%": 21.7,
+    "75%": 27.0,
+    "max": 66.0
+  }
+}

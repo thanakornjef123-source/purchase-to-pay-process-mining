@@ -1,0 +1,928 @@
+case:concept:name,duration,path,purchasing_group,vendor,payment_method,POs,GRs,repeated_payment
+purchase_requisition:0:pr_trigger_0,17.027083333333334,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:100:pr_trigger_100,21.9625,PR approved,002,Jacket Junction Co,C: Bank Collection,3,3,False
+purchase_requisition:101:pr_trigger_101,14.48611111111111,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,1,False
+purchase_requisition:102:pr_trigger_102,22.28263888888889,PR approved,004,Bearing Barons Inc,D:Direct Debit,3,4,False
+purchase_requisition:103:pr_trigger_103,17.906944444444445,PR approved,004,Bearing Barons Inc,C: Bank Collection,2,3,False
+purchase_requisition:104:pr_trigger_104,33.49027777777778,PR approved,003,Pump Pros Inc,C: Bank Collection,1,1,True
+purchase_requisition:105:pr_trigger_105,27.350694444444443,PR approved,005,Chain Chiefs Ltd,D:Direct Debit,3,3,False
+purchase_requisition:106:pr_trigger_106,35.35208333333333,PR approved,004,Cycle Component Corp,D:Direct Debit,1,3,True
+purchase_requisition:107:pr_trigger_107,13.031944444444445,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,3,3,False
+purchase_requisition:108:pr_trigger_108,29.475,no PR created,001,Cycle Parts Manufacturing,D:Direct Debit,3,3,False
+purchase_requisition:109:pr_trigger_109,8.971527777777778,PR approved,005,Lever Legends Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:10:pr_trigger_10,29.490277777777777,PR approved,005,Crankset Kings Ltd,C: Bank Collection,2,2,False
+purchase_requisition:110:pr_trigger_110,21.978472222222223,PR approved,005,Chainring Champions Inc,D:Direct Debit,4,4,False
+purchase_requisition:111:pr_trigger_111,15.495833333333334,PR approved,005,Crankset Kings Ltd,D:Direct Debit,3,4,False
+purchase_requisition:112:pr_trigger_112,16.4625,PR approved,004,Cycle Component Corp,C: Bank Collection,2,2,True
+purchase_requisition:113:pr_trigger_113,32.860416666666666,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,1,1,False
+purchase_requisition:114:pr_trigger_114,15.056944444444444,PR approved,002,Glove Masters Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:115:pr_trigger_115,17.543055555555554,no PR created,004,Cycle Component Corp,D:Direct Debit,3,3,False
+purchase_requisition:116:pr_trigger_116,24.802083333333332,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,2,3,True
+purchase_requisition:117:pr_trigger_117,23.398611111111112,"PR delegated, no approval",001,Secure Locks Co,C: Bank Collection,1,3,False
+purchase_requisition:118:pr_trigger_118,17.542361111111113,no PR created,004,Wheel Wizards Co,C: Bank Collection,2,3,False
+purchase_requisition:119:pr_trigger_119,26.689583333333335,PR approved,004,Bearing Barons Inc,C: Bank Collection,3,3,False
+purchase_requisition:11:pr_trigger_11,32.765972222222224,no PR created,001,Secure Locks Co,C: Bank Collection,2,3,True
+purchase_requisition:120:pr_trigger_120,12.25,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:121:pr_trigger_121,16.240277777777777,PR approved,002,Pants Providers Inc,D:Direct Debit,1,2,False
+purchase_requisition:122:pr_trigger_122,24.06388888888889,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:123:pr_trigger_123,13.113194444444444,no PR created,005,Pedal Providers Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:124:pr_trigger_124,24.240277777777777,PR approved,002,Pants Providers Inc,C: Bank Collection,3,3,False
+purchase_requisition:125:pr_trigger_125,25.677083333333332,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:126:pr_trigger_126,22.147916666666667,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:127:pr_trigger_127,17.035416666666666,no PR created,004,Bearing Barons Inc,D:Direct Debit,1,2,False
+purchase_requisition:128:pr_trigger_128,17.613888888888887,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:129:pr_trigger_129,15.224305555555556,no PR created,005,Crankset Kings Ltd,D:Direct Debit,2,2,False
+purchase_requisition:12:pr_trigger_12,26.14236111111111,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:130:pr_trigger_130,20.448611111111113,PR approved,002,Glove Masters Ltd,D:Direct Debit,1,1,False
+purchase_requisition:131:pr_trigger_131,13.88888888888889,no PR created,004,Rim Royals Ltd,D:Direct Debit,1,3,False
+purchase_requisition:132:pr_trigger_132,28.2875,PR approved,005,Lever Legends Ltd,D:Direct Debit,1,1,False
+purchase_requisition:133:pr_trigger_133,21.47361111111111,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:134:pr_trigger_134,18.319444444444443,PR approved,002,Cycling Style Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:135:pr_trigger_135,14.395138888888889,PR approved,004,Tube Traders Inc,D:Direct Debit,2,4,True
+purchase_requisition:136:pr_trigger_136,35.490972222222226,PR approved,002,Rider Apparel Co,A: Bank TransferB: Check,4,4,False
+purchase_requisition:137:pr_trigger_137,18.74652777777778,PR approved,002,Helmet Heroes Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:138:pr_trigger_138,33.97152777777778,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,2,3,True
+purchase_requisition:139:pr_trigger_139,25.895138888888887,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,4,4,False
+purchase_requisition:13:pr_trigger_13,23.76875,PR approved,004,Valve Ventures Co,D:Direct Debit,2,3,False
+purchase_requisition:140:pr_trigger_140,14.908333333333333,PR approved,003,Pump Pros Inc,D:Direct Debit,1,1,False
+purchase_requisition:141:pr_trigger_141,19.843055555555555,PR approved,004,Wheel Wizards Co,C: Bank Collection,3,4,False
+purchase_requisition:142:pr_trigger_142,13.825,no PR created,004,Wheel Wizards Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:143:pr_trigger_143,26.604861111111113,PR approved,004,Rim Royals Ltd,C: Bank Collection,2,4,False
+purchase_requisition:144:pr_trigger_144,16.134027777777778,no PR created,003,Mirror Makers Ltd,D:Direct Debit,2,2,False
+purchase_requisition:145:pr_trigger_145,16.5625,PR approved,005,Bracket Barons Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:146:pr_trigger_146,21.68263888888889,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,1,1,False
+purchase_requisition:147:pr_trigger_147,22.09722222222222,PR approved,005,Lever Legends Ltd,C: Bank Collection,2,2,True
+purchase_requisition:148:pr_trigger_148,29.0375,PR approved,002,Pants Providers Inc,D:Direct Debit,3,3,False
+purchase_requisition:149:pr_trigger_149,24.12013888888889,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,3,3,False
+purchase_requisition:14:pr_trigger_14,36.43472222222222,PR approved,004,Hub Heroes Ltd,C: Bank Collection,3,3,False
+purchase_requisition:150:pr_trigger_150,48.53194444444444,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,3,3,True
+purchase_requisition:151:pr_trigger_151,18.63125,no PR created,002,Cycling Style Ltd,D:Direct Debit,1,1,False
+purchase_requisition:152:pr_trigger_152,23.279166666666665,PR approved,004,Rim Royals Ltd,C: Bank Collection,1,1,False
+purchase_requisition:153:pr_trigger_153,27.684722222222224,PR approved,003,Bell Barons Inc,C: Bank Collection,1,1,False
+purchase_requisition:154:pr_trigger_154,17.82986111111111,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,1,2,False
+purchase_requisition:155:pr_trigger_155,14.11875,no PR created,002,Glove Masters Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:156:pr_trigger_156,27.068055555555556,no PR created,001,Bike Components Corp,A: Bank TransferB: Check,3,3,False
+purchase_requisition:157:pr_trigger_157,28.056944444444444,PR approved,003,Strap Stars Inc,C: Bank Collection,1,1,False
+purchase_requisition:158:pr_trigger_158,24.610416666666666,PR approved,003,Mirror Makers Ltd,D:Direct Debit,2,2,False
+purchase_requisition:159:pr_trigger_159,34.609722222222224,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,3,False
+purchase_requisition:15:pr_trigger_15,15.381944444444445,no PR created,003,Bottle Bosses Co,A: Bank TransferB: Check,1,1,True
+purchase_requisition:160:pr_trigger_160,24.520138888888887,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,3,3,False
+purchase_requisition:161:pr_trigger_161,18.918055555555554,PR approved,005,Crankset Kings Ltd,C: Bank Collection,2,2,False
+purchase_requisition:162:pr_trigger_162,32.60347222222222,PR approved,003,Cage Creators Ltd,C: Bank Collection,1,1,True
+purchase_requisition:163:pr_trigger_163,26.707638888888887,PR approved,002,Cycling Style Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:164:pr_trigger_164,22.945138888888888,PR approved,005,Crankset Kings Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:165:pr_trigger_165,18.01597222222222,"PR delegated, no approval",001,Precision Gears Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:166:pr_trigger_166,23.85625,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,1,1,True
+purchase_requisition:167:pr_trigger_167,17.2875,PR approved,004,Valve Ventures Co,C: Bank Collection,2,2,False
+purchase_requisition:168:pr_trigger_168,26.790972222222223,PR approved,002,Helmet Heroes Inc,C: Bank Collection,1,1,True
+purchase_requisition:169:pr_trigger_169,23.350694444444443,PR approved,003,Speedometer Specialists Co,D:Direct Debit,1,2,False
+purchase_requisition:16:pr_trigger_16,31.472916666666666,PR approved,005,Cassette Captains Co,D:Direct Debit,1,1,True
+purchase_requisition:170:pr_trigger_170,10.99236111111111,no PR created,004,Rim Royals Ltd,C: Bank Collection,1,1,False
+purchase_requisition:171:pr_trigger_171,19.82638888888889,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:172:pr_trigger_172,14.193055555555556,PR approved,002,Helmet Heroes Inc,D:Direct Debit,1,1,False
+purchase_requisition:173:pr_trigger_173,20.360416666666666,no PR created,004,Nipple Navigators Co,D:Direct Debit,1,1,False
+purchase_requisition:174:pr_trigger_174,22.458333333333332,"PR delegated, no approval",001,Advanced Bike Frames Inc,C: Bank Collection,2,2,False
+purchase_requisition:175:pr_trigger_175,28.594444444444445,PR approved,005,Bracket Barons Inc,C: Bank Collection,4,4,False
+purchase_requisition:176:pr_trigger_176,36.31875,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,1,1,False
+purchase_requisition:177:pr_trigger_177,19.32777777777778,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,1,1,False
+purchase_requisition:178:pr_trigger_178,19.383333333333333,no PR created,003,Lighting Legends Co,A: Bank TransferB: Check,4,4,False
+purchase_requisition:179:pr_trigger_179,17.040972222222223,no PR created,001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:17:pr_trigger_17,21.073611111111113,PR approved,003,Lock Lords Ltd,C: Bank Collection,2,2,False
+purchase_requisition:180:pr_trigger_180,17.35,no PR created,001,Durable Bike Seats Inc,C: Bank Collection,1,1,False
+purchase_requisition:181:pr_trigger_181,24.39097222222222,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,3,4,False
+purchase_requisition:182:pr_trigger_182,15.841666666666667,"PR delegated, no approval",001,Precision Gears Ltd,C: Bank Collection,1,2,True
+purchase_requisition:183:pr_trigger_183,23.183333333333334,PR approved,002,Glove Masters Ltd,D:Direct Debit,1,3,False
+purchase_requisition:184:pr_trigger_184,28.680555555555557,PR approved,004,Tire Titans Ltd,D:Direct Debit,1,1,False
+purchase_requisition:185:pr_trigger_185,11.433333333333334,no PR created,001,Advanced Bike Frames Inc,C: Bank Collection,3,3,False
+purchase_requisition:186:pr_trigger_186,16.741666666666667,no PR created,003,Cage Creators Ltd,D:Direct Debit,3,3,False
+purchase_requisition:187:pr_trigger_187,11.131944444444445,no PR created,004,Wheel Wizards Co,C: Bank Collection,1,1,False
+purchase_requisition:188:pr_trigger_188,14.96875,PR approved,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:189:pr_trigger_189,26.719444444444445,PR approved,004,Wheel Wizards Co,D:Direct Debit,1,2,False
+purchase_requisition:18:pr_trigger_18,27.52638888888889,PR approved,002,Safety Gear Ltd,C: Bank Collection,2,2,False
+purchase_requisition:190:pr_trigger_190,24.464583333333334,PR approved,004,Valve Ventures Co,C: Bank Collection,1,2,False
+purchase_requisition:191:pr_trigger_191,6.7375,no PR created,001,Precision Gears Ltd,D:Direct Debit,1,1,False
+purchase_requisition:192:pr_trigger_192,19.57638888888889,"PR delegated, no approval",001,Bike Components Corp,C: Bank Collection,1,1,True
+purchase_requisition:193:pr_trigger_193,16.3625,PR approved,004,Valve Ventures Co,D:Direct Debit,3,3,False
+purchase_requisition:194:pr_trigger_194,27.54722222222222,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:195:pr_trigger_195,22.082638888888887,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:196:pr_trigger_196,20.808333333333334,PR approved,003,Cycling Accessory Corp,A: Bank TransferB: Check,4,4,False
+purchase_requisition:197:pr_trigger_197,18.544444444444444,"PR delegated, no approval",001,Reliable Tyres Ltd,C: Bank Collection,1,2,False
+purchase_requisition:198:pr_trigger_198,9.125694444444445,PR approved,003,Pump Pros Inc,D:Direct Debit,1,1,False
+purchase_requisition:199:pr_trigger_199,23.59722222222222,PR approved,003,Strap Stars Inc,D:Direct Debit,1,2,False
+purchase_requisition:19:pr_trigger_19,24.347916666666666,PR approved,002,Helmet Heroes Inc,C: Bank Collection,2,2,False
+purchase_requisition:1:pr_trigger_1,24.56875,"PR delegated, no approval",001,Durable Bike Seats Inc,A: Bank TransferB: Check,1,1,True
+purchase_requisition:200:pr_trigger_200,9.925694444444444,PR approved,003,Cage Creators Ltd,D:Direct Debit,1,1,False
+purchase_requisition:201:pr_trigger_201,20.377777777777776,PR approved,003,Strap Stars Inc,C: Bank Collection,1,2,False
+purchase_requisition:202:pr_trigger_202,30.355555555555554,PR approved,005,Cassette Captains Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:203:pr_trigger_203,22.197916666666668,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:204:pr_trigger_204,21.227083333333333,PR approved,005,Lever Legends Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:205:pr_trigger_205,25.300694444444446,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:206:pr_trigger_206,30.801388888888887,PR approved,003,Strap Stars Inc,C: Bank Collection,3,3,False
+purchase_requisition:207:pr_trigger_207,26.722916666666666,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,2,2,True
+purchase_requisition:208:pr_trigger_208,44.889583333333334,PR approved,003,Strap Stars Inc,C: Bank Collection,3,3,False
+purchase_requisition:209:pr_trigger_209,17.321527777777778,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:20:pr_trigger_20,32.08888888888889,PR approved,003,Lock Lords Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:210:pr_trigger_210,10.65625,PR approved,002,Jacket Junction Co,C: Bank Collection,1,1,False
+purchase_requisition:211:pr_trigger_211,17.647222222222222,PR approved,002,Safety Gear Ltd,C: Bank Collection,2,2,False
+purchase_requisition:212:pr_trigger_212,20.986805555555556,PR approved,003,Cage Creators Ltd,C: Bank Collection,2,2,False
+purchase_requisition:213:pr_trigger_213,21.285416666666666,PR approved,004,Nipple Navigators Co,C: Bank Collection,1,2,False
+purchase_requisition:214:pr_trigger_214,29.602083333333333,PR approved,005,Cable Creators Inc,D:Direct Debit,4,4,False
+purchase_requisition:215:pr_trigger_215,21.64375,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:216:pr_trigger_216,14.654861111111112,"PR delegated, no approval",001,Durable Bike Seats Inc,D:Direct Debit,1,1,False
+purchase_requisition:217:pr_trigger_217,33.21319444444445,no PR created,002,Cycling Style Ltd,D:Direct Debit,2,3,True
+purchase_requisition:218:pr_trigger_218,7.802083333333333,no PR created,003,Cycling Accessory Corp,D:Direct Debit,1,1,False
+purchase_requisition:219:pr_trigger_219,27.863194444444446,PR approved,005,Cable Creators Inc,D:Direct Debit,2,4,False
+purchase_requisition:21:pr_trigger_21,27.76875,PR approved,005,Brake Bosses Ltd,C: Bank Collection,1,2,False
+purchase_requisition:220:pr_trigger_220,14.544444444444444,no PR created,005,Pedal Providers Co,D:Direct Debit,2,2,False
+purchase_requisition:221:pr_trigger_221,17.65277777777778,"PR delegated, no approval",001,Cycle Parts Manufacturing,A: Bank TransferB: Check,1,2,False
+purchase_requisition:222:pr_trigger_222,8.238194444444444,no PR created,002,Cycling Style Ltd,D:Direct Debit,1,2,True
+purchase_requisition:223:pr_trigger_223,15.258333333333333,PR approved,002,Helmet Heroes Inc,C: Bank Collection,1,2,True
+purchase_requisition:224:pr_trigger_224,26.674305555555556,PR approved,005,Lever Legends Ltd,C: Bank Collection,1,2,False
+purchase_requisition:225:pr_trigger_225,31.727083333333333,PR approved,005,Brake Bosses Ltd,D:Direct Debit,2,2,False
+purchase_requisition:226:pr_trigger_226,15.415277777777778,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,2,False
+purchase_requisition:227:pr_trigger_227,22.758333333333333,PR approved,004,Nipple Navigators Co,A: Bank TransferB: Check,1,1,True
+purchase_requisition:228:pr_trigger_228,30.90972222222222,PR approved,004,Bearing Barons Inc,D:Direct Debit,2,2,False
+purchase_requisition:229:pr_trigger_229,26.330555555555556,PR approved,004,Hub Heroes Ltd,D:Direct Debit,1,1,False
+purchase_requisition:22:pr_trigger_22,14.947222222222223,PR approved,002,Pants Providers Inc,C: Bank Collection,1,3,False
+purchase_requisition:230:pr_trigger_230,25.09027777777778,PR approved,003,Cycling Accessory Corp,A: Bank TransferB: Check,1,1,True
+purchase_requisition:231:pr_trigger_231,19.355555555555554,"PR delegated, no approval",001,Professional Cycling Products,D:Direct Debit,2,3,False
+purchase_requisition:232:pr_trigger_232,25.85902777777778,PR approved,004,Wheel Wizards Co,D:Direct Debit,4,4,False
+purchase_requisition:233:pr_trigger_233,13.761805555555556,PR approved,002,Jacket Junction Co,D:Direct Debit,1,1,False
+purchase_requisition:234:pr_trigger_234,12.0625,no PR created,004,Tire Titans Ltd,C: Bank Collection,1,1,False
+purchase_requisition:235:pr_trigger_235,13.223611111111111,no PR created,005,Bracket Barons Inc,D:Direct Debit,1,1,False
+purchase_requisition:236:pr_trigger_236,29.143055555555556,PR approved,005,Cassette Captains Co,C: Bank Collection,2,2,False
+purchase_requisition:237:pr_trigger_237,24.688194444444445,PR approved,004,Wheel Wizards Co,C: Bank Collection,1,2,False
+purchase_requisition:238:pr_trigger_238,24.50486111111111,no PR created,002,Jacket Junction Co,C: Bank Collection,1,1,True
+purchase_requisition:239:pr_trigger_239,14.836805555555555,PR approved,004,Bearing Barons Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:23:pr_trigger_23,37.768055555555556,PR approved,004,Rim Royals Ltd,C: Bank Collection,1,1,False
+purchase_requisition:240:pr_trigger_240,27.255555555555556,PR approved,003,Strap Stars Inc,C: Bank Collection,2,3,False
+purchase_requisition:241:pr_trigger_241,16.216666666666665,PR approved,002,Glove Masters Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:242:pr_trigger_242,21.319444444444443,PR approved,003,Lock Lords Ltd,D:Direct Debit,3,3,False
+purchase_requisition:243:pr_trigger_243,12.668055555555556,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,2,2,False
+purchase_requisition:244:pr_trigger_244,18.68611111111111,PR approved,002,Safety Suppliers Ltd,D:Direct Debit,1,1,False
+purchase_requisition:245:pr_trigger_245,17.864583333333332,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,C: Bank Collection,1,1,False
+purchase_requisition:246:pr_trigger_246,18.038888888888888,no PR created,002,Safety Gear Ltd,D:Direct Debit,3,3,False
+purchase_requisition:247:pr_trigger_247,14.82013888888889,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,2,True
+purchase_requisition:248:pr_trigger_248,37.21597222222222,PR approved,004,Tube Traders Inc,C: Bank Collection,3,3,True
+purchase_requisition:249:pr_trigger_249,16.78611111111111,PR approved,005,Lever Legends Ltd,C: Bank Collection,1,1,False
+purchase_requisition:24:pr_trigger_24,21.509027777777778,PR approved,003,Cage Creators Ltd,C: Bank Collection,1,1,False
+purchase_requisition:250:pr_trigger_250,14.623611111111112,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:251:pr_trigger_251,11.8,no PR created,005,Lever Legends Ltd,C: Bank Collection,1,2,False
+purchase_requisition:252:pr_trigger_252,24.57986111111111,PR approved,002,Pants Providers Inc,D:Direct Debit,1,2,False
+purchase_requisition:253:pr_trigger_253,20.7625,PR approved,004,Bearing Barons Inc,D:Direct Debit,1,1,False
+purchase_requisition:254:pr_trigger_254,24.50347222222222,no PR created,003,Cage Creators Ltd,D:Direct Debit,2,2,True
+purchase_requisition:255:pr_trigger_255,31.985416666666666,PR approved,004,Spoke Suppliers Inc,D:Direct Debit,1,1,True
+purchase_requisition:256:pr_trigger_256,51.22361111111111,PR approved,005,Cable Creators Inc,C: Bank Collection,1,2,False
+purchase_requisition:257:pr_trigger_257,16.35972222222222,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,3,3,False
+purchase_requisition:258:pr_trigger_258,34.22291666666667,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,1,2,True
+purchase_requisition:259:pr_trigger_259,28.547916666666666,PR approved,004,Nipple Navigators Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:25:pr_trigger_25,15.09375,no PR created,001,Quality Helmets Co,D:Direct Debit,3,3,False
+purchase_requisition:260:pr_trigger_260,15.595138888888888,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:261:pr_trigger_261,20.04375,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:262:pr_trigger_262,30.87847222222222,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,3,3,True
+purchase_requisition:263:pr_trigger_263,24.028472222222224,PR approved,002,Comfort Clothing Inc,C: Bank Collection,3,3,False
+purchase_requisition:264:pr_trigger_264,18.438194444444445,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,1,3,False
+purchase_requisition:265:pr_trigger_265,29.177777777777777,PR approved,003,Bottle Bosses Co,C: Bank Collection,2,2,False
+purchase_requisition:266:pr_trigger_266,19.945833333333333,no PR created,003,Mirror Makers Ltd,D:Direct Debit,1,2,False
+purchase_requisition:267:pr_trigger_267,26.465972222222224,no PR created,004,Wheel Wizards Co,C: Bank Collection,3,3,False
+purchase_requisition:268:pr_trigger_268,23.354861111111113,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,4,4,True
+purchase_requisition:269:pr_trigger_269,10.713888888888889,PR approved,003,Cycling Accessory Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:26:pr_trigger_26,29.409027777777776,PR approved,002,Rider Apparel Co,C: Bank Collection,4,4,False
+purchase_requisition:270:pr_trigger_270,24.404166666666665,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:271:pr_trigger_271,17.622916666666665,PR approved,005,Chainring Champions Inc,D:Direct Debit,2,2,False
+purchase_requisition:272:pr_trigger_272,18.064583333333335,PR approved,005,Cassette Captains Co,C: Bank Collection,2,2,False
+purchase_requisition:273:pr_trigger_273,26.919444444444444,no PR created,005,Cassette Captains Co,A: Bank TransferB: Check,3,3,False
+purchase_requisition:274:pr_trigger_274,24.94375,PR approved,003,Cycling Accessory Corp,C: Bank Collection,1,2,False
+purchase_requisition:275:pr_trigger_275,15.647916666666667,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,3,3,False
+purchase_requisition:276:pr_trigger_276,19.868055555555557,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,2,False
+purchase_requisition:277:pr_trigger_277,26.083333333333332,PR approved,004,Bearing Barons Inc,C: Bank Collection,1,1,True
+purchase_requisition:278:pr_trigger_278,6.034722222222222,no PR created,001,Quality Helmets Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:279:pr_trigger_279,13.691666666666666,no PR created,005,Lever Legends Ltd,C: Bank Collection,2,2,False
+purchase_requisition:27:pr_trigger_27,21.152083333333334,PR approved,002,Road Protection Corp,C: Bank Collection,1,1,False
+purchase_requisition:280:pr_trigger_280,6.280555555555556,no PR created,002,Jacket Junction Co,D:Direct Debit,1,2,False
+purchase_requisition:281:pr_trigger_281,24.816666666666666,PR approved,003,Lighting Legends Co,C: Bank Collection,1,3,False
+purchase_requisition:282:pr_trigger_282,31.35902777777778,"PR delegated, no approval",001,Secure Locks Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:283:pr_trigger_283,10.363194444444444,PR approved,003,Lighting Legends Co,C: Bank Collection,1,1,True
+purchase_requisition:284:pr_trigger_284,17.655555555555555,no PR created,002,Pants Providers Inc,A: Bank TransferB: Check,1,3,False
+purchase_requisition:285:pr_trigger_285,17.768055555555556,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,4,True
+purchase_requisition:286:pr_trigger_286,14.307638888888889,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,3,False
+purchase_requisition:287:pr_trigger_287,23.12152777777778,PR approved,003,Cage Creators Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:288:pr_trigger_288,28.309722222222224,PR approved,002,Safety Gear Ltd,C: Bank Collection,2,3,False
+purchase_requisition:289:pr_trigger_289,36.21458333333333,PR approved,002,Rider Apparel Co,C: Bank Collection,3,3,True
+purchase_requisition:28:pr_trigger_28,38.60347222222222,PR approved,003,Speedometer Specialists Co,C: Bank Collection,1,1,False
+purchase_requisition:290:pr_trigger_290,24.76597222222222,no PR created,005,Brake Bosses Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:291:pr_trigger_291,20.422916666666666,"PR delegated, no approval",001,Quality Helmets Co,C: Bank Collection,2,2,False
+purchase_requisition:292:pr_trigger_292,22.321527777777778,PR approved,005,Crankset Kings Ltd,D:Direct Debit,2,3,False
+purchase_requisition:293:pr_trigger_293,28.92222222222222,PR approved,005,Lever Legends Ltd,C: Bank Collection,4,4,False
+purchase_requisition:294:pr_trigger_294,14.658333333333333,no PR created,002,Safety Gear Ltd,C: Bank Collection,1,1,False
+purchase_requisition:295:pr_trigger_295,30.215972222222224,PR approved,003,Cycling Accessory Corp,D:Direct Debit,1,3,False
+purchase_requisition:296:pr_trigger_296,26.99861111111111,PR approved,003,Pump Pros Inc,C: Bank Collection,2,3,True
+purchase_requisition:297:pr_trigger_297,8.745138888888889,no PR created,004,Tube Traders Inc,C: Bank Collection,1,1,False
+purchase_requisition:298:pr_trigger_298,40.77986111111111,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,3,4,False
+purchase_requisition:299:pr_trigger_299,26.208333333333332,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,3,3,False
+purchase_requisition:29:pr_trigger_29,16.82638888888889,PR approved,003,Cage Creators Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:2:pr_trigger_2,24.440277777777776,PR approved,005,Brake Bosses Ltd,D:Direct Debit,2,3,False
+purchase_requisition:300:pr_trigger_300,26.658333333333335,no PR created,001,Durable Bike Seats Inc,A: Bank TransferB: Check,1,2,False
+purchase_requisition:301:pr_trigger_301,36.86944444444445,PR approved,004,Cycle Component Corp,C: Bank Collection,1,1,False
+purchase_requisition:302:pr_trigger_302,15.776388888888889,PR approved,005,Lever Legends Ltd,D:Direct Debit,3,3,False
+purchase_requisition:303:pr_trigger_303,14.901388888888889,no PR created,001,Bike Components Corp,D:Direct Debit,2,2,False
+purchase_requisition:304:pr_trigger_304,24.820833333333333,PR approved,002,Pants Providers Inc,A: Bank TransferB: Check,1,1,True
+purchase_requisition:305:pr_trigger_305,21.220833333333335,"PR delegated, no approval",001,Cycle Parts Manufacturing,C: Bank Collection,4,4,False
+purchase_requisition:306:pr_trigger_306,29.525,no PR created,003,Bell Barons Inc,C: Bank Collection,2,3,True
+purchase_requisition:307:pr_trigger_307,14.342361111111112,PR approved,004,Nipple Navigators Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:308:pr_trigger_308,26.240972222222222,PR approved,004,Valve Ventures Co,C: Bank Collection,1,1,True
+purchase_requisition:309:pr_trigger_309,31.76388888888889,PR approved,005,Cable Creators Inc,C: Bank Collection,1,1,False
+purchase_requisition:30:pr_trigger_30,25.934722222222224,PR approved,005,Lever Legends Ltd,C: Bank Collection,1,1,False
+purchase_requisition:310:pr_trigger_310,29.49861111111111,PR approved,003,Cage Creators Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:311:pr_trigger_311,18.654166666666665,PR approved,004,Valve Ventures Co,D:Direct Debit,1,2,True
+purchase_requisition:312:pr_trigger_312,21.15763888888889,PR approved,002,Rider Apparel Co,D:Direct Debit,1,3,False
+purchase_requisition:313:pr_trigger_313,24.851388888888888,PR approved,003,Lock Lords Ltd,D:Direct Debit,2,2,False
+purchase_requisition:314:pr_trigger_314,21.38888888888889,no PR created,001,Secure Locks Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:315:pr_trigger_315,49.81527777777778,PR approved,002,Cycling Style Ltd,C: Bank Collection,1,4,True
+purchase_requisition:316:pr_trigger_316,27.95486111111111,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,1,1,True
+purchase_requisition:317:pr_trigger_317,22.459722222222222,PR approved,005,Brake Bosses Ltd,D:Direct Debit,2,4,False
+purchase_requisition:318:pr_trigger_318,21.866666666666667,PR approved,005,Cable Creators Inc,A: Bank TransferB: Check,4,4,False
+purchase_requisition:319:pr_trigger_319,12.6625,no PR created,001,Bike Components Corp,D:Direct Debit,1,1,False
+purchase_requisition:31:pr_trigger_31,30.110416666666666,PR approved,004,Wheel Wizards Co,A: Bank TransferB: Check,4,4,False
+purchase_requisition:320:pr_trigger_320,19.956944444444446,"PR delegated, no approval",001,Bike Components Corp,C: Bank Collection,1,3,False
+purchase_requisition:321:pr_trigger_321,27.858333333333334,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,1,1,False
+purchase_requisition:322:pr_trigger_322,29.70138888888889,"PR delegated, no approval",001,Professional Cycling Products,C: Bank Collection,1,3,False
+purchase_requisition:323:pr_trigger_323,14.353472222222223,no PR created,004,Tire Titans Ltd,C: Bank Collection,1,1,False
+purchase_requisition:324:pr_trigger_324,22.36111111111111,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:325:pr_trigger_325,17.14236111111111,PR approved,003,Bell Barons Inc,D:Direct Debit,2,2,False
+purchase_requisition:326:pr_trigger_326,21.738888888888887,PR approved,002,Pants Providers Inc,C: Bank Collection,1,2,False
+purchase_requisition:327:pr_trigger_327,35.30972222222222,PR approved,002,Rider Apparel Co,D:Direct Debit,1,1,False
+purchase_requisition:328:pr_trigger_328,20.8375,PR approved,002,Jacket Junction Co,C: Bank Collection,1,1,True
+purchase_requisition:329:pr_trigger_329,15.724305555555556,no PR created,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:32:pr_trigger_32,28.90972222222222,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,1,2,True
+purchase_requisition:330:pr_trigger_330,47.49513888888889,no PR created,002,Glove Masters Ltd,D:Direct Debit,1,1,True
+purchase_requisition:331:pr_trigger_331,29.43888888888889,no PR created,002,Comfort Clothing Inc,C: Bank Collection,2,3,False
+purchase_requisition:332:pr_trigger_332,23.448611111111113,PR approved,002,Road Protection Corp,C: Bank Collection,1,1,False
+purchase_requisition:333:pr_trigger_333,11.025694444444444,no PR created,004,Spoke Suppliers Inc,D:Direct Debit,2,2,False
+purchase_requisition:334:pr_trigger_334,8.041666666666666,no PR created,001,Bike Components Corp,D:Direct Debit,3,3,False
+purchase_requisition:335:pr_trigger_335,13.138194444444444,no PR created,005,Pedal Providers Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:336:pr_trigger_336,13.86736111111111,PR approved,003,Cycling Accessory Corp,D:Direct Debit,1,1,False
+purchase_requisition:337:pr_trigger_337,13.768055555555556,PR approved,002,Jacket Junction Co,D:Direct Debit,3,4,False
+purchase_requisition:338:pr_trigger_338,24.35625,no PR created,001,Secure Locks Co,C: Bank Collection,2,3,True
+purchase_requisition:339:pr_trigger_339,30.227777777777778,PR approved,004,Spoke Suppliers Inc,D:Direct Debit,1,1,False
+purchase_requisition:33:pr_trigger_33,32.43125,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:340:pr_trigger_340,41.416666666666664,PR approved,005,Chain Chiefs Ltd,C: Bank Collection,2,2,False
+purchase_requisition:341:pr_trigger_341,17.00625,no PR created,002,Comfort Clothing Inc,C: Bank Collection,2,2,False
+purchase_requisition:342:pr_trigger_342,19.69097222222222,PR approved,002,Pants Providers Inc,D:Direct Debit,4,4,False
+purchase_requisition:343:pr_trigger_343,20.581944444444446,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,2,2,True
+purchase_requisition:344:pr_trigger_344,20.99513888888889,PR approved,003,Speedometer Specialists Co,C: Bank Collection,2,3,True
+purchase_requisition:345:pr_trigger_345,46.09305555555556,PR approved,002,Cycling Style Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:346:pr_trigger_346,23.815277777777776,PR approved,005,Cassette Captains Co,C: Bank Collection,1,1,False
+purchase_requisition:347:pr_trigger_347,21.24513888888889,PR approved,005,Crankset Kings Ltd,C: Bank Collection,1,1,False
+purchase_requisition:348:pr_trigger_348,21.479166666666668,no PR created,001,Secure Locks Co,D:Direct Debit,2,2,False
+purchase_requisition:349:pr_trigger_349,15.525694444444444,no PR created,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:34:pr_trigger_34,23.1,PR approved,004,Wheel Wizards Co,C: Bank Collection,1,2,True
+purchase_requisition:350:pr_trigger_350,29.279166666666665,PR approved,004,Spoke Suppliers Inc,D:Direct Debit,1,1,True
+purchase_requisition:351:pr_trigger_351,16.96875,"PR delegated, no approval",001,Professional Cycling Products,A: Bank TransferB: Check,4,4,False
+purchase_requisition:352:pr_trigger_352,16.134722222222223,"PR delegated, no approval",001,Advanced Bike Frames Inc,C: Bank Collection,2,2,False
+purchase_requisition:353:pr_trigger_353,18.604861111111113,"PR delegated, no approval",001,Professional Cycling Products,C: Bank Collection,2,3,False
+purchase_requisition:354:pr_trigger_354,24.129166666666666,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,4,4,False
+purchase_requisition:355:pr_trigger_355,18.75347222222222,no PR created,004,Nipple Navigators Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:356:pr_trigger_356,18.704166666666666,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,1,1,False
+purchase_requisition:357:pr_trigger_357,30.523611111111112,"PR delegated, no approval",001,Precision Gears Ltd,D:Direct Debit,1,3,False
+purchase_requisition:358:pr_trigger_358,27.85,PR approved,005,Chain Chiefs Ltd,A: Bank TransferB: Check,4,4,True
+purchase_requisition:359:pr_trigger_359,11.144444444444444,PR approved,004,Bearing Barons Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:35:pr_trigger_35,16.845833333333335,PR approved,003,Bell Barons Inc,C: Bank Collection,2,2,False
+purchase_requisition:360:pr_trigger_360,14.746527777777779,no PR created,004,Tube Traders Inc,D:Direct Debit,1,1,False
+purchase_requisition:361:pr_trigger_361,20.791666666666668,PR approved,005,Crankset Kings Ltd,D:Direct Debit,3,3,True
+purchase_requisition:362:pr_trigger_362,14.897916666666667,no PR created,001,Bike Components Corp,C: Bank Collection,3,3,False
+purchase_requisition:363:pr_trigger_363,23.939583333333335,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,2,4,False
+purchase_requisition:364:pr_trigger_364,15.438194444444445,PR approved,005,Chain Chiefs Ltd,C: Bank Collection,1,1,False
+purchase_requisition:365:pr_trigger_365,19.768055555555556,PR approved,002,Safety Suppliers Ltd,D:Direct Debit,1,1,False
+purchase_requisition:366:pr_trigger_366,26.639583333333334,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,2,False
+purchase_requisition:367:pr_trigger_367,21.564583333333335,PR approved,004,Nipple Navigators Co,C: Bank Collection,2,3,False
+purchase_requisition:368:pr_trigger_368,19.93611111111111,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,1,1,True
+purchase_requisition:369:pr_trigger_369,24.947916666666668,PR approved,002,Rider Apparel Co,C: Bank Collection,2,3,True
+purchase_requisition:36:pr_trigger_36,25.728472222222223,"PR delegated, no approval",001,Cycle Parts Manufacturing,D:Direct Debit,2,3,True
+purchase_requisition:370:pr_trigger_370,22.78472222222222,"PR delegated, no approval",001,Bike Components Corp,C: Bank Collection,2,3,True
+purchase_requisition:371:pr_trigger_371,20.755555555555556,PR approved,002,Comfort Clothing Inc,D:Direct Debit,1,1,False
+purchase_requisition:372:pr_trigger_372,20.92152777777778,PR approved,005,Pedal Providers Co,D:Direct Debit,1,1,False
+purchase_requisition:373:pr_trigger_373,22.09375,PR approved,002,Glove Masters Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:374:pr_trigger_374,26.752083333333335,PR approved,002,Road Protection Corp,D:Direct Debit,2,2,False
+purchase_requisition:375:pr_trigger_375,36.795138888888886,PR approved,005,Crankset Kings Ltd,D:Direct Debit,4,4,False
+purchase_requisition:376:pr_trigger_376,38.97013888888889,PR approved,004,Tire Titans Ltd,D:Direct Debit,2,2,True
+purchase_requisition:377:pr_trigger_377,31.65972222222222,"PR delegated, no approval",001,Precision Gears Ltd,A: Bank TransferB: Check,1,2,True
+purchase_requisition:378:pr_trigger_378,14.56875,PR approved,005,Chain Chiefs Ltd,C: Bank Collection,1,1,False
+purchase_requisition:379:pr_trigger_379,24.841666666666665,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,2,3,False
+purchase_requisition:37:pr_trigger_37,24.30763888888889,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:380:pr_trigger_380,22.92013888888889,PR approved,004,Bearing Barons Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:381:pr_trigger_381,15.652083333333334,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,3,3,False
+purchase_requisition:382:pr_trigger_382,27.713194444444444,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,3,4,False
+purchase_requisition:383:pr_trigger_383,29.780555555555555,"PR delegated, no approval",001,Cycle Parts Manufacturing,A: Bank TransferB: Check,1,1,False
+purchase_requisition:384:pr_trigger_384,10.378472222222221,PR approved,002,Glove Masters Ltd,C: Bank Collection,1,1,False
+purchase_requisition:385:pr_trigger_385,9.281944444444445,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:386:pr_trigger_386,20.345833333333335,PR approved,004,Cycle Component Corp,D:Direct Debit,2,4,False
+purchase_requisition:387:pr_trigger_387,20.459027777777777,PR approved,002,Jacket Junction Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:388:pr_trigger_388,29.020138888888887,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,2,3,False
+purchase_requisition:389:pr_trigger_389,27.32847222222222,no PR created,002,Road Protection Corp,A: Bank TransferB: Check,2,3,False
+purchase_requisition:38:pr_trigger_38,30.37847222222222,PR approved,003,Bottle Bosses Co,C: Bank Collection,1,1,True
+purchase_requisition:390:pr_trigger_390,33.081944444444446,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,1,2,False
+purchase_requisition:391:pr_trigger_391,21.15277777777778,no PR created,001,Bike Components Corp,C: Bank Collection,2,2,False
+purchase_requisition:392:pr_trigger_392,27.678472222222222,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,2,2,False
+purchase_requisition:393:pr_trigger_393,16.41875,no PR created,004,Rim Royals Ltd,C: Bank Collection,2,2,True
+purchase_requisition:394:pr_trigger_394,20.709722222222222,"PR delegated, no approval",001,Quality Helmets Co,D:Direct Debit,1,2,False
+purchase_requisition:395:pr_trigger_395,21.093055555555555,no PR created,004,Tire Titans Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:396:pr_trigger_396,23.59375,PR approved,002,Safety Gear Ltd,C: Bank Collection,1,1,False
+purchase_requisition:397:pr_trigger_397,17.329166666666666,"PR delegated, no approval",001,Quality Helmets Co,C: Bank Collection,2,2,True
+purchase_requisition:398:pr_trigger_398,28.985416666666666,PR approved,003,Speedometer Specialists Co,D:Direct Debit,1,2,True
+purchase_requisition:399:pr_trigger_399,14.234722222222222,no PR created,004,Nipple Navigators Co,C: Bank Collection,3,3,False
+purchase_requisition:39:pr_trigger_39,17.346527777777776,PR approved,004,Nipple Navigators Co,D:Direct Debit,1,1,False
+purchase_requisition:3:pr_trigger_3,20.40972222222222,"PR delegated, no approval",001,Precision Gears Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:400:pr_trigger_400,33.454861111111114,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,2,2,True
+purchase_requisition:401:pr_trigger_401,17.952083333333334,PR approved,004,Tire Titans Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:402:pr_trigger_402,22.684722222222224,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:403:pr_trigger_403,17.180555555555557,"PR delegated, no approval",001,Professional Cycling Products,A: Bank TransferB: Check,2,3,False
+purchase_requisition:404:pr_trigger_404,15.109027777777778,PR approved,002,Pants Providers Inc,A: Bank TransferB: Check,3,3,False
+purchase_requisition:405:pr_trigger_405,7.876388888888889,no PR created,002,Cycling Style Ltd,C: Bank Collection,1,3,False
+purchase_requisition:406:pr_trigger_406,8.727083333333333,no PR created,005,Crankset Kings Ltd,C: Bank Collection,2,3,False
+purchase_requisition:407:pr_trigger_407,23.090972222222224,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,3,3,False
+purchase_requisition:408:pr_trigger_408,27.0375,PR approved,004,Tire Titans Ltd,C: Bank Collection,1,1,False
+purchase_requisition:409:pr_trigger_409,27.835416666666667,PR approved,002,Pants Providers Inc,D:Direct Debit,4,4,True
+purchase_requisition:40:pr_trigger_40,28.155555555555555,PR approved,002,Jacket Junction Co,D:Direct Debit,2,2,True
+purchase_requisition:410:pr_trigger_410,15.144444444444444,"PR delegated, no approval",001,Advanced Bike Frames Inc,C: Bank Collection,1,1,False
+purchase_requisition:411:pr_trigger_411,8.17013888888889,"PR delegated, no approval",001,Professional Cycling Products,A: Bank TransferB: Check,1,1,False
+purchase_requisition:412:pr_trigger_412,32.97638888888889,PR approved,002,Comfort Clothing Inc,C: Bank Collection,1,1,True
+purchase_requisition:413:pr_trigger_413,17.554861111111112,PR approved,003,Lock Lords Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:414:pr_trigger_414,40.765277777777776,PR approved,003,Pump Pros Inc,D:Direct Debit,1,1,False
+purchase_requisition:415:pr_trigger_415,23.788194444444443,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:416:pr_trigger_416,21.63888888888889,no PR created,003,Lighting Legends Co,D:Direct Debit,2,4,False
+purchase_requisition:417:pr_trigger_417,30.255555555555556,PR approved,002,Helmet Heroes Inc,D:Direct Debit,2,2,False
+purchase_requisition:418:pr_trigger_418,19.948611111111113,"PR delegated, no approval",001,Bike Components Corp,C: Bank Collection,1,2,True
+purchase_requisition:419:pr_trigger_419,21.483333333333334,"PR delegated, no approval",001,Cycle Parts Manufacturing,A: Bank TransferB: Check,2,2,False
+purchase_requisition:41:pr_trigger_41,7.339583333333334,no PR created,005,Crankset Kings Ltd,C: Bank Collection,1,1,False
+purchase_requisition:420:pr_trigger_420,13.491666666666667,PR approved,004,Nipple Navigators Co,D:Direct Debit,2,2,False
+purchase_requisition:421:pr_trigger_421,17.957638888888887,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:422:pr_trigger_422,29.300694444444446,PR approved,002,Pants Providers Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:423:pr_trigger_423,21.573611111111113,PR approved,003,Cycling Accessory Corp,A: Bank TransferB: Check,1,3,False
+purchase_requisition:424:pr_trigger_424,29.29861111111111,PR approved,003,Lighting Legends Co,C: Bank Collection,1,3,False
+purchase_requisition:425:pr_trigger_425,31.891666666666666,PR approved,002,Road Protection Corp,D:Direct Debit,1,1,True
+purchase_requisition:426:pr_trigger_426,30.555555555555557,PR approved,005,Brake Bosses Ltd,D:Direct Debit,2,2,False
+purchase_requisition:427:pr_trigger_427,19.84513888888889,no PR created,001,Reliable Tyres Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:428:pr_trigger_428,28.488888888888887,PR approved,005,Chainring Champions Inc,C: Bank Collection,4,4,False
+purchase_requisition:429:pr_trigger_429,21.181944444444444,PR approved,002,Road Protection Corp,D:Direct Debit,4,4,False
+purchase_requisition:42:pr_trigger_42,32.58680555555556,PR approved,005,Cassette Captains Co,C: Bank Collection,2,2,False
+purchase_requisition:430:pr_trigger_430,17.131944444444443,PR approved,003,Bell Barons Inc,D:Direct Debit,1,1,True
+purchase_requisition:431:pr_trigger_431,11.697222222222223,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:432:pr_trigger_432,33.1875,PR approved,005,Crankset Kings Ltd,C: Bank Collection,1,2,False
+purchase_requisition:433:pr_trigger_433,25.475,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,2,2,False
+purchase_requisition:434:pr_trigger_434,19.527083333333334,PR approved,005,Crankset Kings Ltd,C: Bank Collection,1,1,False
+purchase_requisition:435:pr_trigger_435,14.952083333333333,no PR created,001,Professional Cycling Products,C: Bank Collection,2,2,False
+purchase_requisition:436:pr_trigger_436,20.905555555555555,PR approved,004,Hub Heroes Ltd,A: Bank TransferB: Check,1,2,True
+purchase_requisition:437:pr_trigger_437,17.377777777777776,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,1,1,False
+purchase_requisition:438:pr_trigger_438,19.77638888888889,no PR created,003,Strap Stars Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:439:pr_trigger_439,11.702777777777778,no PR created,003,Bottle Bosses Co,C: Bank Collection,2,2,False
+purchase_requisition:43:pr_trigger_43,14.45625,"PR delegated, no approval",001,Precision Gears Ltd,D:Direct Debit,3,3,False
+purchase_requisition:440:pr_trigger_440,35.11736111111111,PR approved,005,Pedal Providers Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:441:pr_trigger_441,25.02638888888889,PR approved,004,Spoke Suppliers Inc,D:Direct Debit,3,3,False
+purchase_requisition:442:pr_trigger_442,23.602083333333333,PR approved,005,Crankset Kings Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:443:pr_trigger_443,44.12708333333333,PR approved,004,Valve Ventures Co,C: Bank Collection,1,1,False
+purchase_requisition:444:pr_trigger_444,12.702777777777778,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:445:pr_trigger_445,13.766666666666667,no PR created,003,Lock Lords Ltd,D:Direct Debit,1,1,False
+purchase_requisition:446:pr_trigger_446,17.358333333333334,PR approved,002,Rider Apparel Co,C: Bank Collection,2,2,False
+purchase_requisition:447:pr_trigger_447,12.988194444444444,no PR created,004,Valve Ventures Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:448:pr_trigger_448,24.478472222222223,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:449:pr_trigger_449,17.95277777777778,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:44:pr_trigger_44,19.913194444444443,no PR created,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:450:pr_trigger_450,37.58263888888889,PR approved,004,Tire Titans Ltd,C: Bank Collection,2,3,False
+purchase_requisition:451:pr_trigger_451,16.802777777777777,PR approved,005,Brake Bosses Ltd,D:Direct Debit,1,2,False
+purchase_requisition:452:pr_trigger_452,22.772916666666667,PR approved,004,Bearing Barons Inc,C: Bank Collection,1,2,False
+purchase_requisition:453:pr_trigger_453,25.324305555555554,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,2,2,False
+purchase_requisition:454:pr_trigger_454,15.081944444444444,PR approved,003,Bell Barons Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:455:pr_trigger_455,32.822916666666664,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,3,4,False
+purchase_requisition:456:pr_trigger_456,22.30625,PR approved,004,Tube Traders Inc,C: Bank Collection,1,1,False
+purchase_requisition:457:pr_trigger_457,24.363194444444446,no PR created,004,Rim Royals Ltd,C: Bank Collection,4,4,False
+purchase_requisition:458:pr_trigger_458,30.527083333333334,no PR created,005,Brake Bosses Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:459:pr_trigger_459,13.980555555555556,no PR created,005,Lever Legends Ltd,D:Direct Debit,2,2,False
+purchase_requisition:45:pr_trigger_45,29.68125,PR approved,002,Safety Gear Ltd,C: Bank Collection,1,2,True
+purchase_requisition:460:pr_trigger_460,11.634722222222223,no PR created,003,Lock Lords Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:461:pr_trigger_461,16.670833333333334,PR approved,004,Spoke Suppliers Inc,C: Bank Collection,1,1,False
+purchase_requisition:462:pr_trigger_462,24.543055555555554,no PR created,002,Safety Gear Ltd,C: Bank Collection,2,2,False
+purchase_requisition:463:pr_trigger_463,26.675,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:464:pr_trigger_464,17.426388888888887,no PR created,004,Nipple Navigators Co,A: Bank TransferB: Check,3,3,False
+purchase_requisition:465:pr_trigger_465,20.495833333333334,PR approved,002,Glove Masters Ltd,C: Bank Collection,1,2,True
+purchase_requisition:466:pr_trigger_466,11.2875,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:467:pr_trigger_467,15.34375,PR approved,003,Strap Stars Inc,D:Direct Debit,1,1,False
+purchase_requisition:468:pr_trigger_468,27.60763888888889,no PR created,002,Cycling Style Ltd,A: Bank TransferB: Check,2,3,True
+purchase_requisition:469:pr_trigger_469,26.66875,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:46:pr_trigger_46,10.998611111111112,"PR delegated, no approval",001,Reliable Tyres Ltd,D:Direct Debit,1,2,False
+purchase_requisition:470:pr_trigger_470,24.502777777777776,PR approved,003,Cage Creators Ltd,D:Direct Debit,1,1,False
+purchase_requisition:471:pr_trigger_471,24.056944444444444,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:472:pr_trigger_472,7.1930555555555555,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:473:pr_trigger_473,22.21527777777778,PR approved,003,Bottle Bosses Co,D:Direct Debit,2,3,False
+purchase_requisition:474:pr_trigger_474,10.94375,no PR created,003,Mirror Makers Ltd,D:Direct Debit,1,2,False
+purchase_requisition:475:pr_trigger_475,13.886805555555556,PR approved,005,Crankset Kings Ltd,C: Bank Collection,1,1,False
+purchase_requisition:476:pr_trigger_476,25.54652777777778,PR approved,002,Glove Masters Ltd,D:Direct Debit,2,2,False
+purchase_requisition:477:pr_trigger_477,12.9625,no PR created,001,Cycle Parts Manufacturing,D:Direct Debit,2,2,False
+purchase_requisition:478:pr_trigger_478,24.603472222222223,PR approved,005,Chain Chiefs Ltd,D:Direct Debit,1,2,True
+purchase_requisition:479:pr_trigger_479,17.903472222222224,"PR delegated, no approval",001,Precision Gears Ltd,D:Direct Debit,2,3,False
+purchase_requisition:47:pr_trigger_47,29.485416666666666,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,2,2,True
+purchase_requisition:480:pr_trigger_480,24.02638888888889,PR approved,002,Safety Gear Ltd,D:Direct Debit,1,1,False
+purchase_requisition:481:pr_trigger_481,15.713194444444444,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:482:pr_trigger_482,52.81736111111111,PR approved,004,Tire Titans Ltd,D:Direct Debit,1,2,True
+purchase_requisition:483:pr_trigger_483,33.361111111111114,PR approved,005,Cable Creators Inc,C: Bank Collection,2,2,False
+purchase_requisition:484:pr_trigger_484,23.354166666666668,PR approved,005,Cable Creators Inc,C: Bank Collection,4,4,False
+purchase_requisition:485:pr_trigger_485,26.054861111111112,PR approved,005,Crankset Kings Ltd,D:Direct Debit,1,1,False
+purchase_requisition:486:pr_trigger_486,19.37847222222222,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,2,3,False
+purchase_requisition:487:pr_trigger_487,25.26875,PR approved,003,Speedometer Specialists Co,C: Bank Collection,3,4,False
+purchase_requisition:488:pr_trigger_488,28.310416666666665,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,1,2,True
+purchase_requisition:489:pr_trigger_489,16.56597222222222,no PR created,002,Pants Providers Inc,D:Direct Debit,1,2,False
+purchase_requisition:48:pr_trigger_48,23.825694444444444,PR approved,003,Bell Barons Inc,C: Bank Collection,2,2,False
+purchase_requisition:490:pr_trigger_490,29.742361111111112,PR approved,003,Pump Pros Inc,C: Bank Collection,3,3,True
+purchase_requisition:491:pr_trigger_491,12.1125,PR approved,002,Safety Suppliers Ltd,D:Direct Debit,1,1,True
+purchase_requisition:492:pr_trigger_492,27.629166666666666,PR approved,003,Bell Barons Inc,C: Bank Collection,2,2,False
+purchase_requisition:493:pr_trigger_493,31.40763888888889,PR approved,005,Lever Legends Ltd,C: Bank Collection,3,3,False
+purchase_requisition:494:pr_trigger_494,18.463194444444444,PR approved,003,Mirror Makers Ltd,A: Bank TransferB: Check,2,3,True
+purchase_requisition:495:pr_trigger_495,14.088888888888889,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,1,1,False
+purchase_requisition:496:pr_trigger_496,27.992361111111112,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,3,False
+purchase_requisition:497:pr_trigger_497,22.58125,PR approved,004,Tire Titans Ltd,D:Direct Debit,1,1,False
+purchase_requisition:498:pr_trigger_498,16.681944444444444,PR approved,002,Helmet Heroes Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:499:pr_trigger_499,19.70625,PR approved,005,Brake Bosses Ltd,C: Bank Collection,1,1,False
+purchase_requisition:49:pr_trigger_49,29.47013888888889,PR approved,002,Road Protection Corp,C: Bank Collection,1,1,True
+purchase_requisition:4:pr_trigger_4,23.125694444444445,PR approved,003,Strap Stars Inc,D:Direct Debit,1,1,False
+purchase_requisition:500:pr_trigger_500,28.525,PR approved,002,Jacket Junction Co,A: Bank TransferB: Check,2,2,True
+purchase_requisition:501:pr_trigger_501,13.85,no PR created,004,Spoke Suppliers Inc,D:Direct Debit,1,1,False
+purchase_requisition:502:pr_trigger_502,21.06736111111111,PR approved,004,Valve Ventures Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:503:pr_trigger_503,20.211111111111112,no PR created,003,Bell Barons Inc,D:Direct Debit,3,3,False
+purchase_requisition:504:pr_trigger_504,21.9375,"PR delegated, no approval",001,Secure Locks Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:505:pr_trigger_505,8.948611111111111,no PR created,001,Cycle Parts Manufacturing,C: Bank Collection,1,1,False
+purchase_requisition:506:pr_trigger_506,30.252777777777776,PR approved,004,Hub Heroes Ltd,A: Bank TransferB: Check,3,3,True
+purchase_requisition:507:pr_trigger_507,17.894444444444446,no PR created,005,Crankset Kings Ltd,C: Bank Collection,3,4,False
+purchase_requisition:508:pr_trigger_508,28.614583333333332,PR approved,002,Rider Apparel Co,D:Direct Debit,2,3,True
+purchase_requisition:509:pr_trigger_509,27.321527777777778,PR approved,005,Pedal Providers Co,C: Bank Collection,2,2,True
+purchase_requisition:50:pr_trigger_50,21.902083333333334,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,1,True
+purchase_requisition:510:pr_trigger_510,24.104166666666668,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,1,2,True
+purchase_requisition:511:pr_trigger_511,20.79375,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,4,4,True
+purchase_requisition:512:pr_trigger_512,21.366666666666667,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:513:pr_trigger_513,37.295833333333334,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,2,False
+purchase_requisition:514:pr_trigger_514,15.703472222222222,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:515:pr_trigger_515,14.139583333333333,no PR created,001,Bike Components Corp,A: Bank TransferB: Check,2,2,False
+purchase_requisition:516:pr_trigger_516,18.044444444444444,no PR created,003,Cycling Accessory Corp,C: Bank Collection,1,1,False
+purchase_requisition:517:pr_trigger_517,25.96736111111111,PR approved,005,Crankset Kings Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:518:pr_trigger_518,16.523611111111112,no PR created,004,Nipple Navigators Co,D:Direct Debit,3,3,False
+purchase_requisition:519:pr_trigger_519,14.559027777777779,no PR created,002,Safety Gear Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:51:pr_trigger_51,19.4375,no PR created,001,Secure Locks Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:520:pr_trigger_520,20.091666666666665,"PR delegated, no approval",001,Cycle Parts Manufacturing,C: Bank Collection,1,1,True
+purchase_requisition:521:pr_trigger_521,17.81111111111111,PR approved,005,Cassette Captains Co,D:Direct Debit,3,4,False
+purchase_requisition:522:pr_trigger_522,26.98402777777778,PR approved,005,Cassette Captains Co,C: Bank Collection,4,4,False
+purchase_requisition:523:pr_trigger_523,10.157638888888888,no PR created,003,Strap Stars Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:524:pr_trigger_524,21.87152777777778,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,1,False
+purchase_requisition:525:pr_trigger_525,31.147222222222222,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,4,4,True
+purchase_requisition:526:pr_trigger_526,25.019444444444446,no PR created,003,Cage Creators Ltd,C: Bank Collection,4,4,True
+purchase_requisition:527:pr_trigger_527,20.8875,no PR created,004,Valve Ventures Co,C: Bank Collection,2,2,False
+purchase_requisition:528:pr_trigger_528,18.18125,PR approved,005,Cable Creators Inc,D:Direct Debit,1,1,False
+purchase_requisition:529:pr_trigger_529,21.603472222222223,PR approved,002,Helmet Heroes Inc,D:Direct Debit,1,1,False
+purchase_requisition:52:pr_trigger_52,48.58819444444445,PR approved,004,Wheel Wizards Co,C: Bank Collection,4,4,True
+purchase_requisition:530:pr_trigger_530,11.922222222222222,no PR created,005,Chainring Champions Inc,C: Bank Collection,1,2,False
+purchase_requisition:531:pr_trigger_531,30.115277777777777,PR approved,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:532:pr_trigger_532,14.850694444444445,no PR created,003,Cycling Accessory Corp,C: Bank Collection,4,4,False
+purchase_requisition:533:pr_trigger_533,25.77638888888889,PR approved,004,Tire Titans Ltd,C: Bank Collection,1,1,True
+purchase_requisition:534:pr_trigger_534,31.377083333333335,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,2,4,False
+purchase_requisition:535:pr_trigger_535,21.727777777777778,PR approved,004,Valve Ventures Co,C: Bank Collection,4,4,True
+purchase_requisition:536:pr_trigger_536,14.610416666666667,PR approved,003,Lock Lords Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:537:pr_trigger_537,22.961111111111112,PR approved,004,Valve Ventures Co,D:Direct Debit,1,3,False
+purchase_requisition:538:pr_trigger_538,26.575694444444444,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:539:pr_trigger_539,19.2375,no PR created,001,Secure Locks Co,D:Direct Debit,3,3,False
+purchase_requisition:53:pr_trigger_53,22.979166666666668,PR approved,005,Pedal Providers Co,D:Direct Debit,3,3,True
+purchase_requisition:540:pr_trigger_540,14.81875,PR approved,003,Lighting Legends Co,C: Bank Collection,1,1,False
+purchase_requisition:541:pr_trigger_541,15.688888888888888,PR approved,003,Lock Lords Ltd,C: Bank Collection,2,2,False
+purchase_requisition:542:pr_trigger_542,21.20277777777778,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,2,3,False
+purchase_requisition:543:pr_trigger_543,24.448611111111113,PR approved,004,Valve Ventures Co,D:Direct Debit,1,2,True
+purchase_requisition:544:pr_trigger_544,35.235416666666666,PR approved,002,Safety Suppliers Ltd,C: Bank Collection,1,1,True
+purchase_requisition:545:pr_trigger_545,24.243055555555557,PR approved,004,Tire Titans Ltd,C: Bank Collection,1,1,False
+purchase_requisition:546:pr_trigger_546,33.09027777777778,PR approved,003,Strap Stars Inc,C: Bank Collection,3,4,False
+purchase_requisition:547:pr_trigger_547,13.247222222222222,no PR created,004,Tube Traders Inc,C: Bank Collection,3,3,False
+purchase_requisition:548:pr_trigger_548,24.33125,PR approved,003,Pump Pros Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:549:pr_trigger_549,43.769444444444446,PR approved,002,Comfort Clothing Inc,D:Direct Debit,1,1,True
+purchase_requisition:54:pr_trigger_54,29.944444444444443,PR approved,003,Bell Barons Inc,A: Bank TransferB: Check,3,4,False
+purchase_requisition:550:pr_trigger_550,40.43194444444445,PR approved,004,Tire Titans Ltd,D:Direct Debit,2,2,True
+purchase_requisition:551:pr_trigger_551,20.95,no PR created,001,Reliable Tyres Ltd,C: Bank Collection,3,4,False
+purchase_requisition:552:pr_trigger_552,38.40416666666667,PR approved,005,Bracket Barons Inc,C: Bank Collection,3,4,False
+purchase_requisition:553:pr_trigger_553,18.825694444444444,no PR created,005,Derailleur Dynamos Co,A: Bank TransferB: Check,3,3,False
+purchase_requisition:554:pr_trigger_554,38.50833333333333,PR approved,002,Jacket Junction Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:555:pr_trigger_555,25.71875,PR approved,003,Mirror Makers Ltd,D:Direct Debit,1,1,False
+purchase_requisition:556:pr_trigger_556,14.70138888888889,"PR delegated, no approval",001,Professional Cycling Products,A: Bank TransferB: Check,3,3,False
+purchase_requisition:557:pr_trigger_557,20.175,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:558:pr_trigger_558,18.647916666666667,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:559:pr_trigger_559,26.86111111111111,no PR created,004,Tire Titans Ltd,C: Bank Collection,2,2,False
+purchase_requisition:55:pr_trigger_55,31.764583333333334,no PR created,003,Cycling Accessory Corp,C: Bank Collection,1,1,True
+purchase_requisition:560:pr_trigger_560,25.39097222222222,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,2,3,False
+purchase_requisition:561:pr_trigger_561,28.926388888888887,PR approved,002,Glove Masters Ltd,A: Bank TransferB: Check,2,2,True
+purchase_requisition:562:pr_trigger_562,19.959027777777777,no PR created,005,Brake Bosses Ltd,C: Bank Collection,2,2,False
+purchase_requisition:563:pr_trigger_563,22.039583333333333,no PR created,003,Speedometer Specialists Co,A: Bank TransferB: Check,1,3,False
+purchase_requisition:564:pr_trigger_564,24.602083333333333,"PR delegated, no approval",001,Quality Helmets Co,C: Bank Collection,1,1,True
+purchase_requisition:565:pr_trigger_565,46.89791666666667,PR approved,002,Cycling Style Ltd,C: Bank Collection,3,3,True
+purchase_requisition:566:pr_trigger_566,22.249305555555555,PR approved,002,Comfort Clothing Inc,D:Direct Debit,1,1,False
+purchase_requisition:567:pr_trigger_567,27.564583333333335,PR approved,003,Bell Barons Inc,D:Direct Debit,2,2,False
+purchase_requisition:568:pr_trigger_568,36.82013888888889,PR approved,004,Wheel Wizards Co,D:Direct Debit,4,4,True
+purchase_requisition:569:pr_trigger_569,23.645138888888887,no PR created,005,Crankset Kings Ltd,D:Direct Debit,2,2,False
+purchase_requisition:56:pr_trigger_56,22.84861111111111,PR approved,003,Bottle Bosses Co,C: Bank Collection,2,2,False
+purchase_requisition:570:pr_trigger_570,22.529166666666665,PR approved,005,Crankset Kings Ltd,C: Bank Collection,3,3,True
+purchase_requisition:571:pr_trigger_571,24.42222222222222,PR approved,004,Bearing Barons Inc,A: Bank TransferB: Check,2,3,False
+purchase_requisition:572:pr_trigger_572,22.031944444444445,PR approved,003,Pump Pros Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:573:pr_trigger_573,20.625694444444445,PR approved,002,Jacket Junction Co,C: Bank Collection,2,2,False
+purchase_requisition:574:pr_trigger_574,27.680555555555557,PR approved,002,Comfort Clothing Inc,C: Bank Collection,4,4,False
+purchase_requisition:575:pr_trigger_575,21.809722222222224,PR approved,005,Cable Creators Inc,C: Bank Collection,1,1,False
+purchase_requisition:576:pr_trigger_576,19.897916666666667,PR approved,005,Chainring Champions Inc,D:Direct Debit,2,2,True
+purchase_requisition:577:pr_trigger_577,20.414583333333333,"PR delegated, no approval",001,Precision Gears Ltd,C: Bank Collection,2,3,False
+purchase_requisition:578:pr_trigger_578,17.29652777777778,PR approved,002,Safety Suppliers Ltd,D:Direct Debit,1,2,False
+purchase_requisition:579:pr_trigger_579,21.444444444444443,PR approved,002,Glove Masters Ltd,D:Direct Debit,1,2,True
+purchase_requisition:57:pr_trigger_57,27.159027777777776,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,3,3,False
+purchase_requisition:580:pr_trigger_580,24.393055555555556,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:581:pr_trigger_581,19.08888888888889,PR approved,003,Cage Creators Ltd,C: Bank Collection,1,2,False
+purchase_requisition:582:pr_trigger_582,11.679166666666667,PR approved,003,Pump Pros Inc,C: Bank Collection,1,1,False
+purchase_requisition:583:pr_trigger_583,16.2375,PR approved,004,Tire Titans Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:584:pr_trigger_584,27.038194444444443,no PR created,004,Wheel Wizards Co,C: Bank Collection,1,2,False
+purchase_requisition:585:pr_trigger_585,16.295833333333334,"PR delegated, no approval",001,Cycle Parts Manufacturing,D:Direct Debit,2,2,False
+purchase_requisition:586:pr_trigger_586,5.94375,no PR created,001,Professional Cycling Products,D:Direct Debit,1,1,False
+purchase_requisition:587:pr_trigger_587,23.35902777777778,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:588:pr_trigger_588,26.220833333333335,PR approved,005,Lever Legends Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:589:pr_trigger_589,11.147916666666667,no PR created,005,Cassette Captains Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:58:pr_trigger_58,15.534722222222221,PR approved,004,Valve Ventures Co,C: Bank Collection,1,1,False
+purchase_requisition:590:pr_trigger_590,15.506944444444445,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:591:pr_trigger_591,25.10972222222222,PR approved,004,Tire Titans Ltd,D:Direct Debit,2,3,False
+purchase_requisition:592:pr_trigger_592,25.49652777777778,PR approved,004,Hub Heroes Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:593:pr_trigger_593,23.519444444444446,PR approved,005,Bracket Barons Inc,D:Direct Debit,1,1,False
+purchase_requisition:594:pr_trigger_594,21.35902777777778,PR approved,005,Chainring Champions Inc,C: Bank Collection,2,2,False
+purchase_requisition:595:pr_trigger_595,23.856944444444444,PR approved,002,Comfort Clothing Inc,D:Direct Debit,1,2,False
+purchase_requisition:596:pr_trigger_596,25.90972222222222,PR approved,004,Wheel Wizards Co,C: Bank Collection,2,3,True
+purchase_requisition:597:pr_trigger_597,15.295833333333333,PR approved,005,Bracket Barons Inc,D:Direct Debit,1,1,False
+purchase_requisition:598:pr_trigger_598,23.069444444444443,PR approved,002,Jacket Junction Co,D:Direct Debit,2,3,False
+purchase_requisition:599:pr_trigger_599,18.193055555555556,"PR delegated, no approval",001,Quality Helmets Co,D:Direct Debit,1,2,False
+purchase_requisition:59:pr_trigger_59,14.213888888888889,"PR delegated, no approval",001,Precision Gears Ltd,D:Direct Debit,1,1,False
+purchase_requisition:5:pr_trigger_5,19.291666666666668,no PR created,005,Chainring Champions Inc,D:Direct Debit,2,2,False
+purchase_requisition:600:pr_trigger_600,15.083333333333334,PR approved,002,Glove Masters Ltd,C: Bank Collection,2,2,False
+purchase_requisition:601:pr_trigger_601,37.62013888888889,PR approved,005,Brake Bosses Ltd,D:Direct Debit,2,2,False
+purchase_requisition:602:pr_trigger_602,16.146527777777777,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:603:pr_trigger_603,31.050694444444446,PR approved,005,Cable Creators Inc,D:Direct Debit,3,3,False
+purchase_requisition:604:pr_trigger_604,31.259722222222223,no PR created,005,Brake Bosses Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:605:pr_trigger_605,26.888194444444444,PR approved,005,Crankset Kings Ltd,A: Bank TransferB: Check,4,4,False
+purchase_requisition:606:pr_trigger_606,28.652083333333334,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,2,3,False
+purchase_requisition:607:pr_trigger_607,10.033333333333333,no PR created,005,Bracket Barons Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:608:pr_trigger_608,47.984027777777776,PR approved,003,Bottle Bosses Co,D:Direct Debit,2,3,True
+purchase_requisition:609:pr_trigger_609,41.480555555555554,PR approved,002,Rider Apparel Co,A: Bank TransferB: Check,4,4,False
+purchase_requisition:60:pr_trigger_60,8.967361111111112,no PR created,002,Cycling Style Ltd,D:Direct Debit,1,2,False
+purchase_requisition:610:pr_trigger_610,22.590972222222224,PR approved,004,Nipple Navigators Co,D:Direct Debit,2,2,False
+purchase_requisition:611:pr_trigger_611,37.12430555555556,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,3,3,False
+purchase_requisition:612:pr_trigger_612,29.127083333333335,PR approved,004,Wheel Wizards Co,D:Direct Debit,2,3,False
+purchase_requisition:613:pr_trigger_613,26.55,no PR created,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:614:pr_trigger_614,11.395833333333334,no PR created,003,Bottle Bosses Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:615:pr_trigger_615,32.05,PR approved,005,Cassette Captains Co,C: Bank Collection,3,4,False
+purchase_requisition:616:pr_trigger_616,39.71388888888889,PR approved,002,Safety Gear Ltd,D:Direct Debit,1,1,True
+purchase_requisition:617:pr_trigger_617,35.545833333333334,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,2,2,True
+purchase_requisition:618:pr_trigger_618,23.463194444444444,PR approved,005,Cassette Captains Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:619:pr_trigger_619,21.61111111111111,PR approved,005,Cassette Captains Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:61:pr_trigger_61,16.93125,PR approved,003,Bottle Bosses Co,D:Direct Debit,1,1,False
+purchase_requisition:620:pr_trigger_620,11.191666666666666,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,2,3,False
+purchase_requisition:621:pr_trigger_621,23.635416666666668,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,1,3,False
+purchase_requisition:622:pr_trigger_622,26.9125,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,2,True
+purchase_requisition:623:pr_trigger_623,7.990972222222222,no PR created,005,Chain Chiefs Ltd,C: Bank Collection,1,1,False
+purchase_requisition:624:pr_trigger_624,32.25486111111111,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,4,4,False
+purchase_requisition:625:pr_trigger_625,20.824305555555554,no PR created,002,Jacket Junction Co,C: Bank Collection,2,2,True
+purchase_requisition:626:pr_trigger_626,16.83888888888889,PR approved,004,Cycle Component Corp,C: Bank Collection,2,3,False
+purchase_requisition:627:pr_trigger_627,16.049305555555556,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:628:pr_trigger_628,19.513194444444444,"PR delegated, no approval",001,Durable Bike Seats Inc,C: Bank Collection,1,1,False
+purchase_requisition:629:pr_trigger_629,45.05,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,3,4,False
+purchase_requisition:62:pr_trigger_62,20.638194444444444,no PR created,004,Bearing Barons Inc,C: Bank Collection,1,1,False
+purchase_requisition:630:pr_trigger_630,26.966666666666665,PR approved,003,Mirror Makers Ltd,D:Direct Debit,3,3,False
+purchase_requisition:631:pr_trigger_631,23.03263888888889,no PR created,001,Cycle Parts Manufacturing,D:Direct Debit,2,2,False
+purchase_requisition:632:pr_trigger_632,19.683333333333334,PR approved,005,Cable Creators Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:633:pr_trigger_633,26.32777777777778,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,1,False
+purchase_requisition:634:pr_trigger_634,21.929861111111112,PR approved,004,Tube Traders Inc,D:Direct Debit,2,2,False
+purchase_requisition:635:pr_trigger_635,28.575,PR approved,004,Valve Ventures Co,C: Bank Collection,2,3,False
+purchase_requisition:636:pr_trigger_636,21.889583333333334,PR approved,005,Chainring Champions Inc,C: Bank Collection,2,2,False
+purchase_requisition:637:pr_trigger_637,4.595138888888889,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,1,1,False
+purchase_requisition:638:pr_trigger_638,17.636111111111113,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:639:pr_trigger_639,15.869444444444444,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:63:pr_trigger_63,20.036805555555556,PR approved,004,Rim Royals Ltd,D:Direct Debit,1,1,False
+purchase_requisition:640:pr_trigger_640,35.49513888888889,PR approved,004,Bearing Barons Inc,A: Bank TransferB: Check,2,4,False
+purchase_requisition:641:pr_trigger_641,14.046527777777778,PR approved,003,Bottle Bosses Co,C: Bank Collection,3,3,False
+purchase_requisition:642:pr_trigger_642,14.047916666666667,PR approved,005,Cassette Captains Co,C: Bank Collection,2,2,False
+purchase_requisition:643:pr_trigger_643,40.79097222222222,PR approved,004,Rim Royals Ltd,D:Direct Debit,1,4,True
+purchase_requisition:644:pr_trigger_644,16.591666666666665,PR approved,002,Glove Masters Ltd,C: Bank Collection,3,3,True
+purchase_requisition:645:pr_trigger_645,15.894444444444444,PR approved,005,Crankset Kings Ltd,D:Direct Debit,1,1,False
+purchase_requisition:646:pr_trigger_646,39.58888888888889,PR approved,002,Cycling Style Ltd,C: Bank Collection,2,3,True
+purchase_requisition:647:pr_trigger_647,24.42152777777778,PR approved,003,Bottle Bosses Co,D:Direct Debit,2,3,False
+purchase_requisition:648:pr_trigger_648,17.208333333333332,PR approved,005,Brake Bosses Ltd,D:Direct Debit,1,1,True
+purchase_requisition:649:pr_trigger_649,27.19375,PR approved,004,Tire Titans Ltd,D:Direct Debit,2,3,True
+purchase_requisition:64:pr_trigger_64,27.759722222222223,PR approved,003,Cage Creators Ltd,C: Bank Collection,2,2,True
+purchase_requisition:650:pr_trigger_650,18.988194444444446,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:651:pr_trigger_651,15.60763888888889,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:652:pr_trigger_652,22.207638888888887,"PR delegated, no approval",001,Durable Bike Seats Inc,D:Direct Debit,3,4,False
+purchase_requisition:653:pr_trigger_653,14.63125,no PR created,003,Lock Lords Ltd,C: Bank Collection,2,4,False
+purchase_requisition:654:pr_trigger_654,27.85763888888889,no PR created,004,Valve Ventures Co,C: Bank Collection,1,1,False
+purchase_requisition:655:pr_trigger_655,36.81388888888889,PR approved,003,Strap Stars Inc,C: Bank Collection,1,1,True
+purchase_requisition:656:pr_trigger_656,25.444444444444443,PR approved,004,Tube Traders Inc,D:Direct Debit,4,4,False
+purchase_requisition:657:pr_trigger_657,15.635416666666666,no PR created,005,Cable Creators Inc,C: Bank Collection,1,1,False
+purchase_requisition:658:pr_trigger_658,15.401388888888889,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,1,1,False
+purchase_requisition:659:pr_trigger_659,25.11111111111111,PR approved,004,Hub Heroes Ltd,D:Direct Debit,1,2,False
+purchase_requisition:65:pr_trigger_65,11.502083333333333,PR approved,005,Derailleur Dynamos Co,D:Direct Debit,1,1,False
+purchase_requisition:660:pr_trigger_660,16.860416666666666,PR approved,005,Chain Chiefs Ltd,C: Bank Collection,1,1,True
+purchase_requisition:661:pr_trigger_661,43.16041666666667,PR approved,003,Bottle Bosses Co,C: Bank Collection,1,1,False
+purchase_requisition:662:pr_trigger_662,27.680555555555557,"PR delegated, no approval",001,Precision Gears Ltd,C: Bank Collection,1,3,True
+purchase_requisition:663:pr_trigger_663,23.05902777777778,"PR delegated, no approval",001,Secure Locks Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:664:pr_trigger_664,26.063194444444445,PR approved,002,Helmet Heroes Inc,C: Bank Collection,1,1,False
+purchase_requisition:665:pr_trigger_665,15.540277777777778,PR approved,003,Pump Pros Inc,D:Direct Debit,1,3,False
+purchase_requisition:666:pr_trigger_666,15.460416666666667,PR approved,004,Wheel Wizards Co,C: Bank Collection,1,1,False
+purchase_requisition:667:pr_trigger_667,16.883333333333333,PR approved,005,Crankset Kings Ltd,D:Direct Debit,1,1,False
+purchase_requisition:668:pr_trigger_668,22.56875,PR approved,005,Pedal Providers Co,D:Direct Debit,1,1,True
+purchase_requisition:669:pr_trigger_669,21.450694444444444,PR approved,005,Crankset Kings Ltd,D:Direct Debit,3,3,False
+purchase_requisition:66:pr_trigger_66,66.01875,PR approved,005,Lever Legends Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:670:pr_trigger_670,44.265277777777776,PR approved,004,Bearing Barons Inc,C: Bank Collection,3,4,False
+purchase_requisition:671:pr_trigger_671,17.905555555555555,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,1,1,True
+purchase_requisition:672:pr_trigger_672,31.71736111111111,PR approved,005,Pedal Providers Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:673:pr_trigger_673,14.06875,PR approved,002,Jacket Junction Co,D:Direct Debit,1,1,False
+purchase_requisition:674:pr_trigger_674,22.053472222222222,PR approved,002,Jacket Junction Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:675:pr_trigger_675,18.331944444444446,PR approved,005,Chainring Champions Inc,C: Bank Collection,1,1,False
+purchase_requisition:676:pr_trigger_676,16.54513888888889,"PR delegated, no approval",001,Precision Gears Ltd,C: Bank Collection,1,3,False
+purchase_requisition:677:pr_trigger_677,11.065972222222221,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,2,3,False
+purchase_requisition:678:pr_trigger_678,23.049305555555556,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,4,4,False
+purchase_requisition:679:pr_trigger_679,15.92013888888889,no PR created,004,Hub Heroes Ltd,C: Bank Collection,1,1,False
+purchase_requisition:67:pr_trigger_67,15.463888888888889,PR approved,004,Cycle Component Corp,C: Bank Collection,2,2,False
+purchase_requisition:680:pr_trigger_680,9.463194444444444,PR approved,004,Cycle Component Corp,D:Direct Debit,1,1,False
+purchase_requisition:681:pr_trigger_681,31.872222222222224,PR approved,005,Brake Bosses Ltd,C: Bank Collection,1,4,True
+purchase_requisition:682:pr_trigger_682,24.7625,"PR delegated, no approval",001,Secure Locks Co,D:Direct Debit,1,1,False
+purchase_requisition:683:pr_trigger_683,12.169444444444444,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:684:pr_trigger_684,21.884027777777778,PR approved,003,Speedometer Specialists Co,C: Bank Collection,2,2,False
+purchase_requisition:685:pr_trigger_685,21.459722222222222,PR approved,004,Rim Royals Ltd,C: Bank Collection,1,1,True
+purchase_requisition:686:pr_trigger_686,19.459722222222222,no PR created,004,Hub Heroes Ltd,C: Bank Collection,4,4,False
+purchase_requisition:687:pr_trigger_687,18.852083333333333,PR approved,004,Tire Titans Ltd,C: Bank Collection,4,4,False
+purchase_requisition:688:pr_trigger_688,33.200694444444444,PR approved,002,Jacket Junction Co,C: Bank Collection,3,3,False
+purchase_requisition:689:pr_trigger_689,54.60486111111111,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:68:pr_trigger_68,35.28958333333333,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,3,3,False
+purchase_requisition:690:pr_trigger_690,17.45625,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:691:pr_trigger_691,21.74861111111111,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:692:pr_trigger_692,14.096527777777778,PR approved,003,Speedometer Specialists Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:693:pr_trigger_693,22.646527777777777,PR approved,005,Chainring Champions Inc,C: Bank Collection,1,1,True
+purchase_requisition:694:pr_trigger_694,22.15625,no PR created,001,Secure Locks Co,D:Direct Debit,4,4,True
+purchase_requisition:695:pr_trigger_695,9.658333333333333,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:696:pr_trigger_696,21.78263888888889,no PR created,002,Road Protection Corp,D:Direct Debit,1,1,False
+purchase_requisition:697:pr_trigger_697,22.363888888888887,PR approved,002,Pants Providers Inc,A: Bank TransferB: Check,3,3,False
+purchase_requisition:698:pr_trigger_698,14.4375,no PR created,001,Quality Helmets Co,D:Direct Debit,1,1,False
+purchase_requisition:699:pr_trigger_699,22.636805555555554,PR approved,002,Jacket Junction Co,D:Direct Debit,3,4,False
+purchase_requisition:69:pr_trigger_69,24.209722222222222,PR approved,003,Pump Pros Inc,D:Direct Debit,1,1,False
+purchase_requisition:6:pr_trigger_6,33.47291666666667,PR approved,005,Cable Creators Inc,D:Direct Debit,1,2,False
+purchase_requisition:700:pr_trigger_700,15.167361111111111,no PR created,001,Durable Bike Seats Inc,C: Bank Collection,1,2,False
+purchase_requisition:701:pr_trigger_701,17.1625,no PR created,005,Crankset Kings Ltd,C: Bank Collection,3,3,False
+purchase_requisition:702:pr_trigger_702,19.665972222222223,"PR delegated, no approval",001,Bike Components Corp,C: Bank Collection,2,2,True
+purchase_requisition:703:pr_trigger_703,14.100694444444445,PR approved,003,Pump Pros Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:704:pr_trigger_704,35.80902777777778,PR approved,002,Cycling Style Ltd,D:Direct Debit,2,2,False
+purchase_requisition:705:pr_trigger_705,15.13263888888889,PR approved,004,Valve Ventures Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:706:pr_trigger_706,18.606944444444444,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,C: Bank Collection,2,2,False
+purchase_requisition:707:pr_trigger_707,37.57083333333333,PR approved,004,Rim Royals Ltd,C: Bank Collection,2,3,False
+purchase_requisition:708:pr_trigger_708,30.147222222222222,PR approved,002,Rider Apparel Co,D:Direct Debit,3,4,False
+purchase_requisition:709:pr_trigger_709,18.65625,PR approved,005,Crankset Kings Ltd,C: Bank Collection,1,1,False
+purchase_requisition:70:pr_trigger_70,15.810416666666667,PR approved,005,Crankset Kings Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:710:pr_trigger_710,21.554861111111112,PR approved,003,Pump Pros Inc,C: Bank Collection,1,2,False
+purchase_requisition:711:pr_trigger_711,12.329166666666667,no PR created,004,Cycle Component Corp,D:Direct Debit,1,1,False
+purchase_requisition:712:pr_trigger_712,21.225,no PR created,003,Bottle Bosses Co,D:Direct Debit,2,2,False
+purchase_requisition:713:pr_trigger_713,14.064583333333333,PR approved,005,Cassette Captains Co,D:Direct Debit,1,1,False
+purchase_requisition:714:pr_trigger_714,18.25138888888889,no PR created,003,Lock Lords Ltd,D:Direct Debit,3,3,False
+purchase_requisition:715:pr_trigger_715,26.01736111111111,PR approved,005,Lever Legends Ltd,C: Bank Collection,1,1,False
+purchase_requisition:716:pr_trigger_716,51.15763888888889,PR approved,002,Cycling Style Ltd,C: Bank Collection,1,4,True
+purchase_requisition:717:pr_trigger_717,14.197222222222223,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,1,3,False
+purchase_requisition:718:pr_trigger_718,24.89236111111111,"PR delegated, no approval",001,Secure Locks Co,C: Bank Collection,1,4,False
+purchase_requisition:719:pr_trigger_719,14.984027777777778,no PR created,004,Spoke Suppliers Inc,C: Bank Collection,1,1,False
+purchase_requisition:71:pr_trigger_71,8.4375,PR approved,003,Lock Lords Ltd,D:Direct Debit,1,1,False
+purchase_requisition:720:pr_trigger_720,18.95138888888889,"PR delegated, no approval",001,Advanced Bike Frames Inc,C: Bank Collection,1,2,False
+purchase_requisition:721:pr_trigger_721,17.491666666666667,PR approved,005,Cassette Captains Co,D:Direct Debit,2,2,False
+purchase_requisition:722:pr_trigger_722,32.791666666666664,"PR delegated, no approval",001,Secure Locks Co,D:Direct Debit,1,1,True
+purchase_requisition:723:pr_trigger_723,27.31736111111111,PR approved,005,Bracket Barons Inc,C: Bank Collection,2,2,False
+purchase_requisition:724:pr_trigger_724,21.31388888888889,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:725:pr_trigger_725,32.45625,"PR delegated, no approval",001,Reliable Tyres Ltd,D:Direct Debit,1,1,True
+purchase_requisition:726:pr_trigger_726,26.102777777777778,PR approved,003,Speedometer Specialists Co,C: Bank Collection,1,1,False
+purchase_requisition:727:pr_trigger_727,13.779166666666667,PR approved,005,Brake Bosses Ltd,D:Direct Debit,1,1,False
+purchase_requisition:728:pr_trigger_728,23.147222222222222,PR approved,004,Valve Ventures Co,A: Bank TransferB: Check,2,2,False
+purchase_requisition:729:pr_trigger_729,15.58611111111111,no PR created,002,Cycling Style Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:72:pr_trigger_72,24.874305555555555,PR approved,002,Pants Providers Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:730:pr_trigger_730,15.090972222222222,PR approved,003,Lock Lords Ltd,D:Direct Debit,1,3,False
+purchase_requisition:731:pr_trigger_731,20.825,no PR created,003,Bottle Bosses Co,C: Bank Collection,1,4,True
+purchase_requisition:732:pr_trigger_732,20.88125,PR approved,002,Helmet Heroes Inc,C: Bank Collection,1,1,False
+purchase_requisition:733:pr_trigger_733,22.749305555555555,PR approved,005,Brake Bosses Ltd,C: Bank Collection,2,3,True
+purchase_requisition:734:pr_trigger_734,27.29861111111111,PR approved,004,Tube Traders Inc,C: Bank Collection,1,2,False
+purchase_requisition:735:pr_trigger_735,19.90972222222222,"PR delegated, no approval",001,Quality Helmets Co,D:Direct Debit,3,3,False
+purchase_requisition:736:pr_trigger_736,14.979166666666666,PR approved,003,Lighting Legends Co,D:Direct Debit,1,3,False
+purchase_requisition:737:pr_trigger_737,26.030555555555555,PR approved,004,Rim Royals Ltd,C: Bank Collection,3,4,False
+purchase_requisition:738:pr_trigger_738,29.916666666666668,PR approved,004,Spoke Suppliers Inc,C: Bank Collection,1,1,False
+purchase_requisition:739:pr_trigger_739,24.986805555555556,PR approved,004,Nipple Navigators Co,C: Bank Collection,3,4,False
+purchase_requisition:73:pr_trigger_73,21.678472222222222,PR approved,004,Nipple Navigators Co,D:Direct Debit,1,1,False
+purchase_requisition:740:pr_trigger_740,8.050694444444444,PR approved,002,Helmet Heroes Inc,A: Bank TransferB: Check,1,2,True
+purchase_requisition:741:pr_trigger_741,24.13888888888889,no PR created,001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:742:pr_trigger_742,24.772222222222222,PR approved,004,Tube Traders Inc,D:Direct Debit,1,1,False
+purchase_requisition:743:pr_trigger_743,11.440972222222221,no PR created,005,Pedal Providers Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:744:pr_trigger_744,13.268055555555556,no PR created,003,Cycling Accessory Corp,C: Bank Collection,1,1,False
+purchase_requisition:745:pr_trigger_745,15.76736111111111,PR approved,004,Valve Ventures Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:746:pr_trigger_746,48.15625,PR approved,005,Lever Legends Ltd,C: Bank Collection,1,3,False
+purchase_requisition:747:pr_trigger_747,20.35625,PR approved,003,Cage Creators Ltd,A: Bank TransferB: Check,2,2,True
+purchase_requisition:748:pr_trigger_748,18.31388888888889,PR approved,004,Tire Titans Ltd,D:Direct Debit,1,1,False
+purchase_requisition:749:pr_trigger_749,27.90763888888889,PR approved,003,Cycling Accessory Corp,C: Bank Collection,1,1,False
+purchase_requisition:74:pr_trigger_74,16.91875,PR approved,004,Nipple Navigators Co,C: Bank Collection,1,1,False
+purchase_requisition:750:pr_trigger_750,32.33888888888889,PR approved,003,Speedometer Specialists Co,D:Direct Debit,1,1,False
+purchase_requisition:751:pr_trigger_751,23.896527777777777,PR approved,003,Cage Creators Ltd,C: Bank Collection,1,1,False
+purchase_requisition:752:pr_trigger_752,41.84861111111111,PR approved,004,Wheel Wizards Co,D:Direct Debit,2,2,False
+purchase_requisition:753:pr_trigger_753,12.391666666666667,no PR created,003,Mirror Makers Ltd,C: Bank Collection,1,1,False
+purchase_requisition:754:pr_trigger_754,26.934722222222224,PR approved,002,Pants Providers Inc,D:Direct Debit,3,3,False
+purchase_requisition:755:pr_trigger_755,21.8,no PR created,005,Lever Legends Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:756:pr_trigger_756,9.083333333333334,no PR created,004,Spoke Suppliers Inc,D:Direct Debit,1,1,False
+purchase_requisition:757:pr_trigger_757,16.447916666666668,no PR created,004,Cycle Component Corp,A: Bank TransferB: Check,2,2,False
+purchase_requisition:758:pr_trigger_758,32.87916666666667,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,2,2,True
+purchase_requisition:759:pr_trigger_759,10.80625,no PR created,004,Tube Traders Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:75:pr_trigger_75,28.04722222222222,PR approved,002,Road Protection Corp,A: Bank TransferB: Check,1,2,False
+purchase_requisition:760:pr_trigger_760,15.665277777777778,no PR created,001,Quality Helmets Co,C: Bank Collection,2,2,False
+purchase_requisition:761:pr_trigger_761,14.860416666666667,no PR created,003,Pump Pros Inc,D:Direct Debit,1,1,False
+purchase_requisition:762:pr_trigger_762,15.170833333333333,no PR created,003,Lighting Legends Co,D:Direct Debit,2,2,False
+purchase_requisition:763:pr_trigger_763,15.907638888888888,PR approved,002,Safety Gear Ltd,C: Bank Collection,1,1,True
+purchase_requisition:764:pr_trigger_764,18.475694444444443,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:765:pr_trigger_765,23.386805555555554,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:766:pr_trigger_766,30.494444444444444,PR approved,003,Pump Pros Inc,C: Bank Collection,1,1,True
+purchase_requisition:767:pr_trigger_767,23.428472222222222,PR approved,005,Bracket Barons Inc,A: Bank TransferB: Check,3,3,False
+purchase_requisition:768:pr_trigger_768,25.770833333333332,no PR created,003,Pump Pros Inc,D:Direct Debit,3,3,True
+purchase_requisition:769:pr_trigger_769,19.596527777777776,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,2,2,False
+purchase_requisition:76:pr_trigger_76,23.581944444444446,PR approved,002,Safety Suppliers Ltd,A: Bank TransferB: Check,1,2,True
+purchase_requisition:770:pr_trigger_770,17.861805555555556,"PR delegated, no approval",001,Secure Locks Co,D:Direct Debit,3,3,False
+purchase_requisition:771:pr_trigger_771,19.824305555555554,PR approved,004,Tire Titans Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:772:pr_trigger_772,38.88611111111111,PR approved,004,Nipple Navigators Co,C: Bank Collection,1,1,False
+purchase_requisition:773:pr_trigger_773,13.145138888888889,no PR created,003,Strap Stars Inc,A: Bank TransferB: Check,1,2,False
+purchase_requisition:774:pr_trigger_774,9.807638888888889,no PR created,004,Spoke Suppliers Inc,A: Bank TransferB: Check,1,3,False
+purchase_requisition:775:pr_trigger_775,44.34791666666667,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:776:pr_trigger_776,9.957638888888889,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,1,1,True
+purchase_requisition:777:pr_trigger_777,20.14236111111111,no PR created,004,Cycle Component Corp,C: Bank Collection,1,1,True
+purchase_requisition:778:pr_trigger_778,17.68402777777778,PR approved,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,1,True
+purchase_requisition:779:pr_trigger_779,24.641666666666666,PR approved,002,Rider Apparel Co,C: Bank Collection,2,2,False
+purchase_requisition:77:pr_trigger_77,25.52638888888889,PR approved,005,Pedal Providers Co,C: Bank Collection,2,3,True
+purchase_requisition:780:pr_trigger_780,34.91736111111111,PR approved,002,Comfort Clothing Inc,D:Direct Debit,3,3,False
+purchase_requisition:781:pr_trigger_781,21.159027777777776,PR approved,004,Cycle Component Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:782:pr_trigger_782,17.215972222222224,no PR created,004,Valve Ventures Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:783:pr_trigger_783,13.161111111111111,no PR created,001,Advanced Bike Frames Inc,D:Direct Debit,1,1,False
+purchase_requisition:784:pr_trigger_784,26.693055555555556,PR approved,004,Spoke Suppliers Inc,C: Bank Collection,2,2,True
+purchase_requisition:785:pr_trigger_785,17.414583333333333,no PR created,004,Wheel Wizards Co,D:Direct Debit,2,2,False
+purchase_requisition:786:pr_trigger_786,15.649305555555555,"PR delegated, no approval",001,Durable Bike Seats Inc,D:Direct Debit,1,2,False
+purchase_requisition:787:pr_trigger_787,33.513194444444444,PR approved,003,Strap Stars Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:788:pr_trigger_788,25.818055555555556,PR approved,005,Cassette Captains Co,A: Bank TransferB: Check,1,4,False
+purchase_requisition:789:pr_trigger_789,15.636111111111111,no PR created,003,Bell Barons Inc,C: Bank Collection,4,4,False
+purchase_requisition:78:pr_trigger_78,20.259027777777778,PR approved,002,Cycling Style Ltd,D:Direct Debit,1,1,False
+purchase_requisition:790:pr_trigger_790,34.62013888888889,PR approved,003,Bottle Bosses Co,D:Direct Debit,2,3,False
+purchase_requisition:791:pr_trigger_791,32.51875,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:792:pr_trigger_792,27.22013888888889,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,4,4,False
+purchase_requisition:793:pr_trigger_793,24.87638888888889,no PR created,003,Strap Stars Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:794:pr_trigger_794,20.3875,no PR created,004,Nipple Navigators Co,D:Direct Debit,2,2,False
+purchase_requisition:795:pr_trigger_795,11.751388888888888,no PR created,003,Bottle Bosses Co,D:Direct Debit,1,1,True
+purchase_requisition:796:pr_trigger_796,25.770833333333332,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:797:pr_trigger_797,17.98263888888889,no PR created,001,Secure Locks Co,A: Bank TransferB: Check,3,3,False
+purchase_requisition:798:pr_trigger_798,18.988194444444446,"PR delegated, no approval",001,Quality Helmets Co,C: Bank Collection,2,4,False
+purchase_requisition:799:pr_trigger_799,42.59027777777778,PR approved,002,Glove Masters Ltd,D:Direct Debit,1,2,True
+purchase_requisition:79:pr_trigger_79,27.254166666666666,no PR created,002,Comfort Clothing Inc,A: Bank TransferB: Check,1,2,False
+purchase_requisition:7:pr_trigger_7,16.68263888888889,no PR created,004,Tire Titans Ltd,C: Bank Collection,1,1,False
+purchase_requisition:800:pr_trigger_800,16.977083333333333,"PR delegated, no approval",001,Reliable Tyres Ltd,D:Direct Debit,3,3,True
+purchase_requisition:801:pr_trigger_801,26.585416666666667,PR approved,004,Rim Royals Ltd,D:Direct Debit,2,2,False
+purchase_requisition:802:pr_trigger_802,17.377083333333335,PR approved,004,Nipple Navigators Co,C: Bank Collection,1,1,False
+purchase_requisition:803:pr_trigger_803,17.064583333333335,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:804:pr_trigger_804,14.80625,no PR created,005,Chainring Champions Inc,D:Direct Debit,1,2,False
+purchase_requisition:805:pr_trigger_805,24.125,PR approved,002,Cycling Style Ltd,D:Direct Debit,2,2,False
+purchase_requisition:806:pr_trigger_806,21.513194444444444,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:807:pr_trigger_807,24.45486111111111,no PR created,003,Lock Lords Ltd,C: Bank Collection,4,4,False
+purchase_requisition:808:pr_trigger_808,35.03819444444444,PR approved,005,Pedal Providers Co,D:Direct Debit,2,3,True
+purchase_requisition:809:pr_trigger_809,27.78263888888889,PR approved,002,Road Protection Corp,D:Direct Debit,3,4,True
+purchase_requisition:80:pr_trigger_80,17.438194444444445,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:810:pr_trigger_810,30.256944444444443,PR approved,003,Bottle Bosses Co,D:Direct Debit,4,4,False
+purchase_requisition:811:pr_trigger_811,19.273611111111112,PR approved,002,Road Protection Corp,D:Direct Debit,1,2,False
+purchase_requisition:812:pr_trigger_812,27.61111111111111,no PR created,005,Brake Bosses Ltd,C: Bank Collection,1,1,True
+purchase_requisition:813:pr_trigger_813,29.086805555555557,PR approved,004,Cycle Component Corp,D:Direct Debit,1,1,False
+purchase_requisition:814:pr_trigger_814,28.936805555555555,PR approved,004,Rim Royals Ltd,D:Direct Debit,1,1,False
+purchase_requisition:815:pr_trigger_815,26.166666666666668,PR approved,004,Tube Traders Inc,C: Bank Collection,1,1,False
+purchase_requisition:816:pr_trigger_816,35.7875,PR approved,003,Cage Creators Ltd,D:Direct Debit,1,1,True
+purchase_requisition:817:pr_trigger_817,21.611805555555556,PR approved,002,Road Protection Corp,C: Bank Collection,1,3,False
+purchase_requisition:818:pr_trigger_818,8.20486111111111,no PR created,002,Rider Apparel Co,D:Direct Debit,1,1,False
+purchase_requisition:819:pr_trigger_819,8.9375,"PR delegated, no approval",001,Cycle Parts Manufacturing,C: Bank Collection,1,1,False
+purchase_requisition:81:pr_trigger_81,8.011805555555556,PR approved,005,Cassette Captains Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:820:pr_trigger_820,27.816666666666666,PR approved,003,Lock Lords Ltd,D:Direct Debit,3,3,False
+purchase_requisition:821:pr_trigger_821,28.144444444444446,PR approved,003,Mirror Makers Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:822:pr_trigger_822,30.009027777777778,PR approved,004,Tire Titans Ltd,C: Bank Collection,1,2,True
+purchase_requisition:823:pr_trigger_823,20.903472222222224,PR approved,003,Lock Lords Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:824:pr_trigger_824,16.880555555555556,no PR created,003,Lock Lords Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:825:pr_trigger_825,20.458333333333332,no PR created,005,Bracket Barons Inc,D:Direct Debit,3,4,False
+purchase_requisition:826:pr_trigger_826,27.411805555555556,PR approved,002,Helmet Heroes Inc,D:Direct Debit,3,3,False
+purchase_requisition:827:pr_trigger_827,28.321527777777778,PR approved,002,Rider Apparel Co,C: Bank Collection,2,2,False
+purchase_requisition:828:pr_trigger_828,14.972222222222221,no PR created,002,Safety Gear Ltd,C: Bank Collection,2,2,False
+purchase_requisition:829:pr_trigger_829,15.208333333333334,no PR created,002,Pants Providers Inc,C: Bank Collection,1,1,False
+purchase_requisition:82:pr_trigger_82,25.933333333333334,PR approved,004,Hub Heroes Ltd,C: Bank Collection,2,2,True
+purchase_requisition:830:pr_trigger_830,16.62013888888889,no PR created,004,Nipple Navigators Co,D:Direct Debit,1,1,False
+purchase_requisition:831:pr_trigger_831,14.073611111111111,no PR created,002,Cycling Style Ltd,D:Direct Debit,1,4,True
+purchase_requisition:832:pr_trigger_832,16.60902777777778,PR approved,003,Lighting Legends Co,C: Bank Collection,3,3,False
+purchase_requisition:833:pr_trigger_833,24.2125,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:834:pr_trigger_834,28.877083333333335,PR approved,004,Cycle Component Corp,D:Direct Debit,3,3,False
+purchase_requisition:835:pr_trigger_835,24.004166666666666,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,D:Direct Debit,3,4,False
+purchase_requisition:836:pr_trigger_836,26.565277777777776,PR approved,003,Lighting Legends Co,D:Direct Debit,2,2,False
+purchase_requisition:837:pr_trigger_837,10.615277777777777,no PR created,003,Cycling Accessory Corp,A: Bank TransferB: Check,2,2,False
+purchase_requisition:838:pr_trigger_838,27.804166666666667,PR approved,004,Nipple Navigators Co,C: Bank Collection,2,2,False
+purchase_requisition:839:pr_trigger_839,15.856944444444444,PR approved,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,3,False
+purchase_requisition:83:pr_trigger_83,25.511111111111113,no PR created,002,Jacket Junction Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:840:pr_trigger_840,17.088194444444444,"PR delegated, no approval",001,Bike Components Corp,D:Direct Debit,2,2,False
+purchase_requisition:841:pr_trigger_841,17.50486111111111,PR approved,005,Pedal Providers Co,D:Direct Debit,1,3,False
+purchase_requisition:842:pr_trigger_842,21.85902777777778,PR approved,002,Jacket Junction Co,D:Direct Debit,1,1,False
+purchase_requisition:843:pr_trigger_843,24.108333333333334,"PR delegated, no approval",001,Precision Gears Ltd,A: Bank TransferB: Check,4,4,True
+purchase_requisition:844:pr_trigger_844,26.683333333333334,no PR created,002,Road Protection Corp,D:Direct Debit,2,4,True
+purchase_requisition:845:pr_trigger_845,23.061805555555555,PR approved,003,Pump Pros Inc,C: Bank Collection,4,4,False
+purchase_requisition:846:pr_trigger_846,14.1125,no PR created,003,Bell Barons Inc,A: Bank TransferB: Check,4,4,False
+purchase_requisition:847:pr_trigger_847,15.395833333333334,no PR created,005,Bracket Barons Inc,C: Bank Collection,1,1,False
+purchase_requisition:848:pr_trigger_848,38.859722222222224,PR approved,003,Lock Lords Ltd,A: Bank TransferB: Check,1,2,False
+purchase_requisition:849:pr_trigger_849,20.321527777777778,PR approved,004,Wheel Wizards Co,C: Bank Collection,2,2,True
+purchase_requisition:84:pr_trigger_84,20.729166666666668,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:850:pr_trigger_850,22.124305555555555,no PR created,005,Chain Chiefs Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:851:pr_trigger_851,17.92222222222222,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,2,3,False
+purchase_requisition:852:pr_trigger_852,12.229166666666666,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:853:pr_trigger_853,11.758333333333333,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:854:pr_trigger_854,23.23472222222222,PR approved,005,Chainring Champions Inc,C: Bank Collection,3,3,True
+purchase_requisition:855:pr_trigger_855,17.200694444444444,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,2,3,False
+purchase_requisition:856:pr_trigger_856,25.334027777777777,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:857:pr_trigger_857,20.080555555555556,PR approved,003,Bottle Bosses Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:858:pr_trigger_858,18.42222222222222,PR approved,003,Mirror Makers Ltd,A: Bank TransferB: Check,3,3,False
+purchase_requisition:859:pr_trigger_859,19.697916666666668,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,2,False
+purchase_requisition:85:pr_trigger_85,34.798611111111114,PR approved,002,Pants Providers Inc,D:Direct Debit,2,2,True
+purchase_requisition:860:pr_trigger_860,10.681944444444444,no PR created,004,Hub Heroes Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:861:pr_trigger_861,28.697916666666668,PR approved,005,Derailleur Dynamos Co,C: Bank Collection,4,4,False
+purchase_requisition:862:pr_trigger_862,17.56111111111111,no PR created,002,Safety Suppliers Ltd,C: Bank Collection,2,2,False
+purchase_requisition:863:pr_trigger_863,26.391666666666666,PR approved,004,Rim Royals Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:864:pr_trigger_864,9.91875,"PR delegated, no approval",001,Precision Gears Ltd,D:Direct Debit,1,1,False
+purchase_requisition:865:pr_trigger_865,15.445833333333333,no PR created,001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:866:pr_trigger_866,18.78472222222222,PR approved,004,Wheel Wizards Co,C: Bank Collection,1,1,True
+purchase_requisition:867:pr_trigger_867,17.000694444444445,PR approved,004,Wheel Wizards Co,D:Direct Debit,1,1,True
+purchase_requisition:868:pr_trigger_868,11.104166666666666,no PR created,001,Professional Cycling Products,A: Bank TransferB: Check,1,3,False
+purchase_requisition:869:pr_trigger_869,18.864583333333332,PR approved,004,Rim Royals Ltd,D:Direct Debit,3,3,False
+purchase_requisition:86:pr_trigger_86,14.731944444444444,PR approved,004,Rim Royals Ltd,C: Bank Collection,3,4,False
+purchase_requisition:870:pr_trigger_870,32.88472222222222,PR approved,004,Spoke Suppliers Inc,A: Bank TransferB: Check,2,2,False
+purchase_requisition:871:pr_trigger_871,17.602083333333333,PR approved,005,Cassette Captains Co,D:Direct Debit,3,3,False
+purchase_requisition:872:pr_trigger_872,27.384722222222223,no PR created,003,Speedometer Specialists Co,D:Direct Debit,1,1,True
+purchase_requisition:873:pr_trigger_873,17.363888888888887,PR approved,003,Lock Lords Ltd,D:Direct Debit,1,1,False
+purchase_requisition:874:pr_trigger_874,25.84375,PR approved,005,Brake Bosses Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:875:pr_trigger_875,15.666666666666666,PR approved,004,Valve Ventures Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:876:pr_trigger_876,24.10763888888889,PR approved,004,Bearing Barons Inc,C: Bank Collection,3,3,False
+purchase_requisition:877:pr_trigger_877,22.85763888888889,PR approved,004,Wheel Wizards Co,D:Direct Debit,3,4,False
+purchase_requisition:878:pr_trigger_878,46.88263888888889,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,A: Bank TransferB: Check,2,2,True
+purchase_requisition:879:pr_trigger_879,29.041666666666668,PR approved,005,Chain Chiefs Ltd,D:Direct Debit,1,1,False
+purchase_requisition:87:pr_trigger_87,52.78958333333333,PR approved,004,Nipple Navigators Co,D:Direct Debit,4,4,True
+purchase_requisition:880:pr_trigger_880,23.465972222222224,"PR delegated, no approval",001,Quality Helmets Co,D:Direct Debit,3,4,False
+purchase_requisition:881:pr_trigger_881,16.20277777777778,PR approved,003,Speedometer Specialists Co,C: Bank Collection,1,2,False
+purchase_requisition:882:pr_trigger_882,37.69375,PR approved,002,Safety Gear Ltd,C: Bank Collection,4,4,False
+purchase_requisition:883:pr_trigger_883,25.345833333333335,PR approved,003,Pump Pros Inc,D:Direct Debit,2,3,True
+purchase_requisition:884:pr_trigger_884,32.60347222222222,PR approved,004,Spoke Suppliers Inc,D:Direct Debit,2,2,False
+purchase_requisition:885:pr_trigger_885,14.283333333333333,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:886:pr_trigger_886,34.21458333333333,PR approved,002,Rider Apparel Co,D:Direct Debit,1,2,False
+purchase_requisition:887:pr_trigger_887,34.68611111111111,"PR delegated, no approval",001,Advanced Bike Frames Inc,A: Bank TransferB: Check,1,3,True
+purchase_requisition:888:pr_trigger_888,15.078472222222222,PR approved,002,Safety Suppliers Ltd,D:Direct Debit,1,1,False
+purchase_requisition:889:pr_trigger_889,18.75486111111111,PR approved,005,Chainring Champions Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:88:pr_trigger_88,20.726388888888888,PR approved,005,Cable Creators Inc,A: Bank TransferB: Check,1,1,False
+purchase_requisition:890:pr_trigger_890,21.241666666666667,PR approved,005,Derailleur Dynamos Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:891:pr_trigger_891,41.09166666666667,PR approved,002,Safety Gear Ltd,D:Direct Debit,2,2,True
+purchase_requisition:892:pr_trigger_892,17.934722222222224,PR approved,005,Pedal Providers Co,A: Bank TransferB: Check,4,4,False
+purchase_requisition:893:pr_trigger_893,23.44236111111111,PR approved,003,Pump Pros Inc,C: Bank Collection,1,1,False
+purchase_requisition:894:pr_trigger_894,35.522222222222226,PR approved,004,Spoke Suppliers Inc,C: Bank Collection,1,1,True
+purchase_requisition:895:pr_trigger_895,26.227083333333333,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,2,3,False
+purchase_requisition:896:pr_trigger_896,12.472222222222221,PR approved,002,Rider Apparel Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:897:pr_trigger_897,28.275,"PR delegated, no approval",001,Precision Gears Ltd,C: Bank Collection,1,3,False
+purchase_requisition:898:pr_trigger_898,12.750694444444445,no PR created,002,Glove Masters Ltd,D:Direct Debit,1,2,False
+purchase_requisition:899:pr_trigger_899,23.03472222222222,"PR delegated, no approval",001,Bike Components Corp,A: Bank TransferB: Check,1,1,False
+purchase_requisition:89:pr_trigger_89,14.417361111111111,"PR delegated, no approval",001,Reliable Tyres Ltd,A: Bank TransferB: Check,1,1,False
+purchase_requisition:8:pr_trigger_8,28.675,no PR created,004,Tube Traders Inc,C: Bank Collection,2,2,False
+purchase_requisition:900:pr_trigger_900,31.315277777777776,no PR created,003,Speedometer Specialists Co,C: Bank Collection,3,4,False
+purchase_requisition:901:pr_trigger_901,14.00625,no PR created,003,Bell Barons Inc,D:Direct Debit,1,2,True
+purchase_requisition:902:pr_trigger_902,20.177083333333332,PR approved,005,Lever Legends Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:903:pr_trigger_903,28.309722222222224,PR approved,005,Cable Creators Inc,C: Bank Collection,3,3,False
+purchase_requisition:904:pr_trigger_904,35.725,PR approved,005,Cassette Captains Co,D:Direct Debit,2,2,True
+purchase_requisition:905:pr_trigger_905,23.323611111111113,PR approved,004,Nipple Navigators Co,A: Bank TransferB: Check,4,4,True
+purchase_requisition:906:pr_trigger_906,7.979166666666667,"PR delegated, no approval",001,Secure Locks Co,C: Bank Collection,1,1,True
+purchase_requisition:907:pr_trigger_907,31.52986111111111,PR approved,004,Hub Heroes Ltd,A: Bank TransferB: Check,3,4,False
+purchase_requisition:908:pr_trigger_908,18.32847222222222,PR approved,003,Strap Stars Inc,D:Direct Debit,1,2,False
+purchase_requisition:909:pr_trigger_909,24.52777777777778,PR approved,004,Cycle Component Corp,C: Bank Collection,1,1,False
+purchase_requisition:90:pr_trigger_90,23.409027777777776,"PR delegated, no approval",001,Advanced Bike Frames Inc,D:Direct Debit,1,3,False
+purchase_requisition:910:pr_trigger_910,21.334722222222222,no PR created,003,Speedometer Specialists Co,D:Direct Debit,4,4,False
+purchase_requisition:911:pr_trigger_911,14.724305555555556,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:912:pr_trigger_912,17.554861111111112,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,C: Bank Collection,1,2,False
+purchase_requisition:913:pr_trigger_913,22.756944444444443,PR approved,003,Cycling Accessory Corp,A: Bank TransferB: Check,1,1,True
+purchase_requisition:914:pr_trigger_914,29.865972222222222,"PR delegated, no approval",001,Secure Locks Co,A: Bank TransferB: Check,1,1,True
+purchase_requisition:915:pr_trigger_915,12.801388888888889,PR approved,003,Mirror Makers Ltd,D:Direct Debit,1,1,False
+purchase_requisition:916:pr_trigger_916,20.438194444444445,PR approved,002,Safety Gear Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:917:pr_trigger_917,26.972916666666666,no PR created,005,Chain Chiefs Ltd,C: Bank Collection,2,2,False
+purchase_requisition:918:pr_trigger_918,17.95486111111111,no PR created,002,Safety Suppliers Ltd,C: Bank Collection,2,2,False
+purchase_requisition:919:pr_trigger_919,22.655555555555555,PR approved,003,Cage Creators Ltd,A: Bank TransferB: Check,2,2,False
+purchase_requisition:91:pr_trigger_91,10.584722222222222,"PR delegated, no approval",001,Secure Locks Co,C: Bank Collection,1,1,False
+purchase_requisition:920:pr_trigger_920,19.84722222222222,PR approved,003,Lock Lords Ltd,C: Bank Collection,1,1,False
+purchase_requisition:921:pr_trigger_921,36.56041666666667,PR approved,003,Lock Lords Ltd,C: Bank Collection,3,3,True
+purchase_requisition:922:pr_trigger_922,25.68611111111111,PR approved,003,Mirror Makers Ltd,D:Direct Debit,2,2,False
+purchase_requisition:923:pr_trigger_923,32.08541666666667,PR approved,002,Safety Gear Ltd,C: Bank Collection,1,1,False
+purchase_requisition:924:pr_trigger_924,22.268055555555556,"PR delegated, no approval",001,Efficient Lighting Solutions Ltd,C: Bank Collection,2,2,False
+purchase_requisition:925:pr_trigger_925,11.05,PR approved,004,Cycle Component Corp,D:Direct Debit,1,1,False
+purchase_requisition:926:pr_trigger_926,25.113194444444446,PR approved,003,Cycling Accessory Corp,C: Bank Collection,1,4,False
+purchase_requisition:92:pr_trigger_92,22.98611111111111,no PR created,004,Spoke Suppliers Inc,C: Bank Collection,3,3,False
+purchase_requisition:93:pr_trigger_93,20.358333333333334,no PR created,005,Pedal Providers Co,D:Direct Debit,1,1,True
+purchase_requisition:94:pr_trigger_94,21.927083333333332,PR approved,002,Comfort Clothing Inc,A: Bank TransferB: Check,4,4,False
+purchase_requisition:95:pr_trigger_95,22.027083333333334,PR approved,003,Lighting Legends Co,A: Bank TransferB: Check,1,1,False
+purchase_requisition:96:pr_trigger_96,14.292361111111111,no PR created,003,Bottle Bosses Co,D:Direct Debit,2,4,True
+purchase_requisition:97:pr_trigger_97,7.822916666666667,no PR created,005,Crankset Kings Ltd,D:Direct Debit,1,1,True
+purchase_requisition:98:pr_trigger_98,35.772222222222226,PR approved,002,Helmet Heroes Inc,C: Bank Collection,3,3,True
+purchase_requisition:99:pr_trigger_99,17.31875,PR approved,005,Cassette Captains Co,D:Direct Debit,3,3,False
+purchase_requisition:9:pr_trigger_9,15.139583333333333,"PR delegated, no approval",001,Quality Helmets Co,A: Bank TransferB: Check,1,1,False

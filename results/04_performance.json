@@ -1,0 +1,453 @@
+{
+  "case_duration_days": {
+    "n": 927,
+    "median": 21.75,
+    "mean": 22.53,
+    "p90": 32.78,
+    "max": 66.02
+  },
+  "stage_wait_days": {
+    "1 PR created -> PR approved": {
+      "n": 607.0,
+      "median": 2.43,
+      "mean": 3.37,
+      "p90": 7.3,
+      "max": 28.39
+    },
+    "1b PR created -> approval delegated": {
+      "n": 122.0,
+      "median": 0.06,
+      "mean": 0.32,
+      "p90": 0.68,
+      "max": 2.73
+    },
+    "2 PR approved -> RFQ": {
+      "n": 607.0,
+      "median": 2.89,
+      "mean": 3.84,
+      "p90": 7.81,
+      "max": 26.99
+    },
+    "3 RFQ -> first PO created": {
+      "n": 927.0,
+      "median": 0.9,
+      "mean": 1.3,
+      "p90": 2.82,
+      "max": 8.62
+    },
+    "4 PO created -> PO approved": {
+      "n": 1598.0,
+      "median": 2.83,
+      "mean": 3.64,
+      "p90": 7.81,
+      "max": 25.34
+    },
+    "5 PO approved -> first goods receipt": {
+      "n": 1598.0,
+      "median": 3.01,
+      "mean": 3.92,
+      "p90": 8.31,
+      "max": 25.6
+    },
+    "6 first goods receipt -> invoice": {
+      "n": 1941.0,
+      "median": 2.41,
+      "mean": 2.82,
+      "p90": 5.58,
+      "max": 17.46
+    },
+    "7 invoice -> two-way match": {
+      "n": 1941.0,
+      "median": 0.23,
+      "mean": 0.49,
+      "p90": 1.85,
+      "max": 2.71
+    },
+    "8 two-way match -> first payment": {
+      "n": 1941.0,
+      "median": 2.93,
+      "mean": 3.76,
+      "p90": 8.01,
+      "max": 24.32
+    }
+  },
+  "longest_stage_by_median": "5 PO approved -> first goods receipt",
+  "longest_stage_median_days": 3.01,
+  "longest_stage_by_p90": "5 PO approved -> first goods receipt",
+  "sum_of_stage_medians_by_group": {
+    "external": 5.42,
+    "internal": 12.21
+  },
+  "internal_share_of_stage_medians_pct": 69.3,
+  "duration_by_group": {
+    "path": [
+      {
+        "path": "PR approved",
+        "cases": 607,
+        "median": 23.6,
+        "mean": 24.53,
+        "p90": 35.33
+      },
+      {
+        "path": "PR delegated, no approval",
+        "cases": 122,
+        "median": 19.77,
+        "mean": 20.48,
+        "p90": 29.77
+      },
+      {
+        "path": "no PR created",
+        "cases": 198,
+        "median": 16.59,
+        "mean": 17.68,
+        "p90": 26.94
+      }
+    ],
+    "purchasing_group": [
+      {
+        "purchasing_group": "001",
+        "cases": 159,
+        "median": 19.24,
+        "mean": 19.72,
+        "p90": 28.82
+      },
+      {
+        "purchasing_group": "002",
+        "cases": 189,
+        "median": 23.07,
+        "mean": 23.78,
+        "p90": 35.55
+      },
+      {
+        "purchasing_group": "003",
+        "cases": 192,
+        "median": 21.96,
+        "mean": 22.75,
+        "p90": 33.07
+      },
+      {
+        "purchasing_group": "004",
+        "cases": 194,
+        "median": 22.59,
+        "mean": 23.2,
+        "p90": 35.45
+      },
+      {
+        "purchasing_group": "005",
+        "cases": 193,
+        "median": 21.98,
+        "mean": 22.74,
+        "p90": 31.85
+      }
+    ],
+    "payment_method": [
+      {
+        "payment_method": "A: Bank TransferB: Check",
+        "cases": 304,
+        "median": 21.43,
+        "mean": 21.9,
+        "p90": 31.33
+      },
+      {
+        "payment_method": "C: Bank Collection",
+        "cases": 319,
+        "median": 22.65,
+        "mean": 23.45,
+        "p90": 33.23
+      },
+      {
+        "payment_method": "D:Direct Debit",
+        "cases": 304,
+        "median": 21.54,
+        "mean": 22.21,
+        "p90": 33.02
+      }
+    ],
+    "POs": [
+      {
+        "POs": "1",
+        "cases": 494,
+        "median": 20.31,
+        "mean": 21.15,
+        "p90": 31.84
+      },
+      {
+        "POs": "2",
+        "cases": 250,
+        "median": 22.41,
+        "mean": 23.33,
+        "p90": 32.88
+      },
+      {
+        "POs": "3",
+        "cases": 128,
+        "median": 23.45,
+        "mean": 24.75,
+        "p90": 35.9
+      },
+      {
+        "POs": "4",
+        "cases": 55,
+        "median": 24.45,
+        "mean": 26.16,
+        "p90": 36.27
+      }
+    ],
+    "repeated_payment": [
+      {
+        "repeated_payment": "False",
+        "cases": 739,
+        "median": 21.07,
+        "mean": 21.44,
+        "p90": 30.39
+      },
+      {
+        "repeated_payment": "True",
+        "cases": 188,
+        "median": 25.92,
+        "mean": 26.83,
+        "p90": 37.74
+      }
+    ]
+  },
+  "vendor_duration_median_range": [
+    15.96,
+    28.61
+  ],
+  "vendors_with_10plus_cases": 49,
+  "corr_duration_vs_POs": 0.214,
+  "corr_duration_vs_GRs": 0.254,
+  "longest_stage_by_purchasing_group": {
+    "001": 2.8,
+    "002": 3.02,
+    "003": 2.81,
+    "004": 3.17,
+    "005": 3.22
+  },
+  "longest_stage_by_payment_method": {
+    "A: Bank TransferB: Check": 2.96,
+    "C: Bank Collection": 3.25,
+    "D:Direct Debit": 2.83
+  },
+  "longest_stage_by_path": {
+    "PR approved": 2.96,
+    "PR delegated, no approval": 2.76,
+    "no PR created": 3.27
+  },
+  "stage_by_purchasing_group": {
+    "1 PR created -> PR approved": {
+      "001": NaN,
+      "002": 2.14,
+      "003": 2.08,
+      "004": 2.7,
+      "005": 2.64
+    },
+    "1b PR created -> approval delegated": {
+      "001": 0.06,
+      "002": NaN,
+      "003": NaN,
+      "004": NaN,
+      "005": NaN
+    },
+    "2 PR approved -> RFQ": {
+      "001": NaN,
+      "002": 3.02,
+      "003": 2.87,
+      "004": 2.88,
+      "005": 2.67
+    },
+    "3 RFQ -> first PO created": {
+      "001": 0.87,
+      "002": 0.88,
+      "003": 0.9,
+      "004": 0.93,
+      "005": 0.9
+    },
+    "4 PO created -> PO approved": {
+      "001": 2.93,
+      "002": 2.65,
+      "003": 2.93,
+      "004": 2.94,
+      "005": 2.79
+    },
+    "5 PO approved -> first goods receipt": {
+      "001": 2.8,
+      "002": 3.02,
+      "003": 2.81,
+      "004": 3.17,
+      "005": 3.22
+    },
+    "6 first goods receipt -> invoice": {
+      "001": 2.4,
+      "002": 2.47,
+      "003": 2.46,
+      "004": 2.3,
+      "005": 2.39
+    },
+    "7 invoice -> two-way match": {
+      "001": 0.25,
+      "002": 0.22,
+      "003": 0.21,
+      "004": 0.25,
+      "005": 0.23
+    },
+    "8 two-way match -> first payment": {
+      "001": 2.35,
+      "002": 3.08,
+      "003": 3.31,
+      "004": 2.95,
+      "005": 3.09
+    }
+  },
+  "rework": [
+    {
+      "activity": "Create Purchase Order",
+      "document": "purchase_order",
+      "events": 1598,
+      "cases_with_repeat": 433,
+      "cases_repeat_only_from_multiple_documents": 433,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Approve Purchase Order",
+      "document": "purchase_order",
+      "events": 1598,
+      "cases_with_repeat": 433,
+      "cases_repeat_only_from_multiple_documents": 433,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Create Goods Receipt",
+      "document": "goods receipt",
+      "events": 4042,
+      "cases_with_repeat": 582,
+      "cases_repeat_only_from_multiple_documents": 149,
+      "cases_with_repeat_on_same_document": 433,
+      "documents_with_repeat": 1241,
+      "extra_events_on_same_document": 2101
+    },
+    {
+      "activity": "Create Invoice Receipt",
+      "document": "goods receipt",
+      "events": 1941,
+      "cases_with_repeat": 582,
+      "cases_repeat_only_from_multiple_documents": 582,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Perform Two-Way Match",
+      "document": "goods receipt",
+      "events": 1941,
+      "cases_with_repeat": 582,
+      "cases_repeat_only_from_multiple_documents": 582,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Execute Payment",
+      "document": "payment",
+      "events": 1166,
+      "cases_with_repeat": 188,
+      "cases_repeat_only_from_multiple_documents": 0,
+      "cases_with_repeat_on_same_document": 188,
+      "documents_with_repeat": 188,
+      "extra_events_on_same_document": 239
+    },
+    {
+      "activity": "Create Purchase Requisition",
+      "document": "purchase_requisition",
+      "events": 729,
+      "cases_with_repeat": 0,
+      "cases_repeat_only_from_multiple_documents": 0,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Approve Purchase Requisition",
+      "document": "purchase_requisition",
+      "events": 607,
+      "cases_with_repeat": 0,
+      "cases_repeat_only_from_multiple_documents": 0,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Delegate Purchase Requisition Approval",
+      "document": "purchase_requisition",
+      "events": 122,
+      "cases_with_repeat": 0,
+      "cases_repeat_only_from_multiple_documents": 0,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    },
+    {
+      "activity": "Create Request for Quotation",
+      "document": "quotation",
+      "events": 927,
+      "cases_with_repeat": 0,
+      "cases_repeat_only_from_multiple_documents": 0,
+      "cases_with_repeat_on_same_document": 0,
+      "documents_with_repeat": 0,
+      "extra_events_on_same_document": 0
+    }
+  ],
+  "gr_repeat_gap_days": {
+    "n": 2101,
+    "median": 1.46,
+    "mean": 2.3,
+    "p90": 5.51,
+    "max": 17.38
+  },
+  "gr_postings_per_gr": {
+    "1": 700,
+    "2": 601,
+    "3": 420,
+    "4": 220
+  },
+  "gr_documents_with_repeat_pct": 63.9,
+  "gr_span_first_to_last_days": {
+    "n": 1941,
+    "median": 1.26,
+    "mean": 2.49,
+    "p90": 6.81,
+    "max": 20.96
+  },
+  "gr_postings_each_reference_different_po_pct": 100.0,
+  "duration_median_repeated_payment": 25.92,
+  "duration_median_single_payment": 21.07,
+  "events_by_resource_activity": {
+    "Finance/Account Department": {
+      "Create Invoice Receipt": 1941,
+      "Execute Payment": 1166,
+      "Perform Two-Way Match": 1941
+    },
+    "Manufacturing Department": {
+      "Create Purchase Requisition": 729,
+      "Delegate Purchase Requisition Approval": 122
+    },
+    "Procurement Department": {
+      "Create Purchase Order": 1598,
+      "Create Request for Quotation": 927
+    },
+    "Procurement Order Manager": {
+      "Approve Purchase Order": 1598
+    },
+    "Procurement Requisition Manager": {
+      "Approve Purchase Requisition": 607
+    },
+    "Warehouse Department": {
+      "Create Goods Receipt": 4042
+    }
+  },
+  "finance_events_per_month_median": 164.0
+}

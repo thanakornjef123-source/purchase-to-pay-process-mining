@@ -1,0 +1,161 @@
+{
+  "cases": 927,
+  "events": 14671,
+  "variants_full": 388,
+  "variants_full_singletons": 330,
+  "top1_coverage_pct": 19.5,
+  "top5_coverage_pct": 37.4,
+  "top10_coverage_pct": 44.8,
+  "variants_needed_for_50pct": 15,
+  "variants_needed_for_80pct": 203,
+  "variants_collapsed": 247,
+  "variants_skeleton": 3,
+  "skeleton_variants": {
+    "Create PR > Approve PR > Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment": 607,
+    "Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment": 198,
+    "Create PR > Delegate PR Approval > Create RFQ > Create PO > Approve PO > Create GR > Create Invoice > Two-Way Match > Execute Payment": 122
+  },
+  "doc_shapes": [
+    {
+      "shape": "1 PO / 1 GR",
+      "cases": 345,
+      "variants": 11
+    },
+    {
+      "shape": "2 PO / 2 GR",
+      "cases": 162,
+      "variants": 81
+    },
+    {
+      "shape": "1 PO / 2 GR",
+      "cases": 102,
+      "variants": 13
+    },
+    {
+      "shape": "3 PO / 3 GR",
+      "cases": 92,
+      "variants": 88
+    },
+    {
+      "shape": "2 PO / 3 GR",
+      "cases": 75,
+      "variants": 70
+    },
+    {
+      "shape": "4 PO / 4 GR",
+      "cases": 55,
+      "variants": 55
+    },
+    {
+      "shape": "1 PO / 3 GR",
+      "cases": 37,
+      "variants": 12
+    },
+    {
+      "shape": "3 PO / 4 GR",
+      "cases": 36,
+      "variants": 36
+    },
+    {
+      "shape": "2 PO / 4 GR",
+      "cases": 13,
+      "variants": 13
+    },
+    {
+      "shape": "1 PO / 4 GR",
+      "cases": 10,
+      "variants": 9
+    }
+  ],
+  "cases_single_po_single_gr": 345,
+  "variants_in_single_po_single_gr": 11,
+  "dfg_edges": 23,
+  "start_activities": {
+    "Create Purchase Requisition": 729,
+    "Create Request for Quotation": 198
+  },
+  "end_activities": {
+    "Execute Payment": 786,
+    "Create Goods Receipt": 141
+  },
+  "dfg_top_edges": [
+    {
+      "from": "Create Goods Receipt",
+      "to": "Create Goods Receipt",
+      "count": 2386
+    },
+    {
+      "from": "Create Invoice Receipt",
+      "to": "Perform Two-Way Match",
+      "count": 1498
+    },
+    {
+      "from": "Create Goods Receipt",
+      "to": "Create Invoice Receipt",
+      "count": 1158
+    },
+    {
+      "from": "Create Purchase Order",
+      "to": "Approve Purchase Order",
+      "count": 1044
+    },
+    {
+      "from": "Approve Purchase Order",
+      "to": "Create Goods Receipt",
+      "count": 927
+    },
+    {
+      "from": "Create Request for Quotation",
+      "to": "Create Purchase Order",
+      "count": 927
+    },
+    {
+      "from": "Perform Two-Way Match",
+      "to": "Execute Payment",
+      "count": 739
+    },
+    {
+      "from": "Approve Purchase Requisition",
+      "to": "Create Request for Quotation",
+      "count": 607
+    },
+    {
+      "from": "Create Purchase Requisition",
+      "to": "Approve Purchase Requisition",
+      "count": 607
+    },
+    {
+      "from": "Approve Purchase Order",
+      "to": "Approve Purchase Order",
+      "count": 554
+    },
+    {
+      "from": "Create Purchase Order",
+      "to": "Create Purchase Order",
+      "count": 554
+    },
+    {
+      "from": "Perform Two-Way Match",
+      "to": "Create Invoice Receipt",
+      "count": 536
+    }
+  ],
+  "im_top_k": 15,
+  "im_top_cases": 466,
+  "im_top_coverage_pct": 50.3,
+  "im_top_tree": "->( X( tau, ->( 'Create Purchase Requisition', X( 'Approve Purchase Requisition', 'Delegate Purchase Requisition Approval' ) ) ), 'Create Request for Quotation', *( 'Create Purchase Order', tau ), *( 'Approve Purchase Order', tau ), +( *( 'Create Goods Receipt', tau ), ->( *( ->( *( 'Create Invoice Receipt', tau ), *( 'Perform Two-Way Match', tau ) ), tau ), *( 'Execute Payment', tau ) ) ) )",
+  "im_full_tree": "->( X( tau, ->( 'Create Purchase Requisition', X( 'Approve Purchase Requisition', 'Delegate Purchase Requisition Approval' ) ) ), 'Create Request for Quotation', *( 'Create Purchase Order', tau ), *( 'Approve Purchase Order', tau ), +( *( 'Create Goods Receipt', tau ), ->( *( ->( *( 'Create Invoice Receipt', tau ), *( 'Perform Two-Way Match', tau ) ), tau ), *( 'Execute Payment', tau ) ) ) )",
+  "discovered_model_quality": {
+    "top variants": {
+      "fitting_traces_pct": 87.8,
+      "log_fitness": 0.996,
+      "precision": 0.612
+    },
+    "full log, noise 0.2": {
+      "fitting_traces_pct": 87.8,
+      "log_fitness": 0.996,
+      "precision": 0.612
+    }
+  },
+  "trees_identical": true
+}
